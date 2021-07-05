@@ -1,18 +1,18 @@
-.webdev {
+.fun {
   background: #bb6868;
   color: rgb(255, 255, 255);
   height: auto;
 }
 
-.webdev h1 {
+.fun h1 {
   margin: 0;
   padding-top: 75px;
   text-align: left;
-  color: rgb(45, 49, 38);
+  color: rgb(49, 51, 45);
   font-size: 3rem;
 }
-.webdev p {
+.fun p {
   font-size: x-large;
-  background-color: antiquewhite;
+  background-color: rgb(255, 145, 0);
   color: rgb(45, 49, 38);
 }

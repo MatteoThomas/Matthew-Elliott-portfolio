@@ -1,18 +1,18 @@
-.webdev {
-  background: #bb6868;
-  color: rgb(255, 255, 255);
+.about {
+  background: #2bff00;
+  color: rgb(34, 26, 26);
   height: auto;
 }
 
-.webdev h1 {
+.about h1 {
   margin: 0;
   padding-top: 75px;
   text-align: left;
-  color: rgb(45, 49, 38);
+  color: rgb(253, 99, 61);
   font-size: 3rem;
 }
-.webdev p {
+.about p {
   font-size: x-large;
   background-color: antiquewhite;
-  color: rgb(45, 49, 38);
+  color: rgb(0, 0, 0);
 }

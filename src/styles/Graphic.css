@@ -1,0 +1,18 @@
+.graphic {
+  background: #221c1c;
+  color: rgb(255, 134, 134);
+  height: 5rem;
+}
+
+.graphic h1 {
+  margin: 0;
+  padding-top: 75px;
+  text-align: left;
+  color: rgb(68, 4, 47);
+  font-size: 3rem;
+}
+.graphic p {
+  font-size: x-large;
+  background-color: rgb(88, 51, 2);
+  color: rgb(162, 255, 0);
+}
