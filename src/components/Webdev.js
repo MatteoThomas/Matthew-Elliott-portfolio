@@ -1,18 +1,19 @@
 import React from "react";
+import "../styles/Webdev.css";
 
-export default function Webdev() {
-  // All functional components must have a return method that contains JSX.
-  // We return all the JSX inside a parent element with a className of "container".
+function Webdev() {
   return (
-    <div className="container">
+    <webdev className="webdev">
       <h1>Web Development</h1>
       <p>My projects and current skills</p>
-      <ul className="parent">
+      <ul className="webdev">
         <li>React</li>
         <li>Javascript</li>
         <li>CSS</li>
         <li>HTML</li>
       </ul>
-    </div>
+    </webdev>
   );
 }
+
+export default Webdev;
