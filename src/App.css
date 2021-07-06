@@ -24,7 +24,7 @@
 
 body {
   color: var(--gold);
-  background-color: var(--grey);
+  background-color: var(--dark);
   animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;

@@ -1,10 +1,11 @@
 import React from "react";
-// import "../styles/Webdev.css";
+import "../../styles/Webdev.css";
 import tripr from "../../img/tripr2.png";
 import gitmusic from "../../img/gitmusic.png";
 import myteam from "../../img/myteam.png";
 import codequiz from "../../img/codequiz.png";
 import workday from "../../img/workday.png";
+
 function Webdev() {
   return (
     <webdev className="webdev">

@@ -1,0 +1,45 @@
+:root {
+  font-family: "Sen", sans-serif;
+  --dark: #232d2eff;
+  --yellow: #eef907ff;
+  --pink: #ef1a48ff;
+  --grey: #ecececff;
+  --dela: "Dela Gothic One", cursive;
+  --mons: "Montserrat", sans-serif;
+}
+
+.nav {
+  padding: 1rem;
+  font-family: var(--mons);
+  background-color: var(--pink);
+  color: var(--grey);
+  height: auto;
+}
+.nav li {
+  display: inline;
+  padding-right: 2rem;
+}
+
+/* unvisited link */
+a:link {
+  text-decoration: none;
+  color: var(--grey);
+}
+
+/* visited link */
+a:visited {
+  text-decoration: none;
+  color: var(--grey);
+}
+
+/* mouse over link */
+a:hover {
+  text-decoration: none;
+  color: var(--grey);
+}
+
+/* selected link */
+a:active {
+  text-decoration: none;
+  color: var(--grey);
+}

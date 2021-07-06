@@ -1,5 +1,5 @@
 import React from "react";
-// import "../styles/Graphic.css";
+import "../../styles/Graphic.css";
 
 export default function Graphic() {
   // All functional components must have a return method that contains JSX.
