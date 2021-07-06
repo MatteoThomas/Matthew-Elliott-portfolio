@@ -30,7 +30,6 @@ export default function PortfolioContainer() {
     if (currentPage === "Resume") {
       return <Resume />;
     }
-
     return <Fun />;
   };
 

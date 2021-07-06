@@ -1,6 +1,6 @@
 import React from "react";
 // import "../styles/About.css";
-// import headshot from "../src/avatar.jpg";
+import headshot from "../../img/avatar.jpg";
 
 export default function About() {
   // All functional components must have a return method that contains JSX.
@@ -16,7 +16,7 @@ export default function About() {
         for the masses.
       </p>
 
-      {/* <img src={headshot} alt="avatar" /> */}
+      <img src={headshot} alt="avatar" />
     </about>
   );
 }
