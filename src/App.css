@@ -1,3 +1,41 @@
+:root {
+  font-family: "Sen", sans-serif;
+  --dark: #232d2eff;
+  --yellow: #eef907ff;
+  --pink: #ef1a48ff;
+  --grey: #ecececff;
+  --dela: "Dela Gothic One", cursive;
+  --mons: "Montserrat", sans-serif;
+}
+
+.about,
+.fun,
+.webdev,
+.graphic {
+  font-family: var(--mons);
+}
+
+.about,
+.fun,
+.webdev,
+.graphic h1 {
+  font-family: var(--dela);
+}
+
+body {
+  color: var(--gold);
+  background-color: var(--grey);
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  inset: 2rem;
+}
+
+h1,
+p {
+  color: var(--dark);
+}
+
 .App {
   text-align: center;
 }

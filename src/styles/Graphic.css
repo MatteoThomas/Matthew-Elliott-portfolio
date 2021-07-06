@@ -1,7 +1,6 @@
 .graphic {
-  background: #221c1c;
   color: rgb(255, 134, 134);
-  height: 5rem;
+  height: auto;
 }
 
 .graphic h1 {

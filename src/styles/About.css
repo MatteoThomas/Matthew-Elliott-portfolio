@@ -1,18 +1,4 @@
-.about {
-  background: #2bff00;
-  color: rgb(34, 26, 26);
-  height: auto;
-}
-
-.about h1 {
-  margin: 0;
-  padding-top: 75px;
-  text-align: left;
-  color: rgb(253, 99, 61);
-  font-size: 3rem;
-}
-.about p {
-  font-size: x-large;
-  background-color: antiquewhite;
-  color: rgb(0, 0, 0);
+img {
+  mix-blend-mode: darken;
+  width: 200px;
 }
