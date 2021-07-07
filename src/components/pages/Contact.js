@@ -1,12 +1,14 @@
 import React from "react";
+import "../../styles/Components.css";
+import Form from "./Form";
 
-export default function Contact() {
-  // All functional components must have a return method that contains JSX.
-  // We return all the JSX inside a parent element with a className of "container".
+function Contact() {
   return (
-    <about className="contact">
+    <div className="contact">
       <h1>Contact</h1>
-      <ul className="list"></ul>
-    </about>
+      <Form />
+    </div>
   );
 }
+
+export default Contact;

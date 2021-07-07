@@ -1,12 +1,12 @@
 import React from "react";
-// import "../styles/About.css";
+import "../../styles/Components.css";
 import resume from "../../img/resume.png";
 
 export default function About() {
   // All functional components must have a return method that contains JSX.
   // We return all the JSX inside a parent element with a className of "container".
   return (
-    <about className="about">
+    <div className="resume">
       <h1>Resume</h1>
       <ul className="list">
         <li>React</li>
@@ -16,6 +16,6 @@ export default function About() {
       </ul>
 
       <img src={resume} alt="resume" />
-    </about>
+    </div>
   );
 }

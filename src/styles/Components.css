@@ -1,0 +1,49 @@
+:root {
+  --dark: #232d2eff;
+  --yellow: #eef907ff;
+  --pink: #ef1a48ff;
+  --grey: #ecececff;
+  --dela: "Dela Gothic One", cursive;
+  --mons: "Montserrat", sans-serif;
+}
+
+.about,
+.webdev,
+.graphic,
+.contact,
+.resume,
+.fun {
+  padding: 2rem;
+}
+
+h1 {
+  font-family: var(--dela);
+  font-size: 4rem;
+  line-height: 2rem;
+}
+
+.fun h1 {
+  line-height: 3.8rem;
+}
+
+p {
+  font-family: var(--mons);
+  color: var(--grey);
+  width: 400px;
+  letter-spacing: 0.02rem;
+  line-height: 1.4rem;
+}
+
+form {
+  font-family: var(--mons);
+  color: var(--grey);
+}
+
+input {
+  display: block;
+  padding-top: 1rem;
+  background-color: var(--grey);
+  border: none;
+  margin: 0 0 1.2rem 0;
+  width: 11rem;
+}

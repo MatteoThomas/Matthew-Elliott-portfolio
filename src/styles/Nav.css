@@ -1,6 +1,5 @@
 :root {
-  font-family: "Sen", sans-serif;
-  --dark: #232d2eff;
+  --dark: rgb(22, 26, 26);
   --yellow: #eef907ff;
   --pink: #ef1a48ff;
   --grey: #ecececff;
@@ -9,36 +8,33 @@
 }
 
 .nav {
-  padding: 1rem;
-  font-family: var(--mons);
-  background-color: var(--pink);
-  color: var(--grey);
-  height: auto;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
-.nav li {
+.nav-tabs {
+  font-family: var(--mons);
+  background-color: var(--dark);
+  padding: 2rem;
+}
+
+li {
   display: inline;
   padding-right: 2rem;
 }
 
-/* unvisited link */
 a:link {
   text-decoration: none;
   color: var(--grey);
 }
-
-/* visited link */
+a:hover {
+  text-decoration: none;
+  color: var(--pink);
+}
 a:visited {
   text-decoration: none;
   color: var(--grey);
 }
-
-/* mouse over link */
-a:hover {
-  text-decoration: none;
-  color: var(--grey);
-}
-
-/* selected link */
 a:active {
   text-decoration: none;
   color: var(--grey);

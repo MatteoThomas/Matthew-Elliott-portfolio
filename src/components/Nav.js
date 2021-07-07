@@ -1,8 +1,6 @@
 import React from "react";
 import "../styles/Nav.css";
 
-// Here we are using object destructuring assignment to pluck off our variables from the props object
-// We assign them to their own variable names
 function Nav({ currentPage, handlePageChange }) {
   return (
     <ul className="nav nav-tabs">
@@ -76,13 +74,3 @@ function Nav({ currentPage, handlePageChange }) {
 }
 
 export default Nav;
-
-// export default function Nav() {
-//   // All functional components must have a return method that contains JSX.
-//   // We return all the JSX inside a parent element with a className of "container".
-//   return (
-//     <div className="nav">
-//       <h1>Matthew Elliott</h1>
-//     </div>
-//   );
-// }

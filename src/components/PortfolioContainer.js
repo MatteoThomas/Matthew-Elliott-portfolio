@@ -12,8 +12,6 @@ import Resume from "./pages/Resume";
 export default function PortfolioContainer() {
   const [currentPage, setCurrentPage] = useState("Web Development");
 
-  // This method is checking to see what the value of `currentPage` is.
-  // Depending on the value of currentPage, we return the corresponding component to render.
   const renderPage = () => {
     if (currentPage === "About Me") {
       return <About />;

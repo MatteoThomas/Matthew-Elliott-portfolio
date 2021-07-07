@@ -1,12 +1,10 @@
 import React from "react";
-// import "../styles/About.css";
+import "../../styles/Components.css";
 import headshot from "../../img/avatar.jpg";
 
-export default function About() {
-  // All functional components must have a return method that contains JSX.
-  // We return all the JSX inside a parent element with a className of "container".
+function About() {
   return (
-    <about className="about">
+    <div className="about">
       <h1>About me</h1>
       <p>
         I'm currently enrolled in a full-stack web development boot camp at the
@@ -17,6 +15,8 @@ export default function About() {
       </p>
 
       <img src={headshot} alt="avatar" />
-    </about>
+    </div>
   );
 }
+
+export default About;

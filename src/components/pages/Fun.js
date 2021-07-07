@@ -1,5 +1,5 @@
 import React from "react";
-// import "../styles/Fun.css";
+import "../../styles/Components.css";
 
 export default function Fun() {
   // All functional components must have a return method that contains JSX.
@@ -7,7 +7,7 @@ export default function Fun() {
   return (
     <div className="fun">
       <h1>Fun projects and experiments</h1>
-      <p>Fun Javascript stuff</p>
+      <p>Drum Pads</p>
     </div>
   );
 }
