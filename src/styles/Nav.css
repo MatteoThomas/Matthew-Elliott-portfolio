@@ -15,7 +15,7 @@
 .nav-tabs {
   font-family: var(--mons);
   background-color: var(--dark);
-  padding: 2rem;
+  padding: 1rem;
 }
 
 li {

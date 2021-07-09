@@ -5,12 +5,9 @@ export default function Footer() {
   // We return all the JSX inside a parent element with a className of "container".
   return (
     <div className="footer">
-      <h1>Footer Section</h1>
-      <ul>
-        <li>E-Mail</li>
-        <li>Github</li>
-        <li>Instagram</li>
-      </ul>
+      <a href="mailto:matt.ell@pm.me">Email</a>
+      <a href="https://github.com/MatteoThomas">Github</a>
+      <a href="https://www.instagram.com/mattycakes512/">Instagram</a>
     </div>
   );
 }

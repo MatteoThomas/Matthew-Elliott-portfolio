@@ -4,7 +4,7 @@ class Form extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: "coconut",
+      value: this,
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -17,7 +17,7 @@ class Form extends React.Component {
   }
 
   handleSubmit(event) {
-    alert("Your favorite flavor is: " + this.state.value);
+    alert("Thanks for the input!");
     event.preventDefault();
   }
 
@@ -30,7 +30,7 @@ class Form extends React.Component {
           Message:
           <input type="text" name="message" />
           Email:
-          <input type="email" name="email" />
+          <input type="text" name="email" />
           Website: (optional)
           <input type="text" name="website" />
         </label>

@@ -8,11 +8,6 @@ function Graphic() {
     <div className="graphic">
       <h1>Graphic Design</h1>
       <p>My graphic design portfolio</p>
-      <ul className="list">
-        <li>Photoshop</li>
-        <li>Illustrator</li>
-        <li>XD</li>
-      </ul>
     </div>
   );
 }
