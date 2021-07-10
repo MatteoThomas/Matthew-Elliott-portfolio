@@ -12,13 +12,14 @@ import link from "../../img/link_icon.png";
 function Webdev() {
   return (
     <div className="webdev">
-      <h1>Projects</h1>
-
-      <img src={tripr} alt="triper" />
+      <h1>Web Development</h1>
+      <div className="web-image">
+        <img src={tripr} alt="triper" />
+      </div>
       <div className="web-info">
         <p>
-          Tripr. is an an adventure logging app utilizing Node.js, Express, and
-          Handlebars.
+          <h2>Tripr.</h2> is an an adventure logging app utilizing Node.js,
+          Express, and Handlebars.
         </p>
         <a href="https://github.com/k-ryanhunt/Project-2-Travel-Green">
           <img src={github} alt="github" width="40" height="40" />{" "}
@@ -27,11 +28,13 @@ function Webdev() {
           <img src={link} alt="link" width="40" height="40" />{" "}
         </a>
       </div>
-      <img src={gitmusic} alt="git music" />
+      <div className="web-image">
+        <img src={gitmusic} alt="git music" />
+      </div>
       <div className="web-info">
         <p>
-          git.Music a music finding app that relies on the Discogs API for
-          artist information.
+          <h2>git.Music</h2> a music finding app that relies on the Discogs API
+          for artist information.
         </p>
 
         <a href="https://github.com/RLacer/Git-Music-Now-Project">
@@ -41,11 +44,13 @@ function Webdev() {
           <img src={link} alt="link" width="40" height="40" />{" "}
         </a>
       </div>
-      <img src={myteam} alt="My Team" />
+      <div className="web-image">
+        <img src={myteam} alt="My Team" />
+      </div>
       <div className="web-info">
         <p>
-          My Team is a NodeJS app that takes user input and populates cards with
-          it..
+          <h2>My Team</h2> is a NodeJS app that takes user input and populates
+          cards with it..
         </p>
         <a href="https://github.com/MatteoThomas/10-TEAM-PAGE">
           <img src={github} alt="github" width="40" height="40" />{" "}
@@ -54,10 +59,13 @@ function Webdev() {
           <img src={link} alt="link" width="40" height="40" />{" "}
         </a>
       </div>
-      <img src={codequiz} alt="Code Quiz" />
+      <div className="web-image">
+        <img src={codequiz} alt="Code Quiz" />
+      </div>
       <div className="web-info">
         <p>
-          Code Quiz is one of my first apps that uses Javascript to quiz users.
+          <h2>Code Quiz</h2> is one of my first apps that uses Javascript to
+          quiz users.
         </p>
         <a href="https://github.com/MatteoThomas/cool-code-quiz">
           <img src={github} alt="github" width="40" height="40" />{" "}
@@ -66,11 +74,13 @@ function Webdev() {
           <img src={link} alt="link" width="40" height="40" />{" "}
         </a>
       </div>
-      <img src={workday} alt="Work Day" />
+      <div className="web-image">
+        <img src={workday} alt="Work Day" />
+      </div>
       <div className="web-info">
         <p>
-          This app allows users to enter daily tasks and to-do's and save them
-          in local storage.
+          <h2>Workday</h2>allows users to enter daily tasks and to-do's and save
+          them in local storage.
         </p>
         <a href="https://github.com/MatteoThomas/simple-event-planner">
           <img src={github} alt="github" width="40" height="40" />{" "}

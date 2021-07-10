@@ -1,11 +1,12 @@
 :root {
   --dark: rgb(19, 19, 19);
-  --yellow: rgb(233, 233, 233);
+  --yellow: rgb(73, 73, 73);
   --pink: rgb(197, 86, 104);
   --grey: rgb(216, 213, 213);
   --dela: "Raleway", sans-serif;
   --mons: "Montserrat", sans-serif;
 }
+
 html,
 body {
   height: 100%;
@@ -14,6 +15,8 @@ body {
 body {
   display: flex;
   flex-direction: column;
+
+  align-items: center;
 }
 
 .portfolioContainer {
@@ -46,20 +49,65 @@ h1 {
   letter-spacing: 0.1rem;
 }
 
-/* Webdev ----------------------------------------*/
-.web-info {
-  float: right;
-  width: auto;
+h2 {
+  font-family: var(--dela);
+  font-size: 1rem;
+  padding-top: 1rem;
+  letter-spacing: 0.1rem;
 }
+
+p {
+  font-family: var(--mons);
+  color: var(--grey);
+  width: 400px;
+  letter-spacing: 0.03rem;
+  line-height: 1.5rem;
+}
+
+/* About----------------------------------------*/
+.about {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.about img {
+  width: 20rem;
+  margin-right: 1rem;
+  float: left;
+}
+
+.about-info {
+  margin-left: 10rem;
+  height: 20rem;
+}
+
+/* Webdev ----------------------------------------*/
+.webdev {
+  width: 100%;
+}
+.web-image img {
+  width: 20rem;
+  margin-right: 1.5rem;
+  float: left;
+}
+
+.web-info {
+  margin-left: 10rem;
+  height: 20rem;
+}
+
 .web-info img {
   filter: invert(1);
-  padding-right: 1rem;
+  padding-bottom: 3rem;
+}
+.web-info h2 {
+  padding: 0;
 }
 
 /* Graphic --------------------------------------*/
-.graphic p {
-  padding-left: 0.2rem;
-}
+/* .graphic {
+  padding-left: 1rem;
+} */
 
 /* FORM ------------------------------------------*/
 form {
@@ -95,9 +143,9 @@ input[type="submit"] {
 }
 
 /* FUN ---------------------------------------------*/
-.fun {
+/* .fun {
   padding-left: 3rem;
-}
+} */
 
 #drumpadText span {
   font-size: x-large;
@@ -143,14 +191,6 @@ input[type="submit"] {
   transition: all 0.2s;
 }
 
-p {
-  font-family: var(--mons);
-  color: var(--grey);
-  width: 400px;
-  letter-spacing: 0.03rem;
-  line-height: 1.5rem;
-}
-
 .note:active {
   background-color: var(--pink);
   transform: scale(0.9);
@@ -187,10 +227,12 @@ button {
 .footer {
   display: flex;
   flex-shrink: 0;
-  padding: 1rem;
+  /* padding: 1rem; */
   align-items: baseline;
-  background-color: var(--yellow);
+  background-color: var(--grey);
   color: var(--dark);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .footer a {
