@@ -1,10 +1,11 @@
 import React from "react";
 import "../../styles/Components.css";
-import resume from "../../img/resume.png";
+import resumepdf from "../../img/resume.png";
 
-export default function About() {
+export default function Resume() {
   // All functional components must have a return method that contains JSX.
   // We return all the JSX inside a parent element with a className of "container".
+
   return (
     <div className="resume">
       <h1>Resume</h1>
@@ -13,8 +14,7 @@ export default function About() {
           PDF Link
         </a>
       </p>
-
-      <img src={resume} alt="resume" />
+      <img src={resumepdf} alt="resume" />
     </div>
   );
 }

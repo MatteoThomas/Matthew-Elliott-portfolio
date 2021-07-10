@@ -9,8 +9,8 @@ function Fun() {
   }
 
   return (
-    <div className="pad">
-      <h1>Fun projects</h1>
+    <div className="fun">
+      <h1>Fun Projects</h1>
 
       <div>
         <div className="pad">

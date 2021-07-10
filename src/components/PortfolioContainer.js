@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import Nav from "./Nav";
+
 import Webdev from "./pages/Webdev";
 import Graphic from "./pages/Graphic";
 import Contact from "./pages/Contact";
@@ -41,6 +42,7 @@ export default function PortfolioContainer() {
         <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
         {/* Here we are calling the renderPage method which will return a component  */}
         {renderPage()}
+
         <Footer />
       </div>
     </div>

@@ -1,9 +1,9 @@
 :root {
-  --dark: rgb(44, 44, 44);
-  --yellow: rgb(209, 216, 79);
+  --dark: rgb(19, 19, 19);
+  --yellow: rgb(233, 233, 233);
   --pink: rgb(197, 86, 104);
   --grey: rgb(216, 213, 213);
-  --dela: "Dela Gothic One", cursive;
+  --dela: "Raleway", sans-serif;
   --mons: "Montserrat", sans-serif;
 }
 html,
@@ -34,38 +34,29 @@ button:hover {
   color: var(--dark);
 }
 
-.light-mode {
-  background-color: var(--grey);
-  color: var(--dark);
-}
-
 img {
   border-radius: 10px;
 }
 
-/* Navbar --------------------------------------------*/
-
-.header {
-  display: flex;
-}
-
-.about,
-.webdev,
-.graphic,
-.contact,
-.resume,
-.fun {
-  padding: 2rem;
-}
-
 h1 {
   font-family: var(--dela);
+  margin-top: 2rem;
   font-size: 4rem;
   line-height: 3rem;
+  letter-spacing: 0.1rem;
+}
+
+/* Webdev ----------------------------------------*/
+.web-info {
+  float: right;
+  width: auto;
+}
+.web-info img {
+  filter: invert(1);
+  padding-right: 1rem;
 }
 
 /* Graphic --------------------------------------*/
-
 .graphic p {
   padding-left: 0.2rem;
 }
@@ -76,7 +67,8 @@ form {
   color: var(--grey);
 }
 
-input[type="text"] {
+input[type="text"],
+[type="email"] {
   font-family: var(--dela);
   font-size: x-large;
   color: var(--grey);
@@ -120,7 +112,6 @@ input[type="submit"] {
   font-family: var(--mons);
   width: 500px;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   line-height: 2rem;
 }
@@ -152,15 +143,6 @@ input[type="submit"] {
   transition: all 0.2s;
 }
 
-.keys {
-  margin-left: 2.4rem;
-}
-.note:active {
-  background-color: var(--pink);
-  transform: scale(0.9);
-  transition: all 0.2s;
-}
-
 p {
   font-family: var(--mons);
   color: var(--grey);
@@ -169,18 +151,22 @@ p {
   line-height: 1.5rem;
 }
 
+.note:active {
+  background-color: var(--pink);
+  transform: scale(0.9);
+  transition: all 0.2s;
+}
+
 .note-wrapper {
   height: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .note {
   border-radius: 5px;
   width: 100px;
   height: 200px;
-  margin: 2px;
+  margin: 3px;
   background-color: rgb(116, 184, 180);
   display: flex;
   justify-content: space-around;
@@ -189,7 +175,7 @@ p {
   font-size: 20px;
   color: rgb(245, 241, 241);
   user-select: none;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 button {
@@ -201,15 +187,64 @@ button {
 .footer {
   display: flex;
   flex-shrink: 0;
+  padding: 1rem;
   align-items: baseline;
   background-color: var(--yellow);
   color: var(--dark);
 }
 
 .footer a {
+  align-items: center;
   font-family: var(--mons);
-  padding: 1rem;
-  width: 5rem;
-  padding-left: 2rem;
   color: var(--dark);
+}
+
+.footer img {
+  padding-left: 2rem;
+  padding-right: 1rem;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+/* @-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(359deg);
+  }
+}
+
+@-o-keyframes spin {
+  0% {
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    -o-transform: rotate(359deg);
+  }
+}
+
+@-ms-keyframes spin {
+  0% {
+    -ms-transform: rotate(0deg);
+  }
+  100% {
+    -ms-transform: rotate(359deg);
+  }
+} */
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
 }

@@ -23,14 +23,18 @@ class Form extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form
+        method="post"
+        action="subscriberform.php"
+        onSubmit={this.handleSubmit}
+      >
         <label>
           Name:
-          <input type="text" name="name" />
+          <input type="text" name="name" required />
           Message:
-          <input type="text" name="message" />
+          <input type="text" name="message" required />
           Email:
-          <input type="text" name="email" />
+          <input type="email" name="email" required />
           Website: (optional)
           <input type="text" name="website" />
         </label>

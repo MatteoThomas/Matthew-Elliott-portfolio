@@ -11,11 +11,22 @@
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  z-index: 1;
 }
+
 .nav-tabs {
   font-family: var(--mons);
   background-color: var(--dark);
-  padding: 1rem;
+  padding: 2rem;
+}
+
+.about,
+.webdev,
+.graphic,
+.contact,
+.resume,
+.fun {
+  padding: 2rem;
 }
 
 li {

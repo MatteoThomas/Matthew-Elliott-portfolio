@@ -7,7 +7,7 @@ function Graphic() {
   return (
     <div className="graphic">
       <h1>Graphic Design</h1>
-      <p>My graphic design portfolio</p>
+      <p>Under construction...</p>
     </div>
   );
 }
