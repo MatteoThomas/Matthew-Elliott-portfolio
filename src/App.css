@@ -6,8 +6,3 @@
   --dela: "Dela Gothic One", cursive;
   --mons: "Montserrat", sans-serif;
 }
-
-body {
-  color: var(--pink);
-  background-color: var(--dark);
-}

@@ -59,7 +59,7 @@ function Nav({ currentPage, handlePageChange }) {
           Resume
         </a>
       </li>
-      <li className="nav-item">
+      {/* <li className="nav-item">
         <a
           href="#fun"
           onClick={() => handlePageChange("Fun")}
@@ -67,8 +67,8 @@ function Nav({ currentPage, handlePageChange }) {
           className={currentPage === "Fun" ? "nav-link active" : "nav-link"}
         >
           Fun
-        </a>
-      </li>
+        </a> 
+      </li>*/}
     </ul>
   );
 }

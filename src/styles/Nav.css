@@ -1,7 +1,7 @@
 :root {
   --dark: rgb(22, 26, 26);
   --yellow: #eef907ff;
-  --pink: #ef1a48ff;
+  --pink: rgb(197, 86, 104);
   --grey: #ecececff;
   --dela: "Dela Gothic One", cursive;
   --mons: "Montserrat", sans-serif;
@@ -19,6 +19,11 @@
   background-color: var(--dark);
   padding: 2rem;
 }
+
+/* .nav-item:hover {
+  background-color: var(--pink);
+  color: var(--dark);
+} */
 
 .about,
 .webdev,
@@ -38,6 +43,11 @@ a:link {
   text-decoration: none;
   color: var(--grey);
 }
+a:link {
+  text-decoration: none;
+  color: var(--grey);
+}
+
 a:hover {
   text-decoration: none;
   color: var(--pink);
@@ -50,4 +60,19 @@ a:visited {
 a:active {
   text-decoration: none;
   color: var(--pink);
+}
+
+/*- MEDIA QUERIES ------------------------*/
+
+@media screen and (max-width: 415px) {
+  .nav-item {
+    padding-bottom: 1rem;
+  }
+  .nav-tabs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    padding-left: 1rem;
+  }
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import email from "../../img/email.png";
 import instagram from "../../img/instagram_icon.png";
-import github from "../../img/github.png";
+import github from "../../img/github_icon.png";
 
 export default function Footer() {
   // All functional components must have a return method that contains JSX.

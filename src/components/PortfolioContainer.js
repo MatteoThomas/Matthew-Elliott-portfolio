@@ -6,7 +6,7 @@ import Webdev from "./pages/Webdev";
 import Graphic from "./pages/Graphic";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
-import Fun from "./pages/Fun";
+// import Fun from "./pages/Fun";
 import Resume from "./pages/Resume";
 import Footer from "./pages/Footer";
 // import Footer from "./components/Footer";
@@ -27,10 +27,10 @@ export default function PortfolioContainer() {
     if (currentPage === "Contact") {
       return <Contact />;
     }
-    if (currentPage === "Resume") {
-      return <Resume />;
-    }
-    return <Fun />;
+    // if (currentPage === "Resume") {
+    //   return <Resume />;
+    // }
+    return <Resume />;
   };
 
   const handlePageChange = (page) => setCurrentPage(page);

@@ -9,15 +9,11 @@ function Graphic() {
     <div className="graphic">
       <h1>Graphic Design</h1>
       <h2>Photoshop / Illustrator / XD / Blender</h2>
-      <p>
-        In this example we have added a "plus" sign to each button. When the
-        user clicks on the button, the "plus" sign is replaced with a "minus"
-        sign.
-      </p>
+      <p>I have experience in online promotion, print, and product branding.</p>
 
-      <button className="accordion">Print</button>
+      <button className="accordion">Coming soon...</button>
       <div className="panel">
-        <p>Lorem ipsum dolor sit amet.</p>
+        <p></p>
       </div>
     </div>
   );
