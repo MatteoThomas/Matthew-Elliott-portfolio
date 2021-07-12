@@ -66,14 +66,16 @@ p {
 }
 
 /* About----------------------------------------*/
-
+.about {
+  margin-bottom: 5rem;
+}
 .about img {
   width: auto;
   margin-right: 1rem;
 }
 
 .about-info {
-  width: 15rem;
+  width: 13rem;
   height: 20rem;
   float: right;
 }
@@ -149,7 +151,9 @@ p {
 }
 
 /* Graphic --------------------------------------*/
-
+.graphic {
+  margin-bottom: 6rem;
+}
 /* FORM ------------------------------------------*/
 form {
   font-family: var(--mons);
@@ -319,7 +323,8 @@ button {
   } */
 
   .about-info {
-    width: auto;
+    padding-top: 2rem;
+    width: 20rem;
     height: auto;
     float: none;
   }
@@ -335,13 +340,13 @@ button {
   }
 
   .webdev {
-    width: 100%;
+    width: 85%;
     margin: auto;
   }
 
   .container {
     position: relative;
-    width: 90%;
+    width: 100%;
   }
 
   .short-text {
@@ -352,9 +357,11 @@ button {
   }
 
   .web-image img {
-    width: 100%;
+    width: 95%;
     padding-bottom: 0;
     margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
   }
 
   .web-info {

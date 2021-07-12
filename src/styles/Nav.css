@@ -81,6 +81,14 @@ a:active {
 /*- MEDIA QUERIES ------------------------*/
 
 @media screen and (max-width: 415px) {
+  .dolphin {
+    width: 100% !important;
+    height: 250px !important;
+    background-repeat: none !important;
+    background-position: top !important;
+    margin-right: 2rem;
+  }
+
   .nav {
     margin-top: 0;
     padding-top: 0;
