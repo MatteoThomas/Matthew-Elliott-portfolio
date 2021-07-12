@@ -1,6 +1,6 @@
 :root {
   --dark: rgb(22, 26, 26);
-  --yellow: #eef907ff;
+  --yellow: rgb(211, 235, 103);
   --pink: rgb(197, 86, 104);
   --grey: #ecececff;
   --dela: "Dela Gothic One", cursive;
@@ -8,6 +8,7 @@
 }
 
 .nav {
+  overflow: hidden;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -23,6 +24,11 @@
 /* .nav-item:hover {
   background-color: var(--pink);
   color: var(--dark);
+}
+
+.nav-item:active {
+  background-color: var(--pink);
+  color: var(--dark);
 } */
 
 .about,
@@ -32,6 +38,16 @@
 .resume,
 .fun {
   padding: 2rem;
+}
+
+.nav h1 {
+  color: var(--grey);
+  margin-bottom: 1rem;
+}
+.nav span {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--grey);
+  color: var(--dark);
 }
 
 li {
@@ -65,8 +81,14 @@ a:active {
 /*- MEDIA QUERIES ------------------------*/
 
 @media screen and (max-width: 415px) {
+  .nav {
+    margin-top: 0;
+    padding-top: 0;
+    position: relative;
+  }
+
   .nav-item {
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
   }
   .nav-tabs {
     display: flex;

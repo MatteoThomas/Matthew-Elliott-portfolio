@@ -4,6 +4,9 @@ import "../styles/Nav.css";
 function Nav({ currentPage, handlePageChange }) {
   return (
     <ul className="nav nav-tabs">
+      <h1>
+        Matthew <span>Elliott</span>
+      </h1>
       <li className="nav-item">
         <a
           href="#about"
@@ -59,17 +62,19 @@ function Nav({ currentPage, handlePageChange }) {
           Resume
         </a>
       </li>
-      {/* <li className="nav-item">
-        <a
-          href="#fun"
-          onClick={() => handlePageChange("Fun")}
-          // Check to see if the currentPage is `Fun`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-          className={currentPage === "Fun" ? "nav-link active" : "nav-link"}
-        >
-          Fun
-        </a> 
-      </li>*/}
+      <li className="nav-item"></li>
     </ul>
+
+    // {/* <li className="nav-item">
+    //   <a
+    //     href="#fun"
+    //     onClick={() => handlePageChange("Fun")}
+    //     // Check to see if the currentPage is `Fun`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
+    //     className={currentPage === "Fun" ? "nav-link active" : "nav-link"}
+    //   >
+    //     Fun
+    //   </a>
+    // </li>*/}
   );
 }
 

@@ -1,6 +1,6 @@
 :root {
   --dark: rgb(19, 19, 19);
-  --yellow: rgb(73, 73, 73);
+  --yellow: rgb(193, 223, 87);
   --pink: rgb(197, 86, 104);
   --grey: rgb(216, 213, 213);
   --dela: "Raleway", sans-serif;
@@ -68,7 +68,7 @@ p {
 /* About----------------------------------------*/
 
 .about img {
-  width: 20rem;
+  /* width: 20rem; */
   margin-right: 1rem;
 }
 
@@ -76,6 +76,10 @@ p {
   width: 20rem;
   height: 20rem;
   float: right;
+}
+
+.about p {
+  margin-top: 0;
 }
 
 /* Webdev ----------------------------------------*/
@@ -127,7 +131,7 @@ p {
 }
 
 .web-image img {
-  margin-right: 1.5rem;
+  margin-right: 2.5rem;
   margin-bottom: 2rem;
 }
 
@@ -184,7 +188,7 @@ input[type="submit"] {
   padding-left: 3rem;
 } */
 
-.fun p {
+/* .fun p {
   width: 80%;
 }
 
@@ -262,7 +266,7 @@ input[type="submit"] {
 
 button {
   border: none;
-}
+} */
 
 /* Footer --------------------------------------*/
 
@@ -278,6 +282,7 @@ button {
 
 .footer a {
   align-items: center;
+  padding-right: 1.5rem;
   font-family: var(--mons);
   color: var(--dark);
 }
@@ -287,7 +292,9 @@ button {
   padding-right: 1rem;
 }
 
-@-webkit-keyframes spin {
+/* ANIMATION ------------------------------------*/
+
+/* @-webkit-keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
   }
@@ -303,26 +310,38 @@ button {
   100% {
     transform: rotate(359deg);
   }
-}
+} */
 
 /* MEDIA QUERIES ----------------------------*/
 @media screen and (max-width: 415px) {
-  .nav {
+  /* .nav {
     margin-left: 1rem;
+  } */
+
+  .about-info {
+    width: auto;
+    height: auto;
+    float: none;
   }
 
-  .about {
-    display: flex;
-    flex-direction: column;
+  .about img {
+    /* width: 20rem; */
+    width: 100%;
+    margin-right: 0rem;
+  }
+
+  .about p {
+    margin-top: 0;
+  }
+
+  .webdev {
+    width: 100%;
+    margin: auto;
   }
 
   .container {
     position: relative;
-    width: 95%;
-  }
-
-  .webdev {
-    width: 95%;
+    width: 90%;
   }
 
   .short-text {
@@ -347,7 +366,7 @@ button {
     width: 100%;
   }
 
-  .fun {
+  /* .fun {
     display: flex;
     flex-direction: column;
     width: 95vw;
@@ -377,9 +396,22 @@ button {
     width: 10%;
     height: 20%;
     margin: 1px;
-  }
+  } */
+
   .footer {
     display: flex;
-    width: 100vw;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .footer a {
+    padding: auto;
+    font-family: var(--mons);
+    color: var(--dark);
+  }
+
+  .footer img {
+    padding: auto;
+    width: 30px;
   }
 }

@@ -12,7 +12,7 @@ import Footer from "./pages/Footer";
 // import Footer from "./components/Footer";
 
 export default function PortfolioContainer() {
-  const [currentPage, setCurrentPage] = useState("Web Development");
+  const [currentPage, setCurrentPage] = useState("About Me");
 
   const renderPage = () => {
     if (currentPage === "About Me") {
