@@ -68,12 +68,12 @@ p {
 /* About----------------------------------------*/
 
 .about img {
-  /* width: 20rem; */
+  width: auto;
   margin-right: 1rem;
 }
 
 .about-info {
-  width: 20rem;
+  width: 15rem;
   height: 20rem;
   float: right;
 }
