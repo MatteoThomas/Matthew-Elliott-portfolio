@@ -71,7 +71,8 @@ p {
 }
 .about img {
   width: auto;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
+  mix-blend-mode: screen;
 }
 
 .about-info {
@@ -117,7 +118,6 @@ p {
 .container:hover .overlay {
   opacity: 1;
 }
-
 .web-info {
   color: var(--grey);
   position: absolute;
@@ -130,6 +130,10 @@ p {
 
 .short-text {
   display: none;
+}
+
+.webdev img {
+  margin: 1rem;
 }
 
 .web-image img {
