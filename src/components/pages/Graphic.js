@@ -8,7 +8,7 @@ function Graphic() {
   return (
     <div className="graphic">
       <h1>Graphic Design</h1>
-      <h2>Photoshop / Illustrator / XD / Blender</h2>
+      <h2>Photoshop / Illustrator / Blender</h2>
       <p>I have experience in online promotion, print, and product branding.</p>
 
       <button className="accordion">Gallery coming soon...</button>
