@@ -38,7 +38,7 @@ function Webdev() {
       img: codequiz,
       desc: "is one of my first apps that uses Javascript to quiz users.",
       github: "https://github.com/MatteoThomas/cool-code-quiz",
-      link: "https://github.com/MatteoThomas/cool-code-quiz",
+      link: "https://matteothomas.github.io/cool-code-quiz/",
     },
     {
       name: "Workday",
