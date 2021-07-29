@@ -11,7 +11,9 @@ function Graphic() {
       <h2>Photoshop / Illustrator / Blender</h2>
       <p>I have experience in online promotion, print, and product branding.</p>
 
-      <button className="accordion">Gallery coming soon...</button>
+      <button className="accordion">
+        <a href="https://matteoelliott.myportfolio.com/work">Check it out!</a>
+      </button>
       <div className="panel">
         <p></p>
       </div>
