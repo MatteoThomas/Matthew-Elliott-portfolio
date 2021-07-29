@@ -12,7 +12,9 @@ function Graphic() {
       <p>I have experience in online promotion, print, and product branding.</p>
 
       <button className="accordion">
-        <a href="https://matteoelliott.myportfolio.com/work">Check it out!</a>
+        <a href="https://matteoelliott.myportfolio.com/work">
+          Check it out here!
+        </a>
       </button>
       <div className="panel">
         <p></p>

@@ -1,6 +1,6 @@
 import React from "react";
 import "../../styles/Components.css";
-import resumepdf from "../../img/Matthew_Elliott_Resume.png";
+import resumepdf from "../../img/Matthew_Elliott_res.png";
 
 export default function Resume() {
   // All functional components must have a return method that contains JSX.

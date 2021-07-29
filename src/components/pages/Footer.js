@@ -1,11 +1,11 @@
 import React from "react";
-import email from "../../img/email_icon2.svg";
-import instagram from "../../img/instagram_icon.svg";
-import github from "../../img/github_icon.svg";
+import email from "../../img/email_icon2.png";
+import instagram from "../../img/instagram_icon.png";
+import github from "../../img/github_icon.png";
 import linkedin from "../../img/linkedin_icon.png";
+import "../../styles/Components.css";
+
 export default function Footer() {
-  // All functional components must have a return method that contains JSX.
-  // We return all the JSX inside a parent element with a className of "container".
   return (
     <div className="footer">
       <a href="mailto:matt.ell@pm.me">

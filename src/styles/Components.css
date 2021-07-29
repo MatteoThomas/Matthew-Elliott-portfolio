@@ -82,7 +82,16 @@ p {
 }
 
 .about p {
-  margin-top: 0;
+  margin-top: 1rem;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skills button {
+  margin: 0.2rem;
 }
 
 /* Webdev ----------------------------------------*/
@@ -133,7 +142,7 @@ p {
 }
 
 .webdev img {
-  margin: 1rem;
+  margin: 0rem;
 }
 
 .web-image img {
@@ -337,10 +346,6 @@ button {
     /* width: 20rem; */
     width: 100%;
     margin-right: 0rem;
-  }
-
-  .about p {
-    margin-top: 0;
   }
 
   .webdev {

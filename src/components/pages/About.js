@@ -8,12 +8,18 @@ function About() {
       <h1>About Me</h1>
       <img src={headshot} alt="avatar" />
       <div className="about-info">
+        <div className="skills">
+          <button>CSS</button>
+          <button>JavaScript</button> <button>NodeJS</button>
+          <button>Bootstrap</button>
+          <button>React</button>
+        </div>
         <p>
-          I'm currently enrolled in a full-stack web development boot camp at
-          the University of Denver. My background is in graphic design, music
-          production and gaming (playing, not making yet...). I look forward to
-          combining all these talents to create unique and memorable experiences
-          for the masses.
+          I'm a Full Stack Web Developer and Graphic Designer building websites
+          from mockup to rollout. Able to work independently and collaborate
+          with teams I'm prepared to tackle any and all challenges and look
+          forward to combining all these talents to create unique and memorable
+          experiences for the masses.
         </p>
       </div>
     </div>
