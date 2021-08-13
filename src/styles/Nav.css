@@ -21,12 +21,12 @@
   padding: 2rem;
 }
 
-/* .nav-item:hover {
-  background-color: var(--pink);
+.nav-item:hover {
+  background-color: var(--grey);
   color: var(--dark);
 }
 
-.nav-item:active {
+/* .nav-item:active {
   background-color: var(--pink);
   color: var(--dark);
 } */

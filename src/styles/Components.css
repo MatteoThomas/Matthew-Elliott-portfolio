@@ -33,11 +33,11 @@ button {
   background-color: var(--pink);
   color: var(--grey);
 }
-
+/* 
 button:hover {
   background-color: var(--grey);
   color: var(--dark);
-}
+} */
 
 img {
   border-radius: 2px;
@@ -167,10 +167,11 @@ p {
 .graphic {
   margin-bottom: 6rem;
 }
-/* FORM ------------------------------------------*/
+/* Contact ------------------------------------------*/
 form {
   font-family: var(--mons);
   color: var(--grey);
+  margin-bottom: 2rem;
 }
 
 input[type="text"],
@@ -189,14 +190,12 @@ input[type="text"],
   outline: none;
 }
 
-input[type="button"],
 input[type="submit"] {
-  background-color: var(--grey);
+  background-color: var(--pink);
   border: none;
-  color: var(--dark);
-  padding: 16px 32px;
+  color: var(--grey);
+  margin: 0.2rem;
   text-decoration: none;
-  margin: 4px 2px;
   cursor: pointer;
 }
 

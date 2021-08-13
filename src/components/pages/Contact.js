@@ -17,6 +17,8 @@ export default function ContactUs() {
       .then(
         (result) => {
           console.log(result.text);
+          alert("Message Sent");
+          document.querySelector("form").reset();
         },
         (error) => {
           console.log(error.text);
@@ -26,14 +28,18 @@ export default function ContactUs() {
 
   return (
     <form className="contact-form" onSubmit={sendEmail}>
-      <input type="hidden" name="contact_number" />
       <label>Name</label>
-      <input type="text" name="user_name" />
+      <input type="text" name="from_name" />
+
       <label>Email</label>
       <input type="email" name="user_email" />
+
       <label>Message</label>
-      <textarea name="message" />
-      <input type="submit" value="Send" />
+      <input type="text" name="message" />
+
+      <button>
+        <input type="submit" value="Send" />
+      </button>
     </form>
   );
 }

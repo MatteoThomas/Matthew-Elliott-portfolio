@@ -16,11 +16,11 @@ function About() {
           <button>React</button>
         </div>
         <p>
-          I'm a Full Stack Web Developer and Graphic Designer building websites
-          from idea to address. Able to work independently and collaborate with
-          teams I'm prepared to tackle any and all challenges and look forward
-          to combining all these talents to create unique and memorable
-          experiences for the masses.
+          I'm a recent Full Stack Web Developer boot camp graduate and Graphic
+          Designer, able to work independently and collaborate with teams I'm
+          prepared to tackle any and all challenges and look forward to
+          combining all these talents to create unique and memorable experiences
+          for the masses.
         </p>
       </div>
     </div>
