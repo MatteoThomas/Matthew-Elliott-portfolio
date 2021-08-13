@@ -7,6 +7,11 @@
   --mons: "Montserrat", sans-serif;
 }
 
+.dolphin img {
+  width: 10rem;
+  height: 5rem;
+}
+
 .nav {
   overflow: hidden;
   position: -webkit-sticky;
@@ -21,15 +26,10 @@
   padding: 2rem;
 }
 
-.nav-item:hover {
+a.nav-link.active {
   background-color: var(--grey);
   color: var(--dark);
 }
-
-/* .nav-item:active {
-  background-color: var(--pink);
-  color: var(--dark);
-} */
 
 .about,
 .webdev,
@@ -83,7 +83,7 @@ a:active {
 @media screen and (max-width: 415px) {
   .dolphin {
     width: 100% !important;
-    height: 250px !important;
+    height: 300px !important;
     background-repeat: none !important;
     background-position: top !important;
     margin-right: 2rem;

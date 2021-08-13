@@ -330,10 +330,6 @@ button {
 
 /* MEDIA QUERIES ----------------------------*/
 @media screen and (max-width: 415px) {
-  /* .nav {
-    margin-left: 1rem;
-  } */
-
   .about-info {
     padding-top: 2rem;
     width: 20rem;
@@ -380,38 +376,6 @@ button {
   .resume img {
     width: 100%;
   }
-
-  /* .fun {
-    display: flex;
-    flex-direction: column;
-    width: 95vw;
-  }
-
-  .pad {
-    margin: auto;
-    font-family: var(--mons);
-    width: 75%;
-    display: flex;
-    flex-wrap: wrap;
-    line-height: 2rem;
-  }
-
-  .box {
-    border-radius: 2px;
-    width: 10%;
-    height: 10%;
-    margin: 1px;
-    font-size: 1rem;
-  }
-  .note-wrapper {
-    margin: 0.5rem;
-  }
-  .note {
-    border-radius: 2px;
-    width: 10%;
-    height: 20%;
-    margin: 1px;
-  } */
 
   .footer {
     display: flex;
