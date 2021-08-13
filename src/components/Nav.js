@@ -9,7 +9,7 @@ function Nav({ currentPage, handlePageChange }) {
         className="dolphin"
         style={{
           backgroundImage: `url(${dolphin})`,
-          height: "450px",
+          height: "500px",
           width: "670px",
           backgroundAttachment: "fixed",
           backgroundPosition: "center",

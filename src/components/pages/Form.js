@@ -1,46 +1,66 @@
 import React from "react";
+import { init } from "emailjs-com";
 
+init("user_iwbCAENbu4RyZEHcbrk1W");
 class Form extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      value: this,
-    };
+    this.state = { feedback: "", name: "Name", email: "email@example.com" };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  render() {
+    return (
+      <form className="test-mailing">
+        <h1>Let's see if it works</h1>
+        <div>
+          <textarea
+            id="test-mailing"
+            name="test-mailing"
+            onChange={this.handleChange}
+            placeholder="Post some lorem ipsum here"
+            required
+            value={this.state.feedback}
+            style={{ width: "100%", height: "150px" }}
+          />
+        </div>
+        <input
+          type="button"
+          value="Submit"
+          className="btn btn--submit"
+          onClick={this.handleSubmit}
+        />
+      </form>
+    );
+  }
   handleChange(event) {
-    this.setState({
-      value: event.target.value,
-    });
+    this.setState({ feedback: event.target.value });
   }
 
   handleSubmit(event) {
-    alert("Thanks for the input!");
-    event.preventDefault();
+    const templateId = "template_id";
+
+    this.sendFeedback(templateId, {
+      feedback: this.state.feedback,
+      name: this.state.name,
+      email: this.state.email,
+    });
   }
 
-  render() {
-    return (
-      <form
-        method="post"
-        action="subscriberform.php"
-        onSubmit={this.handleSubmit}
-      >
-        <label>
-          Name:
-          <input type="text" name="name" required />
-          Message:
-          <input type="text" name="message" required />
-          Email:
-          <input type="email" name="email" required />
-          Website: (optional)
-          <input type="text" name="website" />
-        </label>
-        <input type="submit" value="submit" />
-      </form>
-    );
+  sendFeedback(templateId, variables) {
+    window.emailjs
+      .send("gmail", templateId, variables)
+      .then((res) => {
+        console.log("Email successfully sent!");
+      })
+      // Handle errors here however you like, or use a React error boundary
+      .catch((err) =>
+        console.error(
+          "Oh well, you failed. Here some thoughts on the error that occured:",
+          err
+        )
+      );
   }
 }
 export default Form;
