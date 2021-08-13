@@ -6,7 +6,7 @@ I created this app with React. I didn't use any UI kits for the look, just good 
 
 ## Links
 
-[Deployed Link](https://matthew-elliott-portfolio.netlify.app/)
+[Deployed Link](https://melliott.co/)
 
 [Github Repo](https://github.com/MatteoThomas/portfolio6)
 
