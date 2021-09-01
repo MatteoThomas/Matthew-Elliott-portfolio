@@ -3,6 +3,7 @@ import React from "react";
 import "../../styles/Components.css";
 
 import tripr from "../../img/tripr2.png";
+import pd from "../../img/photodrop_screenshot.png";
 import gitmusic from "../../img/gitmusic.png";
 import myteam from "../../img/myteam.png";
 import codequiz from "../../img/codequiz.png";
@@ -20,10 +21,17 @@ function Webdev() {
       link: "https://tripr-project2.herokuapp.com/",
     },
     {
+      name: "PhotoDrop",
+      img: pd,
+      desc: "is a photo sharing project using React, Express, Cloudinary and more.",
+      github: "https://github.com/k-ryanhunt/Project-2-Travel-Green",
+      link: "https://photo-drop2.herokuapp.com/",
+    },
+    {
       name: "git.Music",
       img: gitmusic,
       desc: "is a music finding app that relies on the Discogs API for artist information.",
-      github: "https://github.com/RLacer/Git-Music-Now-Project",
+      github: "https://github.com/MatteoThomas/photo-drop",
       link: "https://rlacer.github.io/Git-Music-Now-Project",
     },
     {
