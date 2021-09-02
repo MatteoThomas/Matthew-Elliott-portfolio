@@ -1,11 +1,12 @@
 import React from "react";
 import "../styles/Nav.css";
-import dolphin from "../img/dolphin_portfolio_sm.svg";
+// import dolphin from "../img/dolphin_portfolio_sm.svg";
 
 function Nav({ currentPage, handlePageChange }) {
   return (
     <div className="parent">
-      <div
+      {/* dolphin landing */}
+      {/* <div
         className="dolphin"
         style={{
           backgroundImage: `url(${dolphin})`,
@@ -17,8 +18,8 @@ function Nav({ currentPage, handlePageChange }) {
           backgroundRepeat: "none",
         }}
       >
-        {/* <img src={dolphin} alt="dolphin" /> */}
-      </div>
+
+      </div> */}
       <div className="nav">
         <ul className="nav nav-tabs">
           <h1>

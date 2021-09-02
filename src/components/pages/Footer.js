@@ -20,9 +20,9 @@ export default function Footer() {
         <img src={linkedin} alt="linkedin" />
       </a>
 
-      <a href="https://www.instagram.com/mattycakes512/">
+      {/* <a href="https://www.instagram.com/mattycakes512/">
         <img src={instagram} alt="instagram" />
-      </a>
+      </a> */}
     </div>
   );
 }
