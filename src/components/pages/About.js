@@ -17,7 +17,7 @@ function About() {
         </p>
         <p>
           I'm a recent Full Stack Web Developer boot camp graduate and Graphic
-          Designer, I'm prepared to tackle any and all challenges and look
+          Designer. I'm prepared to tackle any and all challenges and look
           forward to combining all my talents to create unique and memorable
           experiences for the masses.
         </p>
@@ -26,11 +26,11 @@ function About() {
           <button>CSS</button>
           <button>JavaScript</button>
           <button>NodeJS</button>
-          <button>Bootstrap</button>
+          <button>HTML</button>
           <button>React</button>
         </div>
       </div>
-      <img src={headshot} alt="avatar" />
+      <img id="headshot" src={headshot} alt="avatar" />
     </div>
   );
 }

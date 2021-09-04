@@ -1,5 +1,5 @@
 :root {
-  --dark: rgb(98, 122, 126);
+  --dark: rgb(87, 104, 107);
   --yellow: rgb(193, 223, 87);
   --pink: rgb(255, 83, 126);
   --grey: rgb(255, 255, 255);
@@ -40,7 +40,7 @@ img {
 
 h1 {
   font-family: var(--dela);
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
   font-size: 4rem;
   line-height: 3rem;
   letter-spacing: 0.1rem;
@@ -62,24 +62,25 @@ p {
 
 /* About----------------------------------------*/
 .about {
-  margin-bottom: 5rem;
+  margin-bottom: 15rem;
 }
+
+#headshot {
+  width: 17rem;
+}
+
 .about img {
-  width: auto;
-  margin-right: 0.5rem;
   mix-blend-mode: screen;
 }
 
 .about-info {
   width: 15rem;
   height: 20rem;
-  float: right;
+  float: left;
 }
 
 .about-info p {
   padding-top: 0;
-  margin-top: 0rem;
-  margin-bottom: 1rem;
 }
 
 .about span {
@@ -92,7 +93,9 @@ p {
 }
 
 .skills button {
-  margin: 0.2rem;
+  margin-right: 0.3rem;
+  margin-bottom: 0.3rem;
+  color: var(--grey);
 }
 
 /* Webdev ----------------------------------------*/
@@ -102,12 +105,15 @@ p {
 }
 
 .container {
+  display: flex;
   position: relative;
   width: 50%;
 }
 
+.projects {
+}
+
 .image {
-  display: block;
   width: 100%;
   height: auto;
 }
@@ -118,7 +124,7 @@ p {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 100%;
+  height: 89%;
   width: 100%;
   opacity: 0;
   transition: 0.8s ease;
@@ -132,6 +138,7 @@ p {
 .container:hover .overlay {
   opacity: 1;
 }
+
 .web-info {
   color: var(--grey);
   position: absolute;
@@ -183,6 +190,11 @@ form {
   margin-bottom: 2rem;
 }
 
+.contact-form h1 {
+  color: var(--pink);
+  margin-top: 5rem;
+}
+
 input[type="text"],
 [type="email"] {
   font-family: var(--dela);
@@ -206,6 +218,11 @@ input[type="submit"] {
   margin: 0.2rem;
   text-decoration: none;
   cursor: pointer;
+}
+/* Resume --------------------------------------*/
+
+.resume img {
+  width: 40rem;
 }
 
 /* Footer --------------------------------------*/
@@ -234,17 +251,21 @@ input[type="submit"] {
 
 /* MEDIA QUERIES ----------------------------*/
 @media screen and (max-width: 415px) {
+  .about {
+    margin-bottom: 3rem;
+  }
+
   .about-info {
     padding-top: 0rem;
     width: 20rem;
     height: auto;
     float: none;
+    margin-bottom: 3rem;
+    width: 90%;
   }
 
   .about img {
-    /* width: 20rem; */
     width: 100%;
-    margin-right: 0rem;
   }
 
   .webdev {
@@ -277,6 +298,14 @@ input[type="submit"] {
     margin-left: 0;
     height: 15rem;
   }
+
+  form {
+    font-family: var(--mons);
+    color: var(--grey);
+    width: 85%;
+    margin-left: 1rem;
+  }
+
   .resume img {
     width: 100%;
   }

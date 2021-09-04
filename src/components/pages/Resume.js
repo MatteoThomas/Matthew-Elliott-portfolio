@@ -14,7 +14,7 @@ export default function Resume() {
           PDF Link
         </a>
       </p>
-      <img src={resumepdf} alt="resume" />
+      <img id="resumeImg" src={resumepdf} alt="resume" />
     </div>
   );
 }
