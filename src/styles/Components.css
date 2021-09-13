@@ -62,15 +62,36 @@ p {
 
 /* About----------------------------------------*/
 .about {
+  width: 1000px;
   margin-bottom: 15rem;
 }
 
 #headshot {
   width: 17rem;
+  position: relative;
+  animation-name: example;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes example {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+
+  50% {
+    left: 10px;
+    top: 0px;
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+  }
 }
 
 .about img {
   mix-blend-mode: screen;
+  padding-left: 2rem;
 }
 
 .about-info {
@@ -101,16 +122,16 @@ p {
 /* Webdev ----------------------------------------*/
 
 .webdev {
-  width: 600px;
-}
-
-.container {
-  display: flex;
-  position: relative;
-  width: 50%;
+  width: 1000px;
 }
 
 .projects {
+  width: 400px;
+}
+
+.container {
+  position: relative;
+  width: 95%;
 }
 
 .image {
@@ -124,7 +145,7 @@ p {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 89%;
+  height: 91%;
   width: 100%;
   opacity: 0;
   transition: 0.8s ease;
@@ -177,6 +198,7 @@ p {
 
 /* Graphic --------------------------------------*/
 .graphic {
+  width: 1000px;
   margin-bottom: 6rem;
 }
 
@@ -185,6 +207,8 @@ p {
 }
 /* Contact ------------------------------------------*/
 form {
+  margin-left: 0rem;
+  width: 1000px;
   font-family: var(--mons);
   color: var(--grey);
   margin-bottom: 2rem;
@@ -192,7 +216,6 @@ form {
 
 .contact-form h1 {
   color: var(--pink);
-  margin-top: 5rem;
 }
 
 input[type="text"],
@@ -220,14 +243,18 @@ input[type="submit"] {
   cursor: pointer;
 }
 /* Resume --------------------------------------*/
+.resume {
+  width: 1000px;
+}
 
 .resume img {
-  width: 40rem;
+  width: 80%;
 }
 
 /* Footer --------------------------------------*/
 
 .footer {
+  width: 1000px;
   display: flex;
   flex-shrink: 0;
   align-items: baseline;
@@ -251,8 +278,10 @@ input[type="submit"] {
 
 /* MEDIA QUERIES ----------------------------*/
 @media screen and (max-width: 415px) {
+  /* about ----------------------------*/
   .about {
     margin-bottom: 3rem;
+    width: 100%;
   }
 
   .about-info {
@@ -265,8 +294,11 @@ input[type="submit"] {
   }
 
   .about img {
+    padding-left: 2rem;
     width: 100%;
   }
+
+  /* web dev ----------------------------*/
 
   .webdev {
     width: 85%;
@@ -299,6 +331,14 @@ input[type="submit"] {
     height: 15rem;
   }
 
+  /*graphic d ----------------------------*/
+  .graphic {
+    width: 100%;
+    margin-right: 1rem;
+  }
+
+  /*form ----------------------------*/
+
   form {
     font-family: var(--mons);
     color: var(--grey);
@@ -306,9 +346,16 @@ input[type="submit"] {
     margin-left: 1rem;
   }
 
-  .resume img {
+  /* resume ----------------------------*/
+
+  .resume {
     width: 100%;
   }
+  .resume img {
+    width: 80%;
+  }
+
+  /* footer ----------------------------*/
 
   .footer {
     display: flex;

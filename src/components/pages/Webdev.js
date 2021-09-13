@@ -60,12 +60,12 @@ function Webdev() {
   return (
     <div className="webdev">
       <h1>
-        <span className="full-text">Web Development</span>
-        <span className="short-text">Web Dev</span>
+        {/* <span className="full-text">Web Development</span>
+        <span className="short-text">Web Dev</span> */}
       </h1>
 
       {project.map((item, i) => (
-        <div key={i}>
+        <div key={i} className="big">
           <div className="projects">
             <div className="container">
               <div className="web-image">

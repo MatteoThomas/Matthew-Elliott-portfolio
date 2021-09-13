@@ -7,11 +7,14 @@
   --mons: "Montserrat", sans-serif;
 }
 
-.dolphin img {
+/* .dolphin img {
   width: 10rem;
   height: 5rem;
-}
+} */
 
+a {
+  font-size: 1.5rem;
+}
 .nav {
   overflow: hidden;
   position: -webkit-sticky;
@@ -27,8 +30,8 @@
 }
 
 a.nav-link.active {
-  background-color: var(--grey);
-  color: var(--dark);
+  background-color: var(--pink);
+  color: var(--grey);
 }
 
 .about,
