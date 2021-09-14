@@ -15,6 +15,9 @@ body {
 body {
   color: var(--pink);
   background-color: var(--dark);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .portfolioContainer {
@@ -202,8 +205,20 @@ p {
   margin-bottom: 6rem;
 }
 
+.accordion {
+  margin: 0rem 1rem 1rem 0rem;
+}
+
 .accordion a {
+  font-size: 0.9rem;
   color: var(--grey);
+  margin: 1rem;
+}
+#cards,
+#crowlers,
+#recovery,
+#records {
+  width: 800px;
 }
 /* Contact ------------------------------------------*/
 form {
@@ -261,7 +276,7 @@ input[type="submit"] {
   background-color: var(--grey);
   color: var(--dark);
   padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  margin-top: auto;
 }
 
 .footer a {
@@ -281,7 +296,8 @@ input[type="submit"] {
   /* about ----------------------------*/
   .about {
     margin-bottom: 3rem;
-    width: 100%;
+    width: 90%;
+    padding-left: 0;
   }
 
   .about-info {
@@ -299,15 +315,16 @@ input[type="submit"] {
   }
 
   /* web dev ----------------------------*/
-
+  .projects {
+    width: 300px;
+  }
   .webdev {
-    width: 85%;
-    margin: auto;
+    width: 80%;
   }
 
   .container {
     position: relative;
-    width: 100%;
+    width: 90%;
   }
 
   .short-text {
@@ -333,7 +350,7 @@ input[type="submit"] {
 
   /*graphic d ----------------------------*/
   .graphic {
-    width: 100%;
+    width: 90%;
     margin-right: 1rem;
   }
 
@@ -361,6 +378,8 @@ input[type="submit"] {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
+    position: absolute;
+    bottom: 0;
   }
 
   .footer a {
