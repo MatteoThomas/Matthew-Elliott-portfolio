@@ -4,6 +4,7 @@ import crowlers from "../../img/crowlers.png";
 import cards from "../../img/LOFT718.png";
 import records from "../../img/wpRECORDS.jpg";
 import recovery from "../../img/recoverybanner.jpg";
+import searsucker from "../../img/searsucker.png";
 
 function Graphic() {
   return (
@@ -17,12 +18,21 @@ function Graphic() {
           See my portfolio here
         </a>
       </button>
-
-      <img id="crowlers" src={crowlers} alt="crowlers" />
-      <img id="records" src={records} alt="records" />
-      <img id="recovery" src={recovery} alt="recovery banner" />
-      <img id="cards" src={cards} alt="crowlers" />
-
+      <a href="https://matteoelliott.myportfolio.com/gd">
+        <img id="crowlers" src={crowlers} alt="crowlers" />
+      </a>
+      <a href="https://matteoelliott.myportfolio.com/whiskey-pickle">
+        <img id="records" src={records} alt="records" />
+      </a>
+      <a href="https://matteoelliott.myportfolio.com/recovery">
+        <img id="recovery" src={recovery} alt="recovery banner" />
+      </a>
+      <a href="https://matteoelliott.myportfolio.com/loft-718">
+        <img id="cards" src={cards} alt="crowlers" />
+      </a>
+      <a href="https://matteoelliott.myportfolio.com/searsucker">
+        <img id="searsucker" src={searsucker} alt="searcucker" />
+      </a>
       <div className="panel">
         <p></p>
       </div>
