@@ -9,11 +9,13 @@ export default function Resume() {
   return (
     <div className="resume">
       {/* <h1>Resume</h1> */}
-      <p>
-        <a href="https://drive.google.com/file/d/1YGZkx19VwBIGdqtN45DTFBAGYCLCV0CG/view?usp=sharing">
-          PDF Link
-        </a>
-      </p>
+      <div className="skills">
+        <p>
+          <a href="https://drive.google.com/file/d/1YGZkx19VwBIGdqtN45DTFBAGYCLCV0CG/view?usp=sharing">
+            <button>PDF Link</button>
+          </a>
+        </p>
+      </div>
       <img id="resumeImg" src={resumepdf} alt="resume" />
     </div>
   );
