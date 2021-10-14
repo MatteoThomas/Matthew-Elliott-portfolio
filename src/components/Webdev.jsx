@@ -1,17 +1,52 @@
 import React from "react";
 
-import "../../styles/Components.css";
+import styled from "styled-components";
 
-import tripr from "../../img/tripr2.png";
-import pd from "../../img/photodrop_screenshot.png";
-import gitmusic from "../../img/gitmusic.png";
-import myteam from "../../img/myteam.png";
-import codequiz from "../../img/codequiz.png";
-import workday from "../../img/workday.png";
-import link from "../../img/link_icon.png";
-import github from "../../img/github_icon.png";
+import tripr from "../img/tripr2.png";
+import pd from "../img/photodrop_screenshot.png";
+import gitmusic from "../img/gitmusic.png";
+import myteam from "../img/myteam.png";
+import codequiz from "../img/codequiz.png";
+import workday from "../img/workday.png";
+import link from "../img/link_icon.png";
+import github from "../img/github_icon.png";
 
-function Webdev() {
+const Container = styled.div`
+
+`
+const Wrapper = styled.div`
+display: flex;
+background-color: #e7e7e7;
+justify-content: space-between;
+height:60rem;
+width:100vw;
+`
+
+const Left = styled.div`
+
+`
+
+const Title = styled.div`
+    position: relative;
+    top: 0rem;
+    left: 6rem;
+    /* background-color: pink; */
+    transform:rotate(270deg);
+    transform-origin:(0 0);
+`
+
+const Projects = styled.div`
+display: flex;
+flex-wrap: wrap;
+/* background-color:lightblue; */
+width: 80rem;
+margin-left: 0rem;
+`
+const Right = styled.div`
+
+`
+
+const Webdev = () => {
   const project = [
     {
       name: "tripr.",
@@ -58,12 +93,16 @@ function Webdev() {
   ];
 
   return (
-    <div className="webdev">
-      <h1>
-        {/* <span className="full-text">Web Development</span>
-        <span className="short-text">Web Dev</span> */}
-      </h1>
+    
+    <div>
+      <Container>
+        <Wrapper>
+          <Left></Left>
+    <Title>
+        <h1>Web<br/>Development</h1>
+      </Title>
 
+      <Projects>
       {project.map((item, i) => (
         <div key={i} className="big">
           <div className="projects">
@@ -86,6 +125,10 @@ function Webdev() {
           </div>
         </div>
       ))}
+      </Projects>
+      <Right></Right>
+      </Wrapper>
+      </Container>
     </div>
   );
 }

@@ -1,10 +1,8 @@
 :root {
   --dark: rgb(22, 26, 26);
   --yellow: rgb(211, 235, 103);
-  --pink: rgb(197, 86, 104);
+  --pink: rgb(228, 69, 96);
   --grey: #ecececff;
-  --dela: "Dela Gothic One", cursive;
-  --mons: "Montserrat", sans-serif;
 }
 
 /* .dolphin img {

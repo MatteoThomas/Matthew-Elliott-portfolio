@@ -1,8 +1,9 @@
 import React from "react";
-import "../../styles/Components.css";
-import resumepdf from "../../img/Matthew_Elliott_res.png";
+import "../styles/Components.css";
+import resumepdf from "../img/Matthew_Elliott_res.png";
+import styled from "styled-components";
 
-export default function Resume() {
+const Resume = () => {
   // All functional components must have a return method that contains JSX.
   // We return all the JSX inside a parent element with a className of "container".
 
@@ -11,7 +12,7 @@ export default function Resume() {
       {/* <h1>Resume</h1> */}
       <div className="skills">
         <p>
-          <a href="https://drive.google.com/file/d/1YGZkx19VwBIGdqtN45DTFBAGYCLCV0CG/view?usp=sharing">
+          <a href="https://docs.google.com/document/d/1yIj3v-auWwRtl1c8PikZNHBjr5PvkoXtcOY7j9OFkPs/edit?usp=sharing">
             <button>PDF Link</button>
           </a>
         </p>
@@ -20,3 +21,5 @@ export default function Resume() {
     </div>
   );
 }
+
+export default Resume

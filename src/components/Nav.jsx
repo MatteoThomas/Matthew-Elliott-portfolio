@@ -1,31 +1,58 @@
 import React from "react";
-import "../styles/Nav.css";
-// import dolphin from "../img/dolphin_portfolio_sm.svg";
+import styled from "styled-components";
+import GlobalStyles from '../GlobalStyles';
 
-function Nav({ currentPage, handlePageChange }) {
+const Container = styled.div`
+
+`
+const Wrapper = styled.div`
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+`;
+
+
+const Left = styled.div`
+
+`
+
+const Title = styled.h2`
+    color: black;
+    font-family: 'Noto Sans Mono', monospace;
+    font-size: 1rem;
+`
+const Center = styled.div`
+`
+
+const Nav = styled.div`
+display: flex;
+`
+
+const NavItem = styled.div`
+margin: 0rem 1rem 0rem 1rem;
+`
+
+
+const Right = styled.div`
+`
+
+
+const Navbar = ({ currentPage, handlePageChange }) => {
   return (
-    <div className="parent">
-      {/* dolphin landing */}
-      {/* <div
-        className="dolphin"
-        style={{
-          backgroundImage: `url(${dolphin})`,
-          height: "500px",
-          width: "670px",
-          backgroundAttachment: "fixed",
-          backgroundPosition: "center",
-          backgroundSize: "contain",
-          backgroundRepeat: "none",
-        }}
-      >
+   
+    <Container>
+     <Wrapper>
+  
+           <Title>
+            Matthew Elliott
+          </Title>
+     
+    
 
-      </div> */}
-      <div className="nav">
-        <ul className="nav nav-tabs">
-          <h1>
-            Matthew <span>Elliott</span>
-          </h1>
-          <li className="nav-item">
+      <Nav>
+
+          <NavItem>
             <a
               href="#about"
               onClick={() => handlePageChange("About Me")}
@@ -35,8 +62,8 @@ function Nav({ currentPage, handlePageChange }) {
             >
               About Me
             </a>
-          </li>
-          <li className="nav-item">
+          </NavItem>
+          <NavItem>
             <a
               href="#webdev"
               onClick={() => handlePageChange("Web Development")}
@@ -48,8 +75,8 @@ function Nav({ currentPage, handlePageChange }) {
             >
               Web Development
             </a>
-          </li>
-          <li className="nav-item">
+          </NavItem>
+          <NavItem>
             <a
               href="#graphic"
               onClick={() => handlePageChange("Graphic Design")}
@@ -61,8 +88,8 @@ function Nav({ currentPage, handlePageChange }) {
             >
               Graphic Design
             </a>
-          </li>
-          <li className="nav-item">
+          </NavItem>
+          <NavItem>
             <a
               href="#resume"
               onClick={() => handlePageChange("Resume")}
@@ -72,8 +99,8 @@ function Nav({ currentPage, handlePageChange }) {
             >
               Resume
             </a>
-          </li>
-          <li className="nav-item">
+          </NavItem>
+          <NavItem>
             <a
               href="#contact"
               onClick={() => handlePageChange("Contact")}
@@ -83,11 +110,20 @@ function Nav({ currentPage, handlePageChange }) {
             >
               Contact
             </a>
-          </li>
-        </ul>
-      </div>
-    </div>
+          </NavItem>
+       
+
+        </Nav>
+
+        
+
+!
+  
+        </Wrapper>
+      </Container>
+      
+   
   );
 }
 
-export default Nav;
+export default Navbar;
