@@ -6,18 +6,18 @@
 }
 
 html,
-body {
+/* body {
   height: 100%;
-}
+} */
 
-.portfolioContainer {
+/* .portfolioContainer {
   background-color: var(--dark);
   color: var(--pink);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
+} */
 
 button {
   border: none;
@@ -119,20 +119,20 @@ p {
   display: flex;
   flex-wrap: wrap;
 } */
-
+/* 
 .projects {
   width: 400px;
 }
 
-.container {
+/* .container {
   position: relative;
   width: 95%;
-}
+} */
 
-.image {
+/* .image {
   width: 100%;
   height: auto;
-}
+}  */
 
 .overlay {
   position: absolute;

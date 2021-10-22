@@ -5,45 +5,82 @@ import styled from "styled-components";
 import tripr from "../img/tripr2.png";
 import pd from "../img/photodrop_screenshot.png";
 import gitmusic from "../img/gitmusic.png";
-import myteam from "../img/myteam.png";
-import codequiz from "../img/codequiz.png";
-import workday from "../img/workday.png";
+// import myteam from "../img/myteam.png";
+// import codequiz from "../img/codequiz.png";
+// import workday from "../img/workday.png";
 import link from "../img/link_icon.png";
 import github from "../img/github_icon.png";
 
+
+// font-family: 'Raleway', sans-serif;
+// font-family: 'Syne', sans-serif;
+
 const Container = styled.div`
-
+background-color:#dfb9b9;
+  height: fit-content;
+  width: 100vw;
+  
 `
+
 const Wrapper = styled.div`
-display: flex;
-background-color: #e7e7e7;
-justify-content: space-between;
-height:60rem;
-width:100vw;
-`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  `
 
-const Left = styled.div`
-
-`
-
+ 
 const Title = styled.div`
-    position: relative;
-    top: 0rem;
-    left: 6rem;
-    /* background-color: pink; */
-    transform:rotate(270deg);
-    transform-origin:(0 0);
+    font-family: "Syne";
+    font-size: 2.7rem;
+    font-weight: 700;
+    color:  black;
+    margin: 4rem 0 3rem 0;
+    letter-spacing: -.11rem;
+    transform: scale(1, .9);
+    width: 80vw;
+    /* background-color: aqua; */
+
 `
 
 const Projects = styled.div`
-display: flex;
-flex-wrap: wrap;
-/* background-color:lightblue; */
-width: 80rem;
-margin-left: 0rem;
+/* background-color: green; */
+width:80%;
 `
-const Right = styled.div`
 
+const Key = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+/* background-color: green; */
+`
+  
+
+const ImgWrap = styled.div`
+overflow: hidden;
+height:7rem;
+width:100%;
+/* padding-right: 3rem; */
+background-color: violet;
+`
+const Img = styled.img`
+width: 150%;
+`
+const WebTitle = styled.h1`
+font-family: 'Syne', sans-serif;
+margin:-0rem 0rem -1rem 0rem;
+`
+const WebInfo = styled.div`
+font-family: raleway;
+font-weight: 400;
+font-size: 1rem;
+width: 100%;
+margin: 1rem 0 4rem 0;
+text-align: justify;
+
+`
+const Icon = styled.div`
+background-color: yellow;
 `
 
 const Webdev = () => {
@@ -69,27 +106,27 @@ const Webdev = () => {
       github: "https://github.com/MatteoThomas/photo-drop",
       link: "https://rlacer.github.io/Git-Music-Now-Project",
     },
-    {
-      name: "My Team",
-      img: myteam,
-      desc: "is a NodeJS app that takes user input and populates cards with it.",
-      github: "https://github.com/MatteoThomas/10-TEAM-PAGE",
-      link: "https://drive.google.com/file/d/1DAtHGeAqQ7yb4VXlPAMEG4zgTmYlhWD9/view",
-    },
-    {
-      name: "Code Quiz",
-      img: codequiz,
-      desc: "is one of my first apps that uses Javascript to quiz users.",
-      github: "https://github.com/MatteoThomas/cool-code-quiz",
-      link: "https://matteothomas.github.io/cool-code-quiz/",
-    },
-    {
-      name: "Workday",
-      img: workday,
-      desc: "allows users to enter daily tasks and to-do's and save them in local storage.",
-      github: "https://github.com/MatteoThomas/simple-event-planner",
-      link: "https://matteothomas.github.io/simple-event-planner/",
-    },
+    // {
+    //   name: "My Team",
+    //   img: myteam,
+    //   desc: "is a NodeJS app that takes user input and populates cards with it.",
+    //   github: "https://github.com/MatteoThomas/10-TEAM-PAGE",
+    //   link: "https://drive.google.com/file/d/1DAtHGeAqQ7yb4VXlPAMEG4zgTmYlhWD9/view",
+    // },
+    // {
+    //   name: "Code Quiz",
+    //   img: codequiz,
+    //   desc: "is one of my first apps that uses Javascript to quiz users.",
+    //   github: "https://github.com/MatteoThomas/cool-code-quiz",
+    //   link: "https://matteothomas.github.io/cool-code-quiz/",
+    // },
+    // {
+    //   name: "Workday",
+    //   img: workday,
+    //   desc: "allows users to enter daily tasks and to-do's and save them in local storage.",
+    //   github: "https://github.com/MatteoThomas/simple-event-planner",
+    //   link: "https://matteothomas.github.io/simple-event-planner/",
+    // },
   ];
 
   return (
@@ -97,36 +134,34 @@ const Webdev = () => {
     <div>
       <Container>
         <Wrapper>
-          <Left></Left>
+
     <Title>
-        <h1>Web<br/>Development</h1>
+        Web Development
       </Title>
+
 
       <Projects>
       {project.map((item, i) => (
-        <div key={i} className="big">
-          <div className="projects">
-            <div className="container">
-              <div className="web-image">
-                <img src={item.img} alt="" className="image" />
-              </div>
-              <div className="overlay">
-                <div className="text">
-                  <h2>{item.name}</h2> <p>{item.desc}</p>
+        <Key key={i}>
+          <ImgWrap>
+          <a href={item.link}> <Img src={item.img} alt="" /> </a>
+
+                </ImgWrap>
+                <WebInfo>
+                  <WebTitle>{item.name}</WebTitle><br/>{item.desc}
                   <a href={item.github}>
-                    <img src={github} alt="github" width="40" height="40" />{" "}
+                    <Icon src={github} alt="github" />
                   </a>
                   <a href={item.link}>
-                    <img src={link} alt="link" width="40" height="40" />{" "}
+                    <Icon src={link} alt="link" />
                   </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+
+            </WebInfo>
+          </Key>
+ 
       ))}
       </Projects>
-      <Right></Right>
+
       </Wrapper>
       </Container>
     </div>

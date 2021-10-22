@@ -1,27 +1,29 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100;900&display=swap');
-
-  body {
-    background-color: aliceblue;
-    font-family: 'Gruppo', cursive;
+  
+  html {
+    scroll-behavior: smooth;
   }
 
+  body {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+
+}
+
+
+
   h1 {
-    color: black;
-    font-family: 'Noto Sans Mono', monospace;
-    font-size: 7rem;
-    letter-spacing: -.6rem;
-    line-height: 5rem;
-    padding: 0;
-    color:#e7e7e7;
-    -webkit-text-stroke: 1px black;
+    font-family: "Nagoda";
+ src: local("Nagoda"), url("./fonts/Nagoda.ttf") format("truetype");
   }
 
   h2 {
-padding: 0;
+    padding: 0;
+    margin: 0;
   }
 
 
@@ -52,8 +54,9 @@ a:active {
 
 }
 
-
-
+.font {
+ font-family: "Nagoda";
+ src: local("Nagoda"), url("./fonts/Nagoda.ttf") format("truetype");
+}
 `;
-
 export default GlobalStyles;
