@@ -4,13 +4,10 @@ import "./SmoothScroll.css";
 import useWindowSize from "./useWindowSize";
 
 const SmoothScroll = ({ children }) => {
-  // 1.
   const windowSize = useWindowSize();
 
-  //2.
   const scrollingContainerRef = useRef();
 
-  // 3.
   const data = {
     ease: 0.1,
     current: 0,
@@ -18,7 +15,6 @@ const SmoothScroll = ({ children }) => {
     rounded: 0,
   };
 
-  // 4.
   useEffect(() => {
     setBodyHeight();
   }, [windowSize.height]);
@@ -29,7 +25,6 @@ const SmoothScroll = ({ children }) => {
     }px`;
   };
 
-  // 5.
   useEffect(() => {
     requestAnimationFrame(() => smoothScrollingHandler());
   }, []);
@@ -41,7 +36,6 @@ const SmoothScroll = ({ children }) => {
 
     scrollingContainerRef.current.style.transform = `translateY(-${data.previous}px)`;
 
-    // Recursive call
     requestAnimationFrame(() => smoothScrollingHandler());
   };
 

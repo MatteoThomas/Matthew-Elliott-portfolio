@@ -1,73 +1,58 @@
 import React from 'react';
 import { bool } from 'prop-types';
 import styled from "styled-components";
-
+import {Link} from 'react-scroll'
 
 const StyledMenu = styled.nav`
  font-family: "Syne";
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: white;
-  transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(200%)'};
+  background-color: #23251f;
+  transform: ${({ open }) => open ?  'translateX(0)' : 'translateX(200%)'};
   height: 100vh;
-  text-align: left;
-  padding: 2rem;
+  width: 100vw;
   position: absolute;
   top: 0;
-  right: 0;
-
-  transition: transform 0.3s ease-in-out;
+  z-index: 1;
+  transition: transform .8s ease-in-out;
   
-  @media (max-width: ${({ theme }) => theme.mobile}) {
-    width: 100%;
-  }
-
   a {
-    font-size: 2rem;
-    text-transform: uppercase;
-    padding: 2rem 0;
-    font-weight: bold;
-    letter-spacing: 0.5rem;
-    color: black;
-    text-decoration: none;
-    transition: color 0.3s linear;
-    
-    @media (max-width: ${({ theme }) => theme.mobile}) {
-      font-size: 1.5rem;
-      text-align: center;
-    }
-
-    &:hover {
-      color: ${({ theme }) => theme.primaryHover};
-    }
+    font-family: "Syne";
+    font-size: clamp(2rem, 8vw, 6.7rem);
+    font-weight: 700;
+    letter-spacing: -.11rem;
+    line-height: 2.3rem;
+    color: #ffffff;
+    margin: 4rem 0 3rem 0;
+    transform: scale(1, .9);
+    width: 100%;
+    text-align: center;
   }
-
 `
 
-const Menu = ({ open }) => {
+const Menu = ({ open, setOpen }) => {
   return (
-    <StyledMenu open={open}>
-      <a href="/">
-        
-        About
-      </a>
-      <a href="/">
-        
+    <StyledMenu open={open}>      
+      
+                      {/* CLOSES MENU WHEN LINK CLICKED */}
+      <Link to="web" open={open} onClick={() => setOpen(!open)}>
         Web Development
-        </a>
-      <a href="/">
-       
+        </Link>
+
+      <Link to="graphic" open={open} onClick={() => setOpen(!open)}>
         Graphic Design
-        </a>
-        <a href="/">
-       
-       Contact
-       </a>
-       <a href="/">
-       
+      </Link>
+
+       <Link to="resume" open={open} onClick={() => setOpen(!open)}>
        Resume
-       </a>
+       </Link>
+       
+        <Link to="contact" open={open} onClick={() => setOpen(!open)}>
+       Contact
+       </Link>
+
+
     </StyledMenu>
   )
 }

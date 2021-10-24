@@ -1,7 +1,6 @@
 import Menu from "../components/Nav";
 import NavButton from "../components/NavButton"
 import Footer from "../components/Footer";
-import global from "../GlobalStyles"
 import About from "../components/About";
 import Webdev from "../components/Webdev";
 import Graphic from "../components/Graphic";
@@ -29,7 +28,8 @@ const Home = () => {
           <Graphic />
           <Resume />
           <Contact />
-      </Container>
+          <Footer />
+        </Container>
         </div>
   );
 }

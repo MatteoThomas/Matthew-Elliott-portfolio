@@ -1,25 +1,17 @@
 import React from "react";
-
 import styled from "styled-components";
+import tripr from "../img/TripThumb.png";
+import pd from "../img/PhotoThumb.png";
+import gitmusic from "../img/GitmusicThumb.png";
+// import link from "../img/link_icon.png";
+// import github from "../img/github_icon.png";
+import Slide from 'react-reveal/Slide';
+import  { Header, Description }  from "./Styles";
 
-import tripr from "../img/tripr2.png";
-import pd from "../img/photodrop_screenshot.png";
-import gitmusic from "../img/gitmusic.png";
-// import myteam from "../img/myteam.png";
-// import codequiz from "../img/codequiz.png";
-// import workday from "../img/workday.png";
-import link from "../img/link_icon.png";
-import github from "../img/github_icon.png";
-
-
-// font-family: 'Raleway', sans-serif;
-// font-family: 'Syne', sans-serif;
 
 const Container = styled.div`
-background-color:#dfb9b9;
-  height: fit-content;
+  background-color: #e7e7e7;
   width: 100vw;
-  
 `
 
 const Wrapper = styled.div`
@@ -27,61 +19,41 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 5rem;
   `
 
- 
-const Title = styled.div`
-    font-family: "Syne";
-    font-size: 2.7rem;
-    font-weight: 700;
-    color:  black;
-    margin: 4rem 0 3rem 0;
-    letter-spacing: -.11rem;
-    transform: scale(1, .9);
-    width: 80vw;
-    /* background-color: aqua; */
-
-`
-
-const Projects = styled.div`
-/* background-color: green; */
-width:80%;
-`
 
 const Key = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-/* background-color: green; */
-`
-  
+
+  `
 
 const ImgWrap = styled.div`
-overflow: hidden;
-height:7rem;
-width:100%;
-/* padding-right: 3rem; */
-background-color: violet;
+  overflow: hidden;
+  margin: 1rem 0 1rem 0;
+  width: clamp(22rem, 60vw, 1400px);
 `
-const Img = styled.img`
-width: 150%;
-`
-const WebTitle = styled.h1`
-font-family: 'Syne', sans-serif;
-margin:-0rem 0rem -1rem 0rem;
-`
-const WebInfo = styled.div`
-font-family: raleway;
-font-weight: 400;
-font-size: 1rem;
-width: 100%;
-margin: 1rem 0 4rem 0;
-text-align: justify;
 
+const Img = styled.img`
+  width: 100%;
 `
-const Icon = styled.div`
-background-color: yellow;
+
+
+const WebInfo = styled.div`
+  display: flex;
+  font-family: raleway;
+  font-weight: 400;
+  font-size: 3vw;
+  width: 95%;
+  margin: 1rem 0rem 4rem 0rem;
+  `
+
+const WebTitle = styled.h1`
+    font-family: 'Syne', sans-serif;
+    margin: 0rem 1rem 0rem 0rem;
+    `
+const WebDesc = styled.div`
 `
+
 
 const Webdev = () => {
   const project = [
@@ -95,7 +67,7 @@ const Webdev = () => {
     {
       name: "PhotoDrop",
       img: pd,
-      desc: "is a photo sharing project using React, Express, Cloudinary and more.",
+      desc: "is a photo sharing project using React, Express, and Cloudinary.",
       github: "https://github.com/k-ryanhunt/Project-2-Travel-Green",
       link: "https://photo-drop2.herokuapp.com/",
     },
@@ -106,63 +78,47 @@ const Webdev = () => {
       github: "https://github.com/MatteoThomas/photo-drop",
       link: "https://rlacer.github.io/Git-Music-Now-Project",
     },
-    // {
-    //   name: "My Team",
-    //   img: myteam,
-    //   desc: "is a NodeJS app that takes user input and populates cards with it.",
-    //   github: "https://github.com/MatteoThomas/10-TEAM-PAGE",
-    //   link: "https://drive.google.com/file/d/1DAtHGeAqQ7yb4VXlPAMEG4zgTmYlhWD9/view",
-    // },
-    // {
-    //   name: "Code Quiz",
-    //   img: codequiz,
-    //   desc: "is one of my first apps that uses Javascript to quiz users.",
-    //   github: "https://github.com/MatteoThomas/cool-code-quiz",
-    //   link: "https://matteothomas.github.io/cool-code-quiz/",
-    // },
-    // {
-    //   name: "Workday",
-    //   img: workday,
-    //   desc: "allows users to enter daily tasks and to-do's and save them in local storage.",
-    //   github: "https://github.com/MatteoThomas/simple-event-planner",
-    //   link: "https://matteothomas.github.io/simple-event-planner/",
-    // },
+
   ];
+
 
   return (
     
-    <div>
+    <div id="web">
       <Container>
         <Wrapper>
 
-    <Title>
-        Web Development
-      </Title>
+    
+          <Header>
+          Web Development
+          </Header>
+          <Description>
+        <Slide bottom>
+          JavaScript / CSS / React / APIs / NodeJS / ExpressJS / MongoDB
+      </Slide>
+      </Description>
 
+            {project.map((item, i) => (
+              <Key key={i}>
 
-      <Projects>
-      {project.map((item, i) => (
-        <Key key={i}>
-          <ImgWrap>
-          <a href={item.link}> <Img src={item.img} alt="" /> </a>
+                <Slide bottom>
+                  <ImgWrap>
+                    <a href={item.link}> <Img src={item.img} alt="" /> </a>
+                  </ImgWrap>
+                  </Slide>
 
-                </ImgWrap>
-                <WebInfo>
-                  <WebTitle>{item.name}</WebTitle><br/>{item.desc}
-                  <a href={item.github}>
-                    <Icon src={github} alt="github" />
-                  </a>
-                  <a href={item.link}>
-                    <Icon src={link} alt="link" />
-                  </a>
+                  <Slide bottom>
+                    {/* <WebInfo>
+                    <WebTitle>{item.name}</WebTitle>
+                    <WebDesc>{item.desc}</WebDesc>
+                     
+                  </WebInfo> */}
+                  </Slide>
 
-            </WebInfo>
-          </Key>
- 
-      ))}
-      </Projects>
-
-      </Wrapper>
+              </Key>
+            ))}
+    
+        </Wrapper>
       </Container>
     </div>
   );

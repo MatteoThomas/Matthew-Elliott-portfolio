@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import emailjs from "emailjs-com";
 
 import styled from "styled-components";
 import { Label } from "@mui/icons-material";
 
 const Container = styled.div`
-  background-color: #e7fae9;
+  background-color: #e7e7e7;
   width: 100vw;
   `
 const Wrapper = styled.div`
@@ -14,21 +14,17 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #050505;
-  /* width: 80%; */
 `
 
 const Title = styled.div`
   font-family: "Syne";
-  font-size: 2.7rem;
+  font-size: clamp(2.4rem, 10vw, 18rem);
+  line-height: 8vh;
   font-weight: 700;
   color:  #e7fae9;
-  /* z-index: 1; */
   margin: 4rem 0 3rem 0;
   letter-spacing: -.11rem;
   transform: scale(1, .9);
-  width: 80%;
-  text-align: center;
-  /* background-color: #000000; */
 `
 
 const Form = styled.div`
@@ -42,7 +38,7 @@ const Name = styled.div`
 `
 
 const Text = styled.input`
-  color:  #e7fae9;
+  color: #e7e7e7;
   font-size: 2rem;
   border: none;
   border-bottom: 1px solid var(--pink);
@@ -67,7 +63,6 @@ const Submit = styled.button`
 
 const Contact = () => {
   
-  const  [ count , setCount ] = useState(0)
 
   function sendEmail(e) {
     e.preventDefault();
@@ -91,12 +86,9 @@ const Contact = () => {
       );
   }
 
-  useEffect(() => {
-    // Update the document title using the browser API
-    document.title = `You clicked ${count} times`;
-  });
 
   return (
+    <div id="contact">
   <Container>
     <Wrapper>
 
@@ -106,6 +98,7 @@ const Contact = () => {
 
     </Wrapper>
   </Container>
+  </div>
   );
 }
 

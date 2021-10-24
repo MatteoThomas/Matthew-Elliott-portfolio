@@ -11,8 +11,8 @@ const Button = styled.button`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -24,8 +24,7 @@ const Button = styled.button`
 
   div {
     width: 2rem;
-    height: 0.25rem;
-    background: aqua;
+    height: 0.25rem;  
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
@@ -33,11 +32,14 @@ const Button = styled.button`
   }
 `;
 
+
+
 const NavButton = ({ open, setOpen }) => {
 
   return (
     <Button open={open} onClick={() => setOpen(!open)}>
-      {open ? <CloseIcon /> : <MenuIcon />}
+      {/* CHANGES ICON WHEN OPEN */}
+      {open ? <CloseIcon class="material-icons md-light"/> : <MenuIcon class="material-icons md-36" />}
     </Button>
   );
 };

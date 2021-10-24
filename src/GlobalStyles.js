@@ -7,6 +7,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
+    background-color: #e7e7e7;
   width: 100vw;
   height: 100vh;
   padding: 0;
@@ -17,8 +18,7 @@ const GlobalStyles = createGlobalStyle`
 
 
   h1 {
-    font-family: "Nagoda";
- src: local("Nagoda"), url("./fonts/Nagoda.ttf") format("truetype");
+
   }
 
   h2 {
@@ -54,9 +54,6 @@ a:active {
 
 }
 
-.font {
- font-family: "Nagoda";
- src: local("Nagoda"), url("./fonts/Nagoda.ttf") format("truetype");
-}
+
 `;
 export default GlobalStyles;
