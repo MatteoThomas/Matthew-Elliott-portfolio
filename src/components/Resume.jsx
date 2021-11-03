@@ -4,11 +4,11 @@ import styled from "styled-components";
 import plants from "../img/plants_PNG.png"
 import mountains from "../img/wireframe_mountains.png"
 import  { Button }  from "../styles/Styles";
-import  { Wrapper, Header, Description }  from "../styles/Styles";
+import  { Wrapper, Header, Description, Outline }  from "../styles/Styles";
 import {mobile} from "../responsive"
 
 const Container = styled.div`
-background-color: #e7dcd8;
+background-color: black;
   `
   
 
@@ -38,8 +38,10 @@ const Resume = () => {
     <Container>
       <Wrapper>
         <HeaderWrap>
-     <Header style={{ color: "#000000"}}>
-        Resume
+     <Header>
+       <Outline>
+       RESUME
+       </Outline>
       </Header>
       <Button>
     <a href="https://docs.google.com/document/d/1yIj3v-auWwRtl1c8PikZNHBjr5PvkoXtcOY7j9OFkPs/edit?usp=sharing">

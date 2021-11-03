@@ -5,23 +5,27 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
 const Button = styled.button`
+  color: "#e7dcd8";
   position: fixed;
-  top: 1rem;
-  right: 2rem;
+  top: 1.3rem;
+  right: 1.3rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  width: 3rem;
-  height: 3rem;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
   background: transparent;
   border: none;
   cursor: pointer;
   z-index: 2;
-
-  &:focus {
-    outline: none;
+  filter: invert(1);
+  transition: all .5s ease-in-out;
+/* background-color: aliceblue; */
+  :hover {
+    color: #1100ff;
   }
-
+/* 
   div {
     width: 2rem;
     height: 0.25rem;  
@@ -29,15 +33,15 @@ const Button = styled.button`
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 1px;
-  }
+  } */
 `;
 
 const NavButton = ({ open, setOpen }) => {
 
   return (
-    <Button open={open} style={{fill: "#e7dcd8" }} onClick={() => setOpen(!open)}>
+    <Button open={open} onClick={() => setOpen(!open)}>
       {/* CHANGES ICON WHEN OPEN */}
-      {open ? <CloseIcon class="material-icons" style={{fill: "black" }}/> : <MenuIcon class="material-icons md-36" />}
+      {open ? <CloseIcon className="material-icons" style={{fill: "white" }}/> : <MenuIcon className="material-icons md-36" />}
     </Button>
   );
 };

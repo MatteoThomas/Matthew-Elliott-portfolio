@@ -3,22 +3,24 @@ import  { graphicData } from "../data"
 
 import styled from "styled-components";
 import Slide from 'react-reveal/Slide';
-import  { Wrapper, Header, Description, Button }  from "../styles/Styles";
+import  { Wrapper, Header, Description, Button, Outline }  from "../styles/Styles";
 import {mobile} from "../responsive"
 
 const Container = styled.div`
 
 `
 const HeaderWrap = styled.div`
-  width: clamp(100px, 90%, 1200px);
+  width: clamp(200px, 90%, 1200px);
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  ${mobile({ width: "90%"})} 
+  ${mobile({ width: "90%", flexWrap: "wrap"})} 
+  /* background-color: aliceblue; */
 `
 
 const KeyWrap = styled.div`
   width: clamp(100px, 90%, 1200px);
+  height: 100%;
   display: block;
   ${mobile({ display: "block"})}
 `
@@ -32,12 +34,17 @@ const ImgWrap = styled.div`
 const Img = styled.img`
   object-fit: cover;
   width: 100%;
-  height: 50px;
+height: 50px;
   margin-bottom: 1rem;
-  border-radius: 2px;
-  transition: all .7s ease;
+  border-radius: 50px;
+  transition-delay: 50ms;
+    transition: transform 150ms;
+    transition: height 1.7s ease-in-out;
   &:hover {
-        height: 500px;
+    height: 200px;
+    transition-delay: 150ms;
+    transition: transform 150ms;
+    transition: height .7s ease-in-out;
     }
 `
 
@@ -54,7 +61,7 @@ const Graphic = () => {
       <Wrapper>
      <HeaderWrap>
           <Header>
-       Graphic Design
+       <Outline>GRAPHIC </Outline>DESIGN
        </Header>
       <Button>
         <a href="https://matteoelliott.myportfolio.com">
@@ -67,10 +74,6 @@ const Graphic = () => {
           I have over a decade of experience in online promotion, print, and product branding.
       </Slide>
       </Description>
-
-
-   
- 
 
 <KeyWrap>
       {graphicData.map((item, i) => (

@@ -4,7 +4,7 @@ import { mobile } from "../responsive";
 import vortexSrc from "../img/pc.png"
 import { keyframes} from "styled-components"
 import Fade  from 'react-reveal/Fade';
-import  { Wrapper, Header, Description }  from "../styles/Styles";
+import  { Wrapper, Header, Description, Outline }  from "../styles/Styles";
 
 import Slide from 'react-reveal/Slide';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -31,10 +31,9 @@ const AboutDiv = styled.div`
 const HelloText = styled.div` 
   display: flex;
   justify-content: center;
-  /* width: clamp(315px, 60vw, 1200px); */
   margin-top: 3rem;
   color: #e7dcd8;
-  font-family: "Syne";
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   letter-spacing: -.4vw;
   line-height: clamp(2.5rem, 11vw, 5.6rem);
@@ -46,8 +45,8 @@ const HelloText = styled.div`
 
 const HelloDetail = styled.h2`
 
-  color: #e7dcd8;
-  font-family: "Syne";
+  /* color: #e7dcd8; */
+  font-family: raleway;
   font-weight: 400;
   letter-spacing: 0;
   line-height: clamp(.1rem, 2vh, 1.8rem);
@@ -134,7 +133,7 @@ const About = () => {
           <Fade left>
             
             <Text> 
-          Hey! I'm <br/>Matthew. <br/>Let's make <br/>something!
+            <Outline> Hey! I'm </Outline><br/>Matthew. <br/><Outline>Let's make <br/>something!</Outline>
           </Text>
           
           
@@ -143,7 +142,7 @@ const About = () => {
          
         <HelloDetail>
         <Fade right>
-          <HelloSkills>Web Developer<br/>+ Graphic Designer</HelloSkills>
+          <HelloSkills>Web Developer<br/><Outline>+</Outline> Graphic Designer</HelloSkills>
         </Fade>
         </HelloDetail>  
 

@@ -4,7 +4,7 @@ import styled from "styled-components";
 import {mobile} from "../responsive"
 import Slide from 'react-reveal/Slide';
 
-import  { Wrapper, Header, Description }  from "../styles/Styles";
+import  { Wrapper, Header, Description, Outline }  from "../styles/Styles";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -25,8 +25,7 @@ ${mobile({ width: "90%",fontSize: "1.8rem"})}
 
 const Icons = styled.div`
 display: flex;
-
-${mobile({ marginTop: "0rem", marginRight: "1rem", flexDirection: "column"})}
+${mobile({ margin: "1rem 0rem 1rem 1rem", flexDirection: "column"})}
 `
 
 const Contact = () => {
@@ -60,24 +59,26 @@ const Contact = () => {
   <Container>
     <Wrapper>
 <HeaderWrap>
-    <Header style={{color: "#e7dcd8"}}>
-        Contact
+    <Header>
+      <Outline>
+        CONTACT
+        </Outline>
     </Header>
       
       <Icons>
       <Slide right duration={1000}>
     <a href="mailto:matt.ell@pm.me">
-      <MailOutlineIcon href="mailto:matt.ell@pm.me" style={{color: "#e7dcd8", fontSize: "inherit", margin: "0rem 1rem 0 0"}}/>
+      <MailOutlineIcon href="mailto:matt.ell@pm.me" style={{color: "#e7dcd8", fontSize: "inherit", margin: "0rem 0rem 0 1rem"}}/>
     </a>
     </Slide>
     <Slide right duration={2000}>
     <a href="https://github.com/MatteoThomas">
-      <GitHubIcon style={{color: "#e7dcd8", fontSize: "inherit", margin: "0rem 1rem 0 0"}}/>
+      <GitHubIcon style={{color: "#e7dcd8", fontSize: "inherit", margin: "0rem 0rem 0 1rem"}}/>
     </a>
     </Slide>
     <Slide right duration={3000}>
     <a href="https://www.linkedin.com/in/matthewell/">
-      <LinkedInIcon style={{color: "#e7dcd8", fontSize: "inherit", margin: "0rem 1rem 0 0"}}/>
+      <LinkedInIcon style={{color: "#e7dcd8", fontSize: "inherit", margin: "0rem 0rem 0 1rem"}}/>
     </a>
     </Slide>
     </Icons>

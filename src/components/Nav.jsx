@@ -3,6 +3,7 @@ import { bool } from 'prop-types';
 import styled from "styled-components";
 import {Link} from 'react-scroll'
 import {mobile} from "../responsive"
+import  {  Outline }  from "../styles/Styles";
 
 const StyledMenu = styled.nav`
   display: flex;
@@ -20,18 +21,18 @@ const StyledMenu = styled.nav`
   
   a {
     cursor: pointer;
-    font-family: "Syne";
+    font-family: 'Poppins', sans-serif;
     font-size: clamp(2rem, 8vw, 6.7rem);
     font-weight: 700;
-    letter-spacing: -.11rem;
-    line-height: 2.3rem;
+    letter-spacing: .01rem;
+    line-height: 2rem;
     color: black;
-    margin: 4rem 0 3rem 0;
+    margin: 2rem 0 1rem 0;
     transform: scale(1, .9);
     width: 90%;
     text-align: right;
     margin-right: 2rem;
-    ${mobile({ lineHeight: "0rem"})}
+    ${mobile({ lineHeight: "1.5rem"})}
   }
 `
 
