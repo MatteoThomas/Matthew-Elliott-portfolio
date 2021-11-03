@@ -7,18 +7,16 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background-color: #e7e7e7;
+  background-color: #e7e7e7;
   width: 100vw;
   height: 100vh;
   padding: 0;
   margin: 0;
-
 }
 
-
-
   h1 {
-
+    padding: 0;
+    margin: 0;
   }
 
   h2 {
@@ -53,6 +51,7 @@ a:active {
   text-decoration: none;
 
 }
+
 
 
 `;

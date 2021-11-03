@@ -1,93 +1,143 @@
 import React from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
-import donutSrc from "../img/donut.svg"
-import vortexSrc from "../img/vortex.svg"
+import vortexSrc from "../img/pc.png"
 import { keyframes} from "styled-components"
 import Fade  from 'react-reveal/Fade';
+import  { Wrapper, Header, Description }  from "../styles/Styles";
+
+import Slide from 'react-reveal/Slide';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+
+import down from "../img/downArrow.png"
 
 const Container = styled.div`
-  background-color: #e7e7e7;
-  width: 100vw;
-`
 
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+`
+const Icons = styled.div`
+display: flex;
+width: 100vw;
+justify-content: end;
+margin-right: 15rem;
+margin-top: 1.5rem;
+${mobile({ marginTop: "1.6rem", marginRight: "0", marginLeft: "4.6rem", justifyContent: "start"})}
 `
 
 const AboutDiv = styled.div`
  `
 
- const HelloText = styled.div` 
-  color: black;
+const HelloText = styled.div` 
+  display: flex;
+  justify-content: center;
+  /* width: clamp(315px, 60vw, 1200px); */
+  margin-top: 3rem;
+  color: #e7dcd8;
   font-family: "Syne";
   font-weight: 700;
-  letter-spacing: -.6vw;
-  line-height: clamp(3rem, 7vw, 10vw);
-  font-size: clamp(3.7rem, 12vw, 11rem);
-  max-width: 1000px;
-  margin-top:8rem;
+  letter-spacing: -.4vw;
+  line-height: clamp(2.5rem, 11vw, 5.6rem);
+  font-size: clamp(3.3rem, 14vw, 8rem);
+  /* background-color: #bb7979; */
+  `
+  const Text = styled.div`
   `
 
 const HelloDetail = styled.h2`
-  color: black;
+
+  color: #e7dcd8;
   font-family: "Syne";
   font-weight: 400;
-  letter-spacing: -.1vw;
-  line-height: clamp(.1rem, 3vw, 2.5rem);
-  font-size: clamp(1rem, 3vw, 2rem);
+  letter-spacing: 0;
+  line-height: clamp(.1rem, 2vh, 1.8rem);
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
   text-align: end;
-  padding: 1rem 0rem 0 0;
+  padding: 2.2rem 0rem 0rem 0rem;
   display: flex;
   justify-content: end;
+  align-items: center;
+  ${mobile({ padding: "1rem .5rem 0rem 0rem"})}
+  /* background-color: aqua; */
 `
 
 const HelloSkills = styled.div`
   width: fit-content;
 `
 
-const rotate = keyframes`
-  from {
-      transform: rotate(0deg);
-  }
-  to {
-      transform: rotate(359deg);
-  }
-`
+
 
 const Img = styled.img`
-  width: 27vw;
-  padding-top: 1.5rem;
-  animation: ${rotate} 277s linear infinite;
-  margin-bottom: 5rem;
-`
+  width: clamp(350px, 60%, 600px);
+  margin: 2rem 0 1rem 0;
+
+  /* filter: invert(1); */
+  `
+
+  const blink = keyframes`
+       0% {
+          opacity: 1;
+       }
+        50% {
+        opacity: .6;
+        }
+  `
 
 const AboutDetail = styled.div`
+margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  color: #e7dcd8;
   font-family: raleway;
-  width: clamp(1rem, 80vw, 800px);
-  margin-top: -2rem;
+  margin-top: 1rem;
   margin-bottom: 7rem;
   letter-spacing: -.1vw;
   line-height: clamp(.2rem, 5vw, 2.5rem);
   font-size: clamp(.5rem, 4vw, 2rem);
-  text-align: right;
+  text-align: center;
+  
+  &:after {
+    content: url(${down});
+    margin-top: 1rem;
+    animation: ${blink} 2s infinite;
+ 
+  }
 `
-
 const About = () => {
 
   return (
     <div id="about">
     <Container>
       <Wrapper>
- 
+      <Slide right>
+      <Icons>
+      <Slide right duration={1000}>
+    <a href="mailto:matt.ell@pm.me">
+      <MailOutlineIcon href="mailto:matt.ell@pm.me" style={{color: "#e7dcd8", fontSize: "1.5rem", margin: "0rem 1rem 0 0"}}/>
+    </a>
+    </Slide>
+    <Slide right duration={2000}>
+    <a href="https://github.com/MatteoThomas">
+      <GitHubIcon style={{color: "#e7dcd8", fontSize: "1.5rem", margin: "0rem 1rem 0 0"}}/>
+    </a>
+    </Slide>
+    <Slide right duration={3000}>
+    <a href="https://www.linkedin.com/in/matthewell/">
+      <LinkedInIcon style={{color: "#e7dcd8", fontSize: "1.5rem", margin: "0rem 1rem 0 0"}}/>
+    </a>
+    </Slide>
+    </Icons>
+    </Slide>
       <AboutDiv>
 
         <HelloText>
           <Fade left>
-            <div> Hey! I'm<br/>Matthew.<br/>Let's make<br/>something!</div>
+            
+            <Text> 
+          Hey! I'm <br/>Matthew. <br/>Let's make <br/>something!
+          </Text>
+          
+          
           </Fade> 
         </HelloText>
          
@@ -104,9 +154,7 @@ const About = () => {
         <AboutDetail>
           <Fade bottom>
             I'm a recent full-stack web-developer boot camp graduate & graphic 
-            designer. I'm ready to take on any challenges and look 
-            forward to combining all my talents to create unique and memorable 
-            experiences for the masses.
+            designer.
           </Fade>
         </AboutDetail>
 

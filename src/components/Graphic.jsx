@@ -1,67 +1,50 @@
 import React from "react";
-import crowlers from "../img/VineThumb.png";
-import cards from "../img/CardThumb.png";
-import records from "../img/RecordThumb.png";
-import recovery from "../img/RecoveryThumb.png";
-import searsucker from "../img/SearThumb.png";
+import  { graphicData } from "../data"
+
 import styled from "styled-components";
 import Slide from 'react-reveal/Slide';
-import  { Header, Description, Button }  from "./Styles";
+import  { Wrapper, Header, Description, Button }  from "../styles/Styles";
+import {mobile} from "../responsive"
 
 const Container = styled.div`
-  background-color: #e7e7e7;
-  width: 100vw;
-  `
-const Wrapper = styled.div`
+
+`
+const HeaderWrap = styled.div`
+  width: clamp(100px, 90%, 1200px);
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  `
-const BtnWrap = styled.div`
+  ${mobile({ width: "90%"})} 
 `
 
+const KeyWrap = styled.div`
+  width: clamp(100px, 90%, 1200px);
+  display: block;
+  ${mobile({ display: "block"})}
+`
 const Key = styled.div`
+
 `
 const ImgWrap = styled.div`
-  overflow: hidden;
-  margin: 1rem 0 1rem 0;
-  width: clamp(22rem, 60vw, 1400px);
-`
+  /* width: clamp(200px, 100%, 1200px); */
+  `
 
 const Img = styled.img`
+  object-fit: cover;
   width: 100%;
+  height: 50px;
+  margin-bottom: 1rem;
+  border-radius: 2px;
+  transition: all .7s ease;
+  &:hover {
+        height: 500px;
+    }
 `
+
+
 
 const Graphic = () => {
 
-  const designs = [
-    {
-      name: "Vine St.",
-      img: crowlers,
-      link: "https://matteoelliott.myportfolio.com/gd",
-    },
-    {
-      name: "Whiskey Pickle Records",
-      img: records,
-      link: "https://matteoelliott.myportfolio.com/whiskey-pickle",
-    },
-    {
-      name: "Recovery",
-      img: recovery,
-      link: "https://matteoelliott.myportfolio.com/recovery",
-    },    
-    {
-      name: "LOFT718",
-      img: cards,
-      link: "https://matteoelliott.myportfolio.com/loft-718",
-    },
-    {
-      name: "Searsucker",
-      img: searsucker,
-      link: "https://matteoelliott.myportfolio.com/searsucker",
-    },
-  ]
 
   return (
     
@@ -69,28 +52,28 @@ const Graphic = () => {
     <Container>
  
       <Wrapper>
-     
+     <HeaderWrap>
           <Header>
        Graphic Design
        </Header>
-  
-      <Description>
-        <Slide bottom>
-          I have over a decade of experience in online promotion, print, and product branding.
-      </Slide>
-      </Description>
-   <BtnWrap>
       <Button>
         <a href="https://matteoelliott.myportfolio.com">
           See my portfolio
         </a>
       </Button>
-      </BtnWrap>
+  </HeaderWrap>
+      <Description>
+        <Slide bottom>
+          I have over a decade of experience in online promotion, print, and product branding.
+      </Slide>
+      </Description>
+
+
    
  
 
-
-      {designs.map((item, i) => (
+<KeyWrap>
+      {graphicData.map((item, i) => (
         <Key key={i}>
           <Slide bottom>
             <ImgWrap>
@@ -99,6 +82,7 @@ const Graphic = () => {
           </Slide>
         </Key>
 ))}
+</KeyWrap>
 
    
 

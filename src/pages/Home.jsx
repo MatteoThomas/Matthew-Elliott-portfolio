@@ -11,6 +11,8 @@ import React, { useState } from "react";
 
 
 const Container = styled.div`
+background-color: black;
+color:#e7dcd8;
 `
 const Home = () => {
   

@@ -6,8 +6,8 @@ import CloseIcon from "@mui/icons-material/Close";
 
 const Button = styled.button`
   position: fixed;
-  top: 0rem;
-  right: 1rem;
+  top: 1rem;
+  right: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -32,14 +32,12 @@ const Button = styled.button`
   }
 `;
 
-
-
 const NavButton = ({ open, setOpen }) => {
 
   return (
-    <Button open={open} onClick={() => setOpen(!open)}>
+    <Button open={open} style={{fill: "#e7dcd8" }} onClick={() => setOpen(!open)}>
       {/* CHANGES ICON WHEN OPEN */}
-      {open ? <CloseIcon class="material-icons md-light"/> : <MenuIcon class="material-icons md-36" />}
+      {open ? <CloseIcon class="material-icons" style={{fill: "black" }}/> : <MenuIcon class="material-icons md-36" />}
     </Button>
   );
 };
