@@ -3,8 +3,6 @@ import { useState } from 'react'
 import styled from 'styled-components'
 import { keyframes } from 'styled-components'
 import  { webData } from "../data"
-import  KeyboardArrowLeftIcon  from '@mui/icons-material/KeyboardArrowLeft';
-import  KeyboardArrowRightIcon  from '@mui/icons-material/KeyboardArrowRight';
 import  {  SubHeader,  Description, SubDescription, Tech, Button }  from "../styles/Styles";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkIcon from '@mui/icons-material/Link';
@@ -73,12 +71,13 @@ const Slider = () => {
 <Button onClick={handleClick(index)}><ExpandMoreIcon/></Button>
 </BoxHeader>
 
-{show[index] ? <Box> <Image src={item.img}/><Tech>{item.tech}</Tech><SubDescription>{item.desc}</SubDescription></Box> : toggleShow} 
+{show[index] ? <Box> 
     
+    <Image src={item.img}/>
+    <Tech>{item.tech}</Tech>
+    <SubDescription>{item.desc}</SubDescription>
+    </Box> : toggleShow} 
     
-
-
-
  </div>
 
 ))}

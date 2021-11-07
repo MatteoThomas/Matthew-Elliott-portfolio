@@ -14,8 +14,8 @@ const HeaderWrap = styled.div`
   justify-content: space-between;
   align-items: center;
   ${mobile({ width: "90%"})} 
-`
 
+`
 
 
 const Webdev = () => {
@@ -31,6 +31,7 @@ const Webdev = () => {
           <Outline> WEB </Outline>DEVELOPMENT
           </Header>
         </HeaderWrap>
+   
           <Description>
         <Slide bottom>
           JavaScript / CSS / React / APIs / NodeJS / ExpressJS / MongoDB

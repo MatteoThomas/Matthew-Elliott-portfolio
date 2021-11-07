@@ -1,6 +1,6 @@
 import Menu from "../components/Nav";
 import NavButton from "../components/NavButton"
-import Footer from "../components/Footer";
+
 import About from "../components/About";
 import Webdev from "../components/Webdev";
 import Graphic from "../components/Graphic";
@@ -30,7 +30,7 @@ const Home = () => {
           <Graphic />
           <Resume />
           <Contact />
-          <Footer />
+          {/* <Footer /> */}
         </Container>
         </div>
   );

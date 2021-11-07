@@ -21,7 +21,6 @@ const Header = styled.h1`
   margin: 3rem 0 1rem 0;
   width: clamp(100px, 90%, 1200px);
 
-  /* background-color: #4bff72; */
   `
 const Outline = styled.div`
 display: inline;
@@ -30,15 +29,18 @@ display: inline;
 `
 
 const Description = styled.p`
-  font-family: raleway;
-  text-align: left;
+/* background-color: #4bff72; */
+  font-family: 'Poppins', sans-serif;
+  /* text-align: left; */
   letter-spacing: .01vw;
   line-height: clamp(.1rem, 6vw, 2rem);
   font-size: clamp(.3rem, 3.5vw, 1.74rem); 
   width: clamp(100px, 90%, 1200px);
   margin-top: 1rem;
   margin-bottom: 2rem;
-  color:  #e7dcd8;
+  /* ${mobile({ textAlign: "right"})} */
+
+ color: #${props=>props.color};
   `
 
 const SubHeader = styled.h2`
@@ -51,12 +53,11 @@ word-wrap: break-word;
 text-align: left;
 color:  #e7dcd8;
 margin: 1rem 0 0rem 0rem;
-
-/* background-color: #ffbb00; */
+background-color: #ffbb00;
 `
 const SubDescription = styled.p`
   color: #e7dcd8;
-  font-family: raleway;
+  font-family: 'Poppins', sans-serif;
   text-align: left;
   letter-spacing: .01vw;
   line-height: clamp(.1rem, 6vw, 1.4rem);
@@ -67,7 +68,7 @@ const SubDescription = styled.p`
   
   const Tech = styled.p`
   color: #e7dcd8;
-  font-family: raleway;
+  font-family: 'Poppins', sans-serif;
   text-align: left;
   letter-spacing: .01vw;
   line-height: clamp(.1rem, 6vw, 1.4rem);
@@ -77,19 +78,22 @@ const SubDescription = styled.p`
   `
   
 const Button = styled.button`
+  color: #e7dcd8;
   border: solid;
-  border-color: black;
+  border-color: #e7dcd8;
   border-width: 1px;
-  background-color:#e7dcd8;
-  border-radius: 50px 0 0 50px;
+  background-color:black;
+  /* background-color:#e7dcd8 */
+  border-radius: 50px 50px 50px 50px;
+
   padding: .5rem 1rem .5rem 1rem;
   flex:none;
   text-transform: uppercase;
   :hover {
     transition: all .8s ease;
-    background-color: #e6ff07;
+    background-color: #e7dcd8;
 
-    border-color: #e6ff07;
+    border-color: #e7dcd8;
   }
   `
   

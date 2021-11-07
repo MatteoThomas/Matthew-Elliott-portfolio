@@ -12,7 +12,7 @@ const Container = styled.div`
 const HeaderWrap = styled.div`
   width: clamp(200px, 90%, 1200px);
   display: flex;
-  justify-content: flex-end;
+
   align-items: center;
   ${mobile({ width: "90%", flexWrap: "wrap"})} 
   /* background-color: aliceblue; */
@@ -34,7 +34,7 @@ const ImgWrap = styled.div`
 const Img = styled.img`
   object-fit: cover;
   width: 100%;
-height: 50px;
+  height: 50px;
   margin-bottom: 1rem;
   border-radius: 50px;
   transition-delay: 50ms;
@@ -47,7 +47,6 @@ height: 50px;
     transition: height .7s ease-in-out;
     }
 `
-
 
 
 const Graphic = () => {

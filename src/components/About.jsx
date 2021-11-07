@@ -46,7 +46,7 @@ const HelloText = styled.div`
 const HelloDetail = styled.h2`
 
   /* color: #e7dcd8; */
-  font-family: raleway;
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: clamp(.1rem, 2vh, 1.8rem);
@@ -87,7 +87,7 @@ margin: 1rem;
   display: flex;
   flex-direction: column;
   color: #e7dcd8;
-  font-family: raleway;
+  font-family: 'Poppins', sans-serif;
   margin-top: 1rem;
   margin-bottom: 7rem;
   letter-spacing: -.1vw;
