@@ -20,8 +20,8 @@ const BoxHeader = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #e7dcd8;
-    transition: show 4s;
+    border-bottom: 1px solid ${({ theme }) => theme.background};
+    transition: show 2s;
     `
     
     const fadeIn = keyframes`
@@ -34,19 +34,9 @@ const Box = styled.div`
  transition: transform 1s ease-in-out;
 `
 
-// const Button = styled.button`
-//   color: #e7dcd8;
-//   border: none;
-//   /* border-color:#e672a2;
-//   border-width: 1px;
-//   border-radius: 50px; */
-//   background-color: transparent;
-//   `
-
 const Image = styled.img`
 width: clamp(100px, 100%, 1200px);
 border-radius: 2px;
-/* ${mobile({ width: "90%", marginRight: "5vw", marginLeft: "5vw"})} */
 `
 
 const Slider = () => {
@@ -55,8 +45,10 @@ const Slider = () => {
 
     const handleClick = (index) => () => {
         toggleShow(state => ({
-          ...state, // <-- copy previous state
-          [index]: !state[index] // <-- update value by index key
+            // COPY PREVIOUS STATE
+          ...state, 
+          // UPDATE VALUE BY INDEX KEY
+          [index]: !state[index] 
         }));
       };
     

@@ -6,7 +6,7 @@ import Slider from "../components/Slider"
 import {mobile} from "../responsive"
 
 const Container = styled.div`
-margin-bottom: 10rem;
+margin-bottom: 8rem;
 `
 const HeaderWrap = styled.div`
   width: clamp(10px, 90%, 1200px);
@@ -27,9 +27,11 @@ const Webdev = () => {
         <Wrapper>
 
         <HeaderWrap>
+
           <Header>
           <Outline> WEB </Outline>DEVELOPMENT
           </Header>
+
         </HeaderWrap>
    
           <Description>

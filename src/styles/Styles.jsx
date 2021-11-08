@@ -1,12 +1,11 @@
 import styled from "styled-components";
-import {mobile} from "../responsive"
+
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-    /* background-color: #4bff72; */
 `
 
 const Header = styled.h1`
@@ -17,30 +16,24 @@ const Header = styled.h1`
   line-height: .8;
   word-wrap: break-word;
   text-align: left;
-  color:  #e7dcd8;
-  margin: 3rem 0 1rem 0;
+  margin: 1rem 0 1rem 0;
   width: clamp(100px, 90%, 1200px);
-
   `
 const Outline = styled.div`
 display: inline;
--webkit-text-stroke: 1px #e7dcd8;
--webkit-text-fill-color: black;
+-webkit-text-stroke: 1px ${({ theme }) => theme.text};
+-webkit-text-fill-color: ${({ theme }) => theme.body};
+transition: all .5s ease;
 `
 
 const Description = styled.p`
-/* background-color: #4bff72; */
   font-family: 'Poppins', sans-serif;
-  /* text-align: left; */
   letter-spacing: .01vw;
   line-height: clamp(.1rem, 6vw, 2rem);
   font-size: clamp(.3rem, 3.5vw, 1.74rem); 
   width: clamp(100px, 90%, 1200px);
   margin-top: 1rem;
   margin-bottom: 2rem;
-  /* ${mobile({ textAlign: "right"})} */
-
- color: #${props=>props.color};
   `
 
 const SubHeader = styled.h2`
@@ -51,49 +44,55 @@ letter-spacing: -.05rem;
 line-height: 1;
 word-wrap: break-word;
 text-align: left;
-color:  #e7dcd8;
 margin: 1rem 0 0rem 0rem;
-background-color: #ffbb00;
 `
 const SubDescription = styled.p`
-  color: #e7dcd8;
   font-family: 'Poppins', sans-serif;
   text-align: left;
   letter-spacing: .01vw;
   line-height: clamp(.1rem, 6vw, 1.4rem);
   font-size: clamp(.3rem, 3.5vw, 1rem); 
   width: 90%;
-  /* background-color: aliceblue; */
   `
   
   const Tech = styled.p`
-  color: #e7dcd8;
+
   font-family: 'Poppins', sans-serif;
   text-align: left;
   letter-spacing: .01vw;
   line-height: clamp(.1rem, 6vw, 1.4rem);
   font-size: clamp(.1rem, 3.5vw, 1rem); 
   width: 90%;
-  /* background-color: aliceblue; */
+
   `
   
 const Button = styled.button`
-  color: #e7dcd8;
+  font-family: 'Poppins', sans-serif;
   border: solid;
-  border-color: #e7dcd8;
+  border-color:${({ theme }) => theme.background};
   border-width: 1px;
-  background-color:black;
-  /* background-color:#e7dcd8 */
+  background-color: ${({ theme }) => theme.body};
   border-radius: 50px 50px 50px 50px;
-
   padding: .5rem 1rem .5rem 1rem;
   flex:none;
-  text-transform: uppercase;
-  :hover {
-    transition: all .8s ease;
-    background-color: #e7dcd8;
+  transition: all .5s ease;
+  cursor: pointer;
+  margin: 1rem;
 
-    border-color: #e7dcd8;
+  a {
+    color: ${({ theme }) => theme.text};
+    transition: all .5s ease;
+  }
+
+  :hover {
+    transition: all .5s ease;
+    background-color: ${({ theme }) => theme.background};
+    color: ${({ theme }) => theme.background};
+
+  a {
+    color: ${({ theme }) => theme.body};
+    transition: all .5s ease;
+    }
   }
   `
   

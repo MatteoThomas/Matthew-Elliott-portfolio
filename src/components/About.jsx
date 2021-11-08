@@ -1,28 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
-import vortexSrc from "../img/pc.png"
+import pc from "../img/pc.png"
 import { keyframes} from "styled-components"
 import Fade  from 'react-reveal/Fade';
-import  { Wrapper, Header, Description, Outline }  from "../styles/Styles";
+import  { Wrapper, Outline }  from "../styles/Styles";
 
-import Slide from 'react-reveal/Slide';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import MailOutlineIcon from '@mui/icons-material/MailOutline';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 import down from "../img/downArrow.png"
 
 const Container = styled.div`
 
-`
-const Icons = styled.div`
-display: flex;
-width: 100vw;
-justify-content: end;
-margin-right: 15rem;
-margin-top: 1.5rem;
-${mobile({ marginTop: "1.6rem", marginRight: "0", marginLeft: "4.6rem", justifyContent: "start"})}
 `
 
 const AboutDiv = styled.div`
@@ -32,20 +20,17 @@ const HelloText = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 3rem;
-  color: #e7dcd8;
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   letter-spacing: -.4vw;
   line-height: clamp(2.5rem, 11vw, 5.6rem);
   font-size: clamp(3.3rem, 14vw, 8rem);
-  /* background-color: #bb7979; */
   `
   const Text = styled.div`
+  transition: all .5s ease;
   `
 
 const HelloDetail = styled.h2`
-
-  /* color: #e7dcd8; */
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   letter-spacing: 0;
@@ -57,7 +42,6 @@ const HelloDetail = styled.h2`
   justify-content: end;
   align-items: center;
   ${mobile({ padding: "1rem .5rem 0rem 0rem"})}
-  /* background-color: aqua; */
 `
 
 const HelloSkills = styled.div`
@@ -69,8 +53,6 @@ const HelloSkills = styled.div`
 const Img = styled.img`
   width: clamp(350px, 60%, 600px);
   margin: 2rem 0 1rem 0;
-
-  /* filter: invert(1); */
   `
 
   const blink = keyframes`
@@ -83,10 +65,10 @@ const Img = styled.img`
   `
 
 const AboutDetail = styled.div`
-margin: 1rem;
+  margin: 1rem;
   display: flex;
   flex-direction: column;
-  color: #e7dcd8;
+  color: ${({ theme }) => theme.text};
   font-family: 'Poppins', sans-serif;
   margin-top: 1rem;
   margin-bottom: 7rem;
@@ -108,25 +90,7 @@ const About = () => {
     <div id="about">
     <Container>
       <Wrapper>
-      <Slide right>
-      <Icons>
-      <Slide right duration={1000}>
-    <a href="mailto:matt.ell@pm.me">
-      <MailOutlineIcon href="mailto:matt.ell@pm.me" style={{color: "#e7dcd8", fontSize: "1.5rem", margin: "0rem 1rem 0 0"}}/>
-    </a>
-    </Slide>
-    <Slide right duration={2000}>
-    <a href="https://github.com/MatteoThomas">
-      <GitHubIcon style={{color: "#e7dcd8", fontSize: "1.5rem", margin: "0rem 1rem 0 0"}}/>
-    </a>
-    </Slide>
-    <Slide right duration={3000}>
-    <a href="https://www.linkedin.com/in/matthewell/">
-      <LinkedInIcon style={{color: "#e7dcd8", fontSize: "1.5rem", margin: "0rem 1rem 0 0"}}/>
-    </a>
-    </Slide>
-    </Icons>
-    </Slide>
+
       <AboutDiv>
 
         <HelloText>
@@ -148,7 +112,7 @@ const About = () => {
 
       </AboutDiv>
         
-        <Img src={vortexSrc}/>
+        <Img src={pc}/>
 
         <AboutDetail>
           <Fade bottom>

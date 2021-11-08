@@ -9,14 +9,14 @@ const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #e7dcd8;
+  background-color: ${({ theme }) => theme.body};
   transform: ${({ open }) => open ?  'translateX(0)' : 'translateX(200%)'};
   height: 100vh;
   width: 100vw;
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: 1;
-  transition: transform .8s ease-in-out;
+  transition: transform 1s ease-in-out;
   
   
   a {
@@ -26,7 +26,7 @@ const StyledMenu = styled.nav`
     font-weight: 700;
     letter-spacing: .01rem;
     line-height: 2rem;
-    color: black;
+    color: ${({ theme }) => theme.background};
     margin: 2rem 0 1rem 0;
     transform: scale(1, .9);
     width: 90%;
@@ -42,19 +42,19 @@ const Menu = ({ open, setOpen }) => {
       
                       {/* CLOSES MENU WHEN LINK CLICKED */}
       <Link to="web" open={open} onClick={() => setOpen(!open)}>
-        Web Development
+        WEB DEVELOPMENT
         </Link>
 
       <Link to="graphic" open={open} onClick={() => setOpen(!open)}>
-        Graphic Design
+        GRAPHIC DESIGN
       </Link>
 
        <Link to="resume" open={open} onClick={() => setOpen(!open)}>
-       Resume
+       RESUME
        </Link>
        
         <Link to="contact" open={open} onClick={() => setOpen(!open)}>
-       Contact
+       CONTACT
        </Link>
 
 

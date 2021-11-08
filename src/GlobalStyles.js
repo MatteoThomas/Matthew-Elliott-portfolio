@@ -7,7 +7,9 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-  background-color: #e7e7e7;
+  background: ${({ theme }) => theme.body};
+  color: ${({ theme }) => theme.text};
+  transition: all .5s ease-in-out;
   width: 100vw;
   height: 100vh;
   padding: 0;
@@ -25,9 +27,9 @@ const GlobalStyles = createGlobalStyle`
   }
 
 
-a {
+/* a {
   color: black;
-}
+} */
 
 a:link {
   text-decoration: none;
@@ -52,7 +54,20 @@ a:active {
 
 }
 
-
-
 `;
 export default GlobalStyles;
+
+export const lightTheme = {
+  body: "#e7dcd8",
+  background: "black",
+  text: "black",
+  accent: "#eeff00",
+  // hoverText: "#e7dcd8",
+};
+export const darkTheme = {
+  body: "black",
+  background: "#e7dcd8",
+  text: "#e7dcd8",
+  accent: "#eeff00",
+  // hoverText: "black",
+};
