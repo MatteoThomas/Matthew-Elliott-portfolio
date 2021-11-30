@@ -1,93 +1,111 @@
 import styled from "styled-components";
 
-
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: all .5s ease;
+  
 `
 
 const Header = styled.h1`
-  font-family: 'Poppins', sans-serif;
-  font-size: clamp(2.6rem, 7.9vw, 8rem);
-  font-weight: 700;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 900;
+  font-size: clamp(2.7rem, 11vw, 8rem);
   letter-spacing: -.11rem;
   line-height: .8;
   word-wrap: break-word;
   text-align: left;
-  margin: 1rem 0 1rem 0;
-  width: clamp(100px, 90%, 1200px);
+  transition: all .5s ease;
+`
+
+const HelloOutline = styled.div`
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 900;
+  display: inline;
+  -webkit-text-stroke: 1px ${({ theme }) => theme.text};
+  -webkit-text-fill-color: ${({ theme }) => theme.body};
+  padding: .4rem;
+  transition: all .5s ease;
   `
+
 const Outline = styled.div`
-display: inline;
--webkit-text-stroke: 1px ${({ theme }) => theme.text};
--webkit-text-fill-color: ${({ theme }) => theme.body};
-transition: all .5s ease;
+  font-family: 'Hurricane', cursive;
+  font-size: clamp(2.7rem, 9vw, 8rem);
+  font-weight: 100;
+  /* font-style: italic; */
+  display: inline;
+  -webkit-text-stroke: 1px ${({ theme }) => theme.text};
+  -webkit-text-fill-color: transparent;
+  transition: all .5s ease;
 `
 
 const Description = styled.p`
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
   letter-spacing: .01vw;
   line-height: clamp(.1rem, 6vw, 2rem);
   font-size: clamp(.3rem, 3.5vw, 1.74rem); 
-  width: clamp(100px, 90%, 1200px);
-  margin-top: 1rem;
-  margin-bottom: 2rem;
+  width: clamp(100px, 80%, 1200px);
+  transition: all .5s ease;
+  color:${({ theme }) => theme.text};
+
   `
 
 const SubHeader = styled.h2`
-font-family: 'Poppins', sans-serif;
-font-size: clamp(1.5rem, 3vw, 3.4rem);
-font-weight: 600;
-letter-spacing: -.05rem;
-line-height: 1;
-word-wrap: break-word;
-text-align: left;
-margin: 1rem 0 0rem 0rem;
-`
-const SubDescription = styled.p`
-  font-family: 'Poppins', sans-serif;
+ font-family: 'Nunito Sans', sans-serif;
+ font-weight: 200;
+  font-size: clamp(1.5rem, 3vw, 3.4rem);
+  letter-spacing: -.05rem;
+  line-height: 1;
+  word-wrap: break-word;
+  margin: 1rem 0 1rem 0rem;
+  transition: all .5s ease;
   text-align: left;
+  background-color: transparent;
+`
+
+const SubDescription = styled.p`
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 200;
   letter-spacing: .01vw;
   line-height: clamp(.1rem, 6vw, 1.4rem);
   font-size: clamp(.3rem, 3.5vw, 1rem); 
-  width: 90%;
-  `
+  transition: all .5s ease;
+`
   
-  const Tech = styled.p`
-
-  font-family: 'Poppins', sans-serif;
+const Tech = styled.p`
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 200;
   text-align: left;
   letter-spacing: .01vw;
   line-height: clamp(.1rem, 6vw, 1.4rem);
   font-size: clamp(.1rem, 3.5vw, 1rem); 
-  width: 90%;
-
-  `
+  width: 100%;
+  transition: all .5s ease;
+`
   
 const Button = styled.button`
-  font-family: 'Poppins', sans-serif;
-  border: solid;
-  border-color:${({ theme }) => theme.background};
-  border-width: 1px;
-  background-color: ${({ theme }) => theme.body};
-  border-radius: 50px 50px 50px 50px;
-  padding: .5rem 1rem .5rem 1rem;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 200;
+  border: none;
+  background-color: transparent;
+  color: ${({ theme }) => theme.text};
   flex:none;
   transition: all .5s ease;
   cursor: pointer;
   margin: 1rem;
-
+  
   a {
     color: ${({ theme }) => theme.text};
     transition: all .5s ease;
   }
 
-  :hover {
+  &:hover {
     transition: all .5s ease;
     background-color: ${({ theme }) => theme.background};
-    color: ${({ theme }) => theme.background};
+    color: ${({ theme }) => theme.body};
 
   a {
     color: ${({ theme }) => theme.body};
@@ -96,6 +114,6 @@ const Button = styled.button`
   }
   `
   
-  export  { Wrapper, Header, SubHeader, Description, SubDescription, Tech, Button, Outline }
+  export  { Wrapper, Header, SubHeader, Description, SubDescription, Tech, Button, Outline, HelloOutline}
  
   
