@@ -1,6 +1,6 @@
 # Matthew Elliott Portfolio
 
-I created this app with React. I didn't use any UI kits for the look, just good old fashioned CSS.
+
 
 ![Screenshot](portfolio_screenshot.png)
 
