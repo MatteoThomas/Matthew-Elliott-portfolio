@@ -2,7 +2,7 @@ import React from "react";
 import emailjs from "emailjs-com";
 import styled from "styled-components";
 import {mobile} from "../../js/responsive"
-import  {   Wrapper, Header, Outline, Button }  from "../../styles/Styles";
+import  { Wrapper, Outline }  from "../../styles/Styles";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -11,6 +11,17 @@ import ImageIcon from '@mui/icons-material/Image';
 
 const Container = styled.div`
 
+`
+const Header = styled.h1`
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 900;
+  font-size: clamp(2.7rem, 11vw, 8rem);
+  letter-spacing: -.11rem;
+  line-height: .8;
+  word-wrap: break-word;
+  text-align: right;
+  transition: all .5s ease;
+  /* width: clamp(100px, 90%, 1200px); */
 `
 
 const SubDescription = styled.div`
@@ -30,7 +41,49 @@ const SubHeader = styled.div`
   word-wrap: break-word;
   text-align: right;
 `
+const Button = styled.button`
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 200;
+  border: none;
+  background-color: transparent;
+  color: ${({ theme }) => theme.text};
+  transition: all .5s ease;
+  cursor: pointer;
+  margin: 1rem 1rem 0 -1rem;
 
+  
+  a {
+    color: ${({ theme }) => theme.text};
+    transition: all .5s ease;
+  }
+
+  &:hover {
+    transition: all .5s ease;
+    background-color: ${({ theme }) => theme.background};
+    color: ${({ theme }) => theme.body};
+    
+    a {
+      color: ${({ theme }) => theme.body};
+      transition: all .5s ease;
+    }
+  }
+  `
+
+const ButtonWrap = styled.div`
+  /* display: flex;
+  justify-content: end; */
+  
+  & input {
+    font-size: 2rem;
+    ${mobile({ fontSize: "1.2rem"})};
+    border-bottom: none;
+    color: ${({theme}) => theme.text};
+    &:hover {
+      color: ${({theme}) => theme.accent};
+      border-radius: 50px;
+  } 
+}
+`
 const HeaderIconsWrap = styled.div`
   width: clamp(100px, 90%, 1200px);
 `
@@ -68,7 +121,7 @@ const IconWrapper = styled.div`
 `
 
 const Form = styled.form`
-  width: clamp(100px, 90%, 1200px);
+  /* width: clamp(100px, 90%, 1200px); */
   color: ${({ theme }) => theme.text};
   font-family: 'Poppins', sans-serif;
 `
@@ -86,22 +139,6 @@ const Input = styled.input`
 
 const Label = styled.div`
   margin: 1rem 0 0 0;
-`
-
-const ButtonWrap = styled.div`
-  display: flex;
-  justify-content: end;
-  
-  & input {
-    font-size: 2rem;
-    ${mobile({ fontSize: "1.2rem"})};
-    border-bottom: none;
-    color: ${({theme}) => theme.text};
-    &:hover {
-      color: ${({theme}) => theme.accent};
-      border-radius: 50px;
-  } 
-}
 `
 
 const Contact = () => {
@@ -139,13 +176,14 @@ const Contact = () => {
     
     <Header>
      
-        contact
-       
+    
+        <Outline>contact </Outline>
+       me
     </Header>
 
     <Form onSubmit={sendEmail}> 
 
-      <SubHeader>Drop me a line anytime.</SubHeader>
+      <SubHeader>Drop a line anytime.</SubHeader>
     
         <Label>Name</Label>
         <Input type="text" name="from_name" />
@@ -216,8 +254,8 @@ const Contact = () => {
       <ImageIcon style={{color: "inherit", fontSize: "inherit", margin: "inherit"}}/>
       </IconWrapper>
     </a>
-    <SubDescription>Graphic Design Portfolio
-    </SubDescription>
+    {/* <SubDescription>Graphic Design Portfolio
+    </SubDescription> */}
     </Icons>
 
 

@@ -4,7 +4,7 @@ import { ThemeProvider } from "styled-components";
 import GlobalStyles from '../styles/globalStyles';
 import { lightTheme, darkTheme } from "../styles/globalStyles"
 import LightModeButton from "./LightModeButton"
-import { useLightMode } from "../js/useLightMode";
+import { useLightMode } from "./useLightMode";
 import AboutSpring from "../components/About/AboutSpring";
 import WebdevSpring from "../components/WebDev/WebdevSpring";
 import GraphicSpring from "../components/Graphic/GraphicSpring";
@@ -15,7 +15,6 @@ import MenuButton from "../components/Menu/MenuButton";
 
 const Container = styled.div`
 `
-
 const ComponentsWrapper = styled.div`
 `
 const ButtonWrapper = styled.div`
@@ -37,17 +36,25 @@ const Home = () => {
         <ThemeProvider theme={themeMode}>
           <GlobalStyles />
           <Container>
-            <LightModeButton theme={theme} toggleTheme={toggleTheme}/> 
+            <LightModeButton theme={theme} toggleTheme={toggleTheme} /> 
+
             <ButtonWrapper>
               <MenuButton open={open} setOpen={setOpen} />    
             </ButtonWrapper>
-            <MenuPage open={open} setOpen={setOpen} currentPage={currentPage} handlePageChange={handlePageChange}/>
+
+            <MenuPage 
+            open={open} 
+            setOpen={setOpen} 
+            currentPage={currentPage} 
+            handlePageChange={handlePageChange}/>
+            
             <SplashSpring/>
             <ComponentsWrapper>
             <AboutSpring/>
             <WebdevSpring/>
             <GraphicSpring/>
             <ContactSpring/>
+
             </ComponentsWrapper>
             {/* <Router/> */}
           </Container>

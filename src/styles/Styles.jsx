@@ -32,9 +32,8 @@ const HelloOutline = styled.div`
 
 const Outline = styled.div`
   font-family: 'Hurricane', cursive;
-  font-size: clamp(2.7rem, 9vw, 8rem);
+  font-size: clamp(4rem, 9vw, 8rem);
   font-weight: 100;
-  /* font-style: italic; */
   display: inline;
   -webkit-text-stroke: 1px ${({ theme }) => theme.text};
   -webkit-text-fill-color: transparent;

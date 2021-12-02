@@ -125,7 +125,7 @@ const About = () => {
 
 
 return (
-  <Container>
+  <Container id="about">
       <Wrapper> 
         <AboutDetail>
             I'm a recent full-stack web-developer boot camp graduate & graphic designer.  

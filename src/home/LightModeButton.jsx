@@ -3,42 +3,54 @@ import React from "react";
 import styled from "styled-components";
 import { func, string } from 'prop-types';
 import { mobile } from "../js/responsive"
+import lm from "../img/LDmode_L.png"
 
-const ColorBtn = styled.button`
+const ColorBtn = styled.div`
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
+  line-height: 1rem;
   background-color: transparent;
   border: none;
   flex:none;
   cursor: pointer;
   position: fixed;
-  top:13rem;
-  right:2rem;
-  ${mobile({ top:"9rem", right: "5.5rem"})}
+  top:1rem;
+  left:.5rem;
+  ${mobile({ top:"1rem", right: "5.5rem"})}
   transition: all .5s ease;
   z-index: 110;
-  background-color: transparent;
-  transform: rotate(90deg);
+  transform: rotate(0deg);
 
   &:hover {
-    transform: rotate(90deg) translateX(-10%);
+    transform:  translateY(10%);
 }
 `
 
-const Icon = styled.div`
+const Icon = styled.img`
   transition: all 1s ease;
-  color: ${({ theme }) => theme.text};
+  background-image: url(${lm});
+  width:100;
+  height:100;
 `
 
-const IconDark = styled.div`
+const IconDark = styled.img`
   transition: all .5s ease;
+  background-image: url(${lm});
+  width:100;
+  height:100;
 `
+const Img = ({ theme }) => (
+<img
+style={{ width: '48px', height: '48px' }}
+src={theme === "dark" ? lm  : lm}
+  />
+  );
 
 const LightModeButton = ({theme, toggleTheme}) => {
 
   return (
     <ColorBtn onClick={toggleTheme}>
-      { theme === "dark" ? <Icon>LIGHT MODE</Icon> : <IconDark>DARK MODE</IconDark>}
+     <Img/>
     </ColorBtn>
 );
 }

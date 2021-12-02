@@ -5,19 +5,20 @@ import { webData } from '../../js/data'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkIcon from '@mui/icons-material/Link';
 import { mobile } from "../../js/responsive"
-import { useSpring, animated, useTransition, config } from '@react-spring/web'
-import { Scanner } from '@mui/icons-material'
+import { animated, useTransition, config } from '@react-spring/web'
 
 const Container = styled.div`  
-    height:400px;
-    width: clamp(100px, 90%, 1200px);
+    height:350px;
+    /* width: clamp(100px, 90%, 1200px); */
 `
 
 const Wrapper = styled.div`
     display: flex;
     justify-content: center;
-    margin: 0 auto;
+    flex-direction: column;
+    margin: 0rem 0 0 0;
     ${mobile({ flexDirection: "column"})}
+    background-color: #a03c2867;
 `
 
 const SubHeader = styled.h2`
@@ -28,9 +29,10 @@ const SubHeader = styled.h2`
     line-height: 1;
     font-style: italic;
     word-wrap: break-word;
-    margin: 0 auto 2rem auto;
+    margin: 0 auto 0rem auto;
     transition: all .5s ease;
     text-align: left;
+    background-color: #377575;
 `
 
 const SubDescription = styled.p`
@@ -38,9 +40,10 @@ const SubDescription = styled.p`
     font-weight: 100;
     letter-spacing: .01vw;
     line-height: clamp(.1rem, 6vw, 1.4rem);
-    font-size: clamp(.3rem, 53%, 21rem); 
+    font-size: clamp(.3rem, 100%, 21rem); 
     transition: all 1.5s ease;
     text-align: left;
+    background-color: #7c3fad;
 `
 
 const ImageWrapper = styled.div`
@@ -50,15 +53,18 @@ const ImageWrapper = styled.div`
 
 const Icons = styled.div`
     display: flex;
+    background-color: #6e0f3476;
 `
+
 const Icon = styled.div`
-    margin: 1rem 2rem 0rem 0rem;
+    /* margin: 1rem 2rem 0rem 0rem; */
     color: ${({ theme }) => theme.text};
+    background-color: #47f55e68;
 `
 
 const SlideInfo = styled.div`
     border-radius: 0 0px 0px 0;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
 `
 
 const AnimatedAbout = styled(animated.div)``
@@ -73,7 +79,7 @@ export default function Slider() {
     // DEFINE ANIMATION PARAMETERS
     const transition = useTransition(isVisible, {
         config: isVisible ? { ...config.molasses } : { duration: 150 },
-        from: { opacity: 0, transform: `translate3d(0px, -10px, 0px)` },
+        from: { opacity: 0, transform: `translate3d(110px, -10px, 0px)` },
         enter: { opacity: 1, transform: `translate3d(0px, 0px, 0px)` },
         leave: { opacity: 0, transform: `translate3d(0px, 10px, 0px)` }
 
@@ -98,25 +104,18 @@ export default function Slider() {
         }
     }
 
-    const moveDot = index => {
-        setSlideIndex(index)
-    }
-
+ 
     return (
-        <div className="container-slider">
+        <div >
             <Container>
             {webData.map((item, index) => {
                 return (
-                    <div
-                    key={item.id}
-                    
-                    >
-                       <Container>
+                    <div key={item.id}>
+                    <Container>
                 {transition((style, itemB) =>
                 itemB ? <div><AnimatedAbout style={style}> 
-            
 
-  <Wrapper>
+                        <Wrapper>
              
                          <SlideInfo>
                         <SubHeader>{item.title}</SubHeader>

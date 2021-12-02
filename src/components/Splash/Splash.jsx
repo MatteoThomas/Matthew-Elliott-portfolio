@@ -100,7 +100,7 @@ return (
           <RotatingText className="rotatingText">            
             <span className="rotatingText-adjective">cool</span>
             <span className="rotatingText-adjective">useful</span>
-            <span className="rotatingText-adjective">fun!</span>
+            <span className="rotatingText-adjective">fun</span>
             <span className="rotatingText-adjective">meaningful</span> 
             <span className="rotatingText-adjective">hilarious</span> 
             <span className="rotatingText-adjective">lasting</span>  

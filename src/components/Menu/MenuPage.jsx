@@ -10,6 +10,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import ImageIcon from '@mui/icons-material/Image';
 import Three from "../Three/Three"
+import { Link } from "react-scroll"
 
 const Container = styled.div`
   background-color:  ${({ theme }) => theme.background};
@@ -31,10 +32,11 @@ const Container = styled.div`
     font-weight: 900;
     font-size: clamp(2rem, 10vw, 5.7rem);
     letter-spacing: .01rem;
-    line-height: 3rem;
+    line-height: 4rem;
     text-align: right;
     transition: all .5s ease;
     color: ${({ theme }) => theme.text};
+    padding-right: 1rem;
     ${mobile({ lineHeight: "2rem",  paddingRight:".6rem"})}
     border: none;
 
@@ -112,7 +114,8 @@ function MenuBar({ open, setOpen ,currentPage, handlePageChange }) {
     <Container className="blur" open={open} onClick={() =>  setOpen(!open)}>
       <Wrapper>
 
-         <NavTab
+         <Link
+          to="about"
               href="#about"
               onClick={() => handlePageChange("About")}
               className={
@@ -124,9 +127,10 @@ function MenuBar({ open, setOpen ,currentPage, handlePageChange }) {
               about
 
               </a>
-              </NavTab>
+              </Link>
                 
-        <NavTab
+        <Link
+        to="webdev"
         href="#webdev"
         onClick={() => handlePageChange("Web Development")}
         className={
@@ -136,9 +140,10 @@ function MenuBar({ open, setOpen ,currentPage, handlePageChange }) {
            <a href="#0"> 
            <Outline>wev </Outline>development
             </a>
-            </NavTab>
+            </Link>
 
-            <NavTab
+            <Link
+            to="graphic"
         href="#graphic"
         onClick={() => handlePageChange("Graphic Design")}
         className={
@@ -148,9 +153,10 @@ function MenuBar({ open, setOpen ,currentPage, handlePageChange }) {
            <a href="#0"> 
            <Outline>graphic </Outline>design
             </a>
-            </NavTab>
+            </Link>
 
-            <NavTab
+            <Link
+            to="resume"
         href="#resume"
         onClick={() => handlePageChange("Resume")}
         className={
@@ -162,9 +168,11 @@ function MenuBar({ open, setOpen ,currentPage, handlePageChange }) {
         </a>
             
           
-        </NavTab>
+        </Link>
        
-        <NavTab
+        <Link
+             to="contact"
+       
         href="#contact"
         onClick={() => handlePageChange("Contact")}
         className={
@@ -172,10 +180,10 @@ function MenuBar({ open, setOpen ,currentPage, handlePageChange }) {
         }
         >
            <a href="#0"> 
-            contact
+           <Outline>contact </Outline>me
             </a>
          
-            </NavTab>
+            </Link>
 
 </Wrapper>
           
