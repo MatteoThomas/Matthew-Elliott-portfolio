@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components"
 import { bool } from 'prop-types';
 import { mobile } from "../../js/responsive"
@@ -32,16 +32,15 @@ const Container = styled.div`
     font-weight: 900;
     font-size: clamp(2rem, 10vw, 5.7rem);
     letter-spacing: .01rem;
-    line-height: 4rem;
-    text-align: right;
+    line-height:7rem;
+    text-align: center;
     transition: all .5s ease;
     color: ${({ theme }) => theme.text};
-    padding-right: 1rem;
     ${mobile({ lineHeight: "2rem",  paddingRight:".6rem"})}
-    border: none;
-
+    
     &:hover{
       color: ${({ theme }) => theme.accent};
+      border: none;
     }
     &::after {
       opacity: 0;
@@ -52,7 +51,7 @@ const Container = styled.div`
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  padding-top: 13rem;
+  padding-top: 3rem;
   ${mobile({ paddingTop: "6rem"})}
   height: 60vh;
 `
@@ -61,24 +60,6 @@ const ThreeWrapper = styled.div`
   position: absolute;
   top:0;
   pointer-events: none;
-`
-
-const NavTab = styled.div`
-  width: 100%;
-  line-height:3vh;
-  text-decoration: none;
-  text-align: center;
-  padding-bottom: 2.5rem;
-  transition: all 1s ease;
-  
-  &:hover{
-    color: ${({ theme }) => theme.accent};
-  transform: scale(1.05);
-  transition: all 1s ease;
-  
-  &::after {
-    opacity: 0;
-  }}
 `
 
 const Icons = styled.div`
@@ -105,9 +86,13 @@ const A = styled.a`
     opacity: 0;
   }
 `
-
 function MenuBar({ open, setOpen ,currentPage, handlePageChange }) {
 
+  const clickHandler = (page)  => {
+    handlePageChange(page);
+    setOpen(!open)
+
+  }
     return (
     
 
@@ -116,10 +101,10 @@ function MenuBar({ open, setOpen ,currentPage, handlePageChange }) {
 
          <Link
           to="about"
-              href="#about"
-              onClick={() => handlePageChange("About")}
-              className={
-                currentPage === "About" ?  "" : ""           
+          href="#about"
+          onClick={(e) => clickHandler(e, "About" )}
+          className={
+            currentPage === "About" ?  "" : ""           
               }
            >
               <a href="#0"> 
@@ -132,7 +117,7 @@ function MenuBar({ open, setOpen ,currentPage, handlePageChange }) {
         <Link
         to="webdev"
         href="#webdev"
-        onClick={() => handlePageChange("Web Development")}
+        onClick={(e) => clickHandler(e, "Web Development" )}
         className={
           currentPage === "Web Development" ?  "" : ""
         }
@@ -145,7 +130,7 @@ function MenuBar({ open, setOpen ,currentPage, handlePageChange }) {
             <Link
             to="graphic"
         href="#graphic"
-        onClick={() => handlePageChange("Graphic Design")}
+        onClick={(e) => clickHandler(e, "Graphic Design" )}
         className={
           currentPage === "Graphic Design" ? "" : ""
         }
@@ -158,7 +143,7 @@ function MenuBar({ open, setOpen ,currentPage, handlePageChange }) {
             <Link
             to="resume"
         href="#resume"
-        onClick={() => handlePageChange("Resume")}
+        onClick={(e) => clickHandler(e, "Graphic Design" )}
         className={
           currentPage === "Resume" ? "" : ""
         }
@@ -174,7 +159,7 @@ function MenuBar({ open, setOpen ,currentPage, handlePageChange }) {
              to="contact"
        
         href="#contact"
-        onClick={() => handlePageChange("Contact")}
+        onClick={(e) => clickHandler(e, "Contact" )}
         className={
           currentPage === "Contact" ? "" : ""
         }

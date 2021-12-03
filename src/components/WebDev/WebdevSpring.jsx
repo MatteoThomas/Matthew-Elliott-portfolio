@@ -6,26 +6,13 @@ import { Button } from "../../styles/Styles"
 import Webdev from "./Webdev";
 
 const Wrapper = styled.div`
-    /* text-align: center;
-    padding: 40px; */
-    /* background-color: #1b4c77; */
-    /* width: 100vw; */
 `
-
 const Container = styled.div`
-    /* padding: 40px;
-    margin: 200px 0 0 0;
-    min-height: 200px; */
 `
-
 const AnimatedWebdev = styled(animated.div)`
 `
-
 const ButtonWrap = styled.div`
-/* position: absolute;
-top:4rem; */
 `
-
 const SpringMount = () => {
     const [intervalId, setIntervalId] = useState(0);
     const [disable, setDisable] = useState(false)

@@ -3,10 +3,11 @@ import styled from "styled-components";
 import { mobile } from "../../js/responsive";
 import { useSpring, animated, useTransition, config } from '@react-spring/web'
 import "./rotatingText.css"
+import "./script"
 
 const Container = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: left;
   ${mobile({  flexDirection: "initial"})}
   height: 100vh;
 `
@@ -18,20 +19,20 @@ const Wrapper = styled.div`
 const AnimatedHelloText = styled.div` 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: left;
   text-align: center;
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   letter-spacing: -.4vw;
-  line-height: clamp(1.1rem, 3vw, 9rem);
-  font-size: clamp(3.5rem, 16vw, 13rem);
+  line-height: clamp(1.1rem, 4vw, 4rem);
+  font-size: clamp(1.5rem, 14vw, 13rem);
   transition: all .3s;
   width: clamp(100px, 90%, 1200px);
   ${({ theme }) => theme.text}
 `
 
 const HelloOutline = styled.div`
-  text-align: center;
+  text-align: left;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -51,23 +52,20 @@ const AnimatedFade = styled(animated.div)`
   margin:5rem 0rem 0 0;
   ${mobile({ marginTop: "0rem"})}
 `
+
 const AnimatedAbout = styled(animated.div)`
   margin:0rem 0rem 0 0;
   ${mobile({ marginTop: "0rem"})}
 `
 
-const LeaveText = styled(animated.div)`
-`
-
 const RotatingText = styled.div`
-margin-top: 1rem;
+  margin-top: 1rem;
 
 `
 const Splash = () => {
 
   const [isVisible, setIsVisible] = useState(true);
 
-    
   // DEFINE ANIMATION PARAMETERS
   const first = useTransition(isVisible, {
       config: isVisible ? { ...config.molasses} : { duration: 150 },
@@ -88,33 +86,24 @@ const Splash = () => {
 
 return (
   <Container>
-      <Wrapper>
+    <Wrapper>
       <AnimatedHelloText>
-          <HelloOutline> 
-            Hey! I'm   
-          </HelloOutline>
-          <br/>Matthew.<br/>
-          {/* <LeaveText> */}       
-          <HelloOutline>Let's make<br/>something</HelloOutline>
-
-          <RotatingText className="rotatingText">            
-            <span className="rotatingText-adjective">cool</span>
-            <span className="rotatingText-adjective">useful</span>
-            <span className="rotatingText-adjective">fun</span>
-            <span className="rotatingText-adjective">meaningful</span> 
-            <span className="rotatingText-adjective">hilarious</span> 
-            <span className="rotatingText-adjective">lasting</span>  
-          </RotatingText>
-
-
-          
-
-        </AnimatedHelloText>
-  
-
-      </Wrapper>
-    </Container>
-
+        <HelloOutline> 
+          Hey! I'm   
+        </HelloOutline>
+        <br/>Matthew.<br/>   
+        <HelloOutline>Let's make<br/>something</HelloOutline>
+        <RotatingText className="rotatingText" id="word">            
+          <span className="rotatingText-adjective" id="word">cool</span>
+          <span className="rotatingText-adjective" id="word">useful</span>
+          <span className="rotatingText-adjective" id="word">fun</span>
+          <span className="rotatingText-adjective" id="word">meaningful</span> 
+          <span className="rotatingText-adjective" id="word">hilarious</span> 
+          <span className="rotatingText-adjective" id="word">weird</span>  
+        </RotatingText>
+      </AnimatedHelloText>
+    </Wrapper>
+  </Container>
 )
 }
 

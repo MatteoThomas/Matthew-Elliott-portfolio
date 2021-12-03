@@ -46,7 +46,7 @@ export const webData = [
     id: 4,
     img: gitmusic,
     alt: "git music",
-    title: "GIT.MUSIC",
+    title: "GIT. MUSIC",
     date: "2021",
     desc: "git MUSIC is a music finding app that relies on the Discogs API for artist information. git MUSIC is a music finding app that relies on the Discogs API for artist information.",
     tech: "JavaScript / APIs",
