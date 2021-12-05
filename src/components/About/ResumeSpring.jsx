@@ -2,29 +2,15 @@ import { useTransition } from "@react-spring/core";
 import { animated, config } from "@react-spring/web";
 import React, { useState } from "react";
 import styled from "styled-components"
-
 import Resume from "./Resume";
 
 const Wrapper = styled.div`
-    /* text-align: center;
-    padding: 40px; */
-    /* background-color: #1b4c77; */
-    /* width: 100vw; */
-
 `
-
 const Container = styled.div`
-    /* padding: 40px;
-    margin: 200px 0 0 0;
-    min-height: 200px; */
-
 `
 const AnimatedWebdev = styled(animated.div)`
 `
-
 const ButtonWrap = styled.div`
-/* position: absolute;
-top:4rem; */
 `
 
 const SpringMount = () => {
