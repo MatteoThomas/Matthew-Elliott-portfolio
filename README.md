@@ -4,6 +4,11 @@
 ![React](https://img.shields.io/badge/react-%2320232a.svg??style=flat&logo=appveyor&logo=react&logoColor=%2361DAFB)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=flat&logo=appveyor&logo=css3&logoColor=white)
 ![Threejs](https://img.shields.io/badge/threejs-black?style=flat&logo=appveyor&logo=three.js&logoColor=white)
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> d84074dd8afa146c1641c28941e15014516c7708
 
 This is my personal portfolio. It's meant to show off my front-end skills. There's a web development section with links to my best projects. A graphic design section that shows the design work I've done over the last decade. Also a contact form that uses the Email JS library to send me an email when submitted. I used three js on the menu page for eye candy and there will be more in the future.
 
