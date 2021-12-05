@@ -4,10 +4,10 @@
 }
 
 .rotatingText-adjective {
+  font-size: clamp(5.5rem, 22vw, 22rem);
   font-weight: 700;
   letter-spacing: 0vw;
   line-height: clamp(1.1rem, 5vw, 9rem);
-  font-size: clamp(3.5rem, 15vw, 13rem);
   opacity: 0;
   position: absolute;
   left: 0;
@@ -16,50 +16,50 @@
 }
 
 .rotatingText-adjective:nth-of-type(1) {
-  /* font-family: Times; */
+  font-family: Times;
   animation-name: rotate;
-  animation-duration: 1.5s;
-  animation-delay: 0.5s;
+  animation-duration: 1.3s;
+  animation-delay: 0s;
 }
 
 .rotatingText-adjective:nth-of-type(2) {
-  /* font-family: "EXO", sans-serif; */
+  font-family: "EXO", sans-serif;
   font-weight: 200;
   animation-name: rotate;
-  animation-duration: 1.5s;
-  animation-delay: 1.75s;
+  animation-duration: 1.1s;
+  animation-delay: 1.1s;
 }
 
 .rotatingText-adjective:nth-of-type(3) {
-  /* font-family: "Nunito Sans", sans-serif; */
+  font-family: "Nunito Sans", sans-serif;
   font-weight: 900;
   animation-name: rotate;
-  animation-duration: 1.5s;
-  animation-delay: 3s;
+  animation-duration: 0.9s;
+  animation-delay: 2.1s;
 }
 
 .rotatingText-adjective:nth-of-type(4) {
-  /* font-family: "Times", sans-serif; */
+  font-family: "Times", sans-serif;
   font-weight: 900;
   animation-name: rotate;
-  animation-duration: 1.5s;
-  animation-delay: 4.25s;
+  animation-duration: 0.7s;
+  animation-delay: 2.9s;
 }
 
 .rotatingText-adjective:nth-of-type(5) {
-  /* font-family: "Poppins", sans-serif; */
+  font-family: "Poppins", sans-serif;
   font-weight: 900;
   animation-name: rotate;
-  animation-duration: 1.5s;
-  animation-delay: 5.75s;
+  animation-duration: 0.8s;
+  animation-delay: 3.7s;
 }
 
 .rotatingText-adjective:nth-of-type(6) {
-  /* font-family: "Nunito Sans", sans-serif; */
-  font-weight: 900;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 200;
   animation-name: rotate-last;
-  animation-duration: 1.5s;
-  animation-delay: 7.25s;
+  animation-duration: 0.7s;
+  animation-delay: 4.4s;
   animation-fill-mode: forwards;
 }
 

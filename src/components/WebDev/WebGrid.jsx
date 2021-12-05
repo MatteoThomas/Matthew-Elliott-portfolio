@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import  { Wrapper, Header, Outline }  from "../../styles/Styles";
+import  { Wrapper, Outline }  from "../../styles/Styles";
 import { mobile } from "../../js/responsive"
 import { webData } from '../../js/data'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkIcon from '@mui/icons-material/Link';
 
 const Container = styled.div`
-  width:95%;
-  margin: 2rem auto 0 auto;
+  width: clamp(200px, 90%, 1200px);
+  margin: 2rem auto 5rem auto;
   display: grid; 
   grid-template-columns: 1.1fr 0.5fr 1.4fr 1fr 1fr; 
   grid-template-rows: 0.2fr 1.6fr; 
@@ -23,6 +23,9 @@ const Container = styled.div`
 
 const TitleWrapper = styled.div`
 `
+const Header = styled.div`
+`
+  
 const Title = styled.div`
   grid-area: title;
   font-family: 'Nunito Sans', sans-serif;
@@ -30,6 +33,7 @@ const Title = styled.div`
   font-size: clamp(1.3rem, 11vw, 12rem);
   letter-spacing: -.05rem;
   line-height: 8rem;
+  ${mobile({ lineHeight: "2rem"})}
   font-style: italic;
   word-wrap: break-word;
   transition: all .5s ease;
@@ -54,15 +58,17 @@ const Desc = styled.div`
 const Icons = styled.div`
   grid-area: icons;
     a {
-      padding: 0 2rem 0rem 2rem;
-      
+      padding: 0 2rem 0rem 0rem;
     }
+  ${mobile({ paddingTop: "0rem"})}
 `
 
 const Date = styled.div`
   grid-area: date;
-  padding-top: .2rem;
   text-align: right;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
+  ${mobile({ display: "none"})}
 `
 
 const Grid = () => {
@@ -73,6 +79,12 @@ const Grid = () => {
           return (
             <div key={item.id}>
               <Container>
+                <Image src={item.img}/>  
+                <TitleWrapper>
+                <Title>{item.title}</Title>
+                </TitleWrapper>
+                <Desc>{item.desc}</Desc>
+                <Header>
                 <Icons>
                   <a href={item.link}><LinkIcon/></a>
                   <a href={item.github}><GitHubIcon/></a>
@@ -80,11 +92,7 @@ const Grid = () => {
                   <Date>
                   {item.date}
                   </Date>
-                <Image src={item.img}/>  
-                <Desc>{item.desc}</Desc>
-                <TitleWrapper>
-                <Title>{item.title}</Title>
-                </TitleWrapper>
+                  </Header>
               </Container>
             </div>
           )

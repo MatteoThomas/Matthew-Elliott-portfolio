@@ -49,12 +49,12 @@ const Description = styled.p`
   width: clamp(100px, 80%, 1200px);
   transition: all .5s ease;
   color:${({ theme }) => theme.text};
-
+  text-align: right;
   `
 
 const SubHeader = styled.h2`
- font-family: 'Nunito Sans', sans-serif;
- font-weight: 200;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 200;
   font-size: clamp(1.5rem, 3vw, 3.4rem);
   letter-spacing: -.05rem;
   line-height: 1;

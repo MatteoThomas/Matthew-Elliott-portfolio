@@ -1,21 +1,3 @@
-// THIS APPROACH ADDS A CLASS USING GOOGLE FONTS
-// GIVES CORS ERROR
-// let fonts = ["dela", "amatic", "cinzel", "comforter", "exo", "ibm"];
-
-// function changeFont() {
-//   setInterval(function () {
-//     let element = document.getElementById("changing-letters-google");
-//     let font = Math.floor(Math.random() * fonts.length);
-//     let fontString = font.toString();
-//     element.classList.add(fonts[fontString]);
-//     console.log(fontString);
-//   }, 3000);
-// }
-// changeFont();
-
-// console.log(fonts);
-
-// THIS APPROACH CHANGES THE FONT AMONG WEB SAFE FONTS
 let webFonts = [
   "Poppins",
   "Tahoma",
@@ -79,15 +61,3 @@ function changeSize() {
   size.style.fontSize = sizing[sizeRandom++ % sizing.length];
 }
 setInterval(changeSize, 300);
-
-// const setBg = () => {
-//   const randomColor = Math.floor(Math.random() * 16777215).toString(16);
-//   document.body.style.backgroundColor = "#" + randomColor;
-// };
-// setInterval(setBg, 200);
-
-// const setColor = () => {
-//   const randomColor = Math.floor(Math.random() * 16777215).toString(16);
-//   document.body.style.color = "#" + randomColor;
-// };
-// setInterval(setColor, 100);

@@ -198,11 +198,11 @@ function MenuBar({ open, setOpen ,currentPage, handlePageChange }) {
         </Icon>
       </A>
 
-      <A href="https://matteoelliott.myportfolio.com/">
+      {/* <A href="https://matteoelliott.myportfolio.com/">
         <Icon>
         <ImageIcon style={{ fontSize: "1.5rem"}}/>
         </Icon>
-      </A>
+      </A> */}
  
     </Icons>
 

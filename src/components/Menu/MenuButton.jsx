@@ -2,17 +2,14 @@ import React from "react";
 import { bool, func } from "prop-types";
 import styled, { keyframes } from "styled-components";
 import {mobile} from "../../js/responsive"
-
 import { Wrapper } from "../../styles/Styles.jsx"
-
-import menuCircleLight from "../../img/menu-circular-light.png"
 import menuCircleDark from "../../img/menu-circular-dark.png"
 
 const Button = styled.button`
   overflow: hidden;
   color: ${({ theme }) => theme.background};
   margin: 1rem 1rem 0 0;
-  ${mobile({ margin: "-2rem 4rem 0 0"})}
+  ${mobile({ margin: "-2rem 2rem 0 0"})}
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,10 +20,11 @@ const Button = styled.button`
   z-index: 111;
   transition: all .5s ease-in-out;
   overflow: hidden;
+  
   &:hover {
     transform: scale(1.1);
 }
-&:active {
+  &:active {
     transform: scale(1.2);
     filter: opacity(0);
     transition: all .2s ease-in-out;
@@ -44,7 +42,6 @@ const rotate = keyframes`
 
 const CircleIcon = styled.img`
   width:8rem;
-  /* ${mobile({ width: "8rem"})} */
   animation: ${rotate} 30s linear infinite;
   transition: rotate 2s ease-in-out;
   z-index: 200;

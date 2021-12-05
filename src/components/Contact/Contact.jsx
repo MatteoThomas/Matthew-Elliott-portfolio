@@ -2,7 +2,7 @@ import React from "react";
 import emailjs from "emailjs-com";
 import styled from "styled-components";
 import {mobile} from "../../js/responsive"
-import  { Wrapper, Outline }  from "../../styles/Styles";
+import  { Wrapper, Header  }  from "../../styles/Styles";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -12,16 +12,26 @@ import ImageIcon from '@mui/icons-material/Image';
 const Container = styled.div`
 
 `
-const Header = styled.h1`
-  font-family: 'Nunito Sans', sans-serif;
-  font-weight: 900;
-  font-size: clamp(2.7rem, 11vw, 8rem);
-  letter-spacing: -.11rem;
-  line-height: .8;
-  word-wrap: break-word;
-  text-align: right;
+
+// const Header = styled.h1`
+//   font-family: 'Nunito Sans', sans-serif;
+//   font-weight: 900;
+//   font-size: clamp(1rem, 1vw, 14.74rem); 
+//   letter-spacing: -.11rem;
+//   line-height: .8;
+//   word-wrap: break-word;
+//   text-align: right;
+//   transition: all .5s ease;
+// `
+
+const Outline = styled.div`
+  font-family: 'Hurricane', cursive;
+  font-size: clamp(6rem, 28vw, 22rem);
+  font-weight: 100;
+  display: inline;
+  -webkit-text-stroke: 1px ${({ theme }) => theme.text};
+  -webkit-text-fill-color: transparent;
   transition: all .5s ease;
-  /* width: clamp(100px, 90%, 1200px); */
 `
 
 const SubDescription = styled.div`
@@ -50,7 +60,6 @@ const Button = styled.button`
   transition: all .5s ease;
   cursor: pointer;
   margin: 1rem 1rem 0 -1rem;
-
   
   a {
     color: ${({ theme }) => theme.text};
@@ -247,16 +256,15 @@ const Contact = () => {
     </SubDescription>
     </Icons>
 
-    <Icons>
+    {/* <Icons>
     <a href="https://matteoelliott.myportfolio.com/">
     <IconWrapper>
     
       <ImageIcon style={{color: "inherit", fontSize: "inherit", margin: "inherit"}}/>
       </IconWrapper>
     </a>
-    {/* <SubDescription>Graphic Design Portfolio
-    </SubDescription> */}
-    </Icons>
+
+    </Icons> */}
 
 
 </IconContainer>

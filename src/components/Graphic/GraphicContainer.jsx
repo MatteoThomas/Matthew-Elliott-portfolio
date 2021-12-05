@@ -1,21 +1,17 @@
 
-import { useState } from 'react'
+
 import styled from 'styled-components'
-import { keyframes } from 'styled-components'
+
 import  { graphicData } from "../../js/data"
-import  {   Description, SubDescription, Tech, Button }  from "../../styles/Styles";
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkIcon from '@mui/icons-material/Link';
-import {mobile, tablet} from "../../js/responsive"
+import  {  SubDescription, Tech }  from "../../styles/Styles";
+
+import {mobile} from "../../js/responsive"
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useTransition, animated, useSpring, config } from '@react-spring/web'
 import useResizeAware from "react-resize-aware";
-import { bool } from 'prop-types';
 
 const Container = styled.div`
     width:clamp(10px, 80%, 1200px);
-    /* display:flex;
-    flex-direction: column; */
     display: ${({ open }) => open ?  'none' : 'block'};
 `
     
@@ -34,9 +30,9 @@ const SubHeader = styled.h2`
     word-wrap: break-word;
     margin: 0rem 0 0rem 0rem;
     transition: all .5s ease;
-    justify-content: flex-end;
     background-color: transparent;
     display: flex;
+    justify-content: left;
 `
 
 const Image = styled.img`
@@ -100,8 +96,6 @@ const inputStyle = (index, theme) => {
     )
 
 }
-GraphicContainer.propTypes = {
-    open: bool.isRequired,
-  }
+
   
 export default GraphicContainer

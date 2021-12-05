@@ -1,33 +1,33 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { mobile } from "../../js/responsive";
-import { useSpring, animated, useTransition, config } from '@react-spring/web'
+import { animated, useTransition, config } from '@react-spring/web'
 import "./rotatingText.css"
 import "./script"
 
 const Container = styled.div`
   display: flex;
-  justify-content: left;
-  ${mobile({  flexDirection: "initial"})}
+  justify-content: center;
   height: 100vh;
+  ${mobile({  flexDirection: "initial"})}
 `
 
 const Wrapper = styled.div`
-  padding: 10rem;
+  padding: 8rem;
 `
 
 const AnimatedHelloText = styled.div` 
   display: flex;
   flex-direction: column;
   justify-content: left;
-  text-align: center;
+  text-align: left;
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   letter-spacing: -.4vw;
-  line-height: clamp(1.1rem, 4vw, 4rem);
+  line-height: clamp(1.1rem, 5vw, 4rem);
+  ${mobile({ lineHeight: "clamp(1.1rem, 5vw, 4rem)"})};
   font-size: clamp(1.5rem, 14vw, 13rem);
   transition: all .3s;
-  width: clamp(100px, 90%, 1200px);
   ${({ theme }) => theme.text}
 `
 
@@ -39,11 +39,11 @@ const HelloOutline = styled.div`
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   letter-spacing: -.7vw;
-  line-height: clamp(1.1rem, 6vw, 9rem);
+  line-height: clamp(1.1rem, 7vw, 9rem);
+  ${mobile({ lineHeight: "clamp(1.1rem, 10vw, 9rem)"})};
   font-size: clamp(3.5rem, 12vw, 10rem);
   transition: all .5s;
-  width: clamp(100px, 100%, 1200px);
-  margin-top: 2rem ;
+  margin-top: 1rem ;
   -webkit-text-stroke: 1px ${({ theme }) => theme.text};
   -webkit-text-fill-color: transparent;
 `
@@ -60,7 +60,6 @@ const AnimatedAbout = styled(animated.div)`
 
 const RotatingText = styled.div`
   margin-top: 1rem;
-
 `
 const Splash = () => {
 
@@ -82,7 +81,6 @@ const Splash = () => {
     leave: { opacity: 0 },
     delay: 4000
 });
-
 
 return (
   <Container>
