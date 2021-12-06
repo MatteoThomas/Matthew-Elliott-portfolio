@@ -14,8 +14,8 @@ const ColorBtn = styled.div`
   flex:none;
   cursor: pointer;
   position: fixed;
-  top:1rem;
-  left:.5rem;
+  top:2rem;
+  left:1.5rem;
   ${mobile({ top:"1rem", right: "5.5rem"})}
   transition: all .5s ease;
   z-index: 110;

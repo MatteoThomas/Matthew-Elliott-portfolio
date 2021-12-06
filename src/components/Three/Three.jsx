@@ -25,10 +25,10 @@ export default function App() {
     <Container>
 
     <Canvas camera={{ position: [0, 0, 46], fov: 35 }}>
-      <ambientLight intensity={0.2} />
+      <ambientLight intensity={2.2} />
       {/* <pointLight intensity={1} position={[0, 0, -1000]} /> */}
       <Suspense fallback={null}>
-        <Cloud position={[-34, -2, -25]} speed={.2} opacity={.01} />
+        <Cloud position={[-34, 32, -25]} speed={.2} opacity={.01} />
         <Cloud position={[4, 2, -15]} speed={1} opacity={0.3} />
         <Cloud position={[-6, 2, -10]} speed={0.2} opacity={1} />
         <Cloud position={[21, -2, -5]} speed={0.2} opacity={0.05} />

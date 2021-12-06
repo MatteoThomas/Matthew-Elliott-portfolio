@@ -8,9 +8,8 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import ImageIcon from '@mui/icons-material/Image';
-import Three from "../Three/Three"
-import { Link } from "react-scroll"
+import Three from "../Three/Three";
+import { Link } from "react-scroll";
 
 const Container = styled.div`
   background-color:  ${({ theme }) => theme.background};
@@ -20,11 +19,15 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-content: center;
-  transform: ${({ open }) => open ?  'translateX(0%)' : 'translateX(100%)'};
-  display: ${({ open }) => open ?  'block' : 'none'};
+  filter: ${({ open }) => open ?  'opacity: 1' : 'opacity 0'};
+  transform: ${({ open }) => open ?  'translateX(100%)' : 'translateX(0%)'};
+  /* transition: transform .7s ease-in-out; */
+  transition: all .3s cubic-bezier(0,.23,1,.57);
+  -webkit-transition: all .3s cubic-bezier(0,.23,1,.57);
+  display: block;
   position: fixed;
   z-index: 10;
-  transition: transform 1.8s ease-in-out;
+
   a {
     transition: transform .8s ease-in-out;
     cursor: pointer;
@@ -46,15 +49,15 @@ const Container = styled.div`
       opacity: 0;
     }
   }
-`
+  `
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   padding-top: 3rem;
   ${mobile({ paddingTop: "6rem"})}
-  height: 60vh;
-`
+  height: 100vh;
+  `
 
 const ThreeWrapper = styled.div`
   position: absolute;
@@ -65,7 +68,6 @@ const ThreeWrapper = styled.div`
 const Icons = styled.div`
   display: flex;
   justify-content: center;
-  align-content: center;
   border-top: 2px solid ${({ theme }) => theme.text};
   background-color: ${({ theme }) => theme.background};
 `
@@ -170,8 +172,6 @@ function MenuBar({ open, setOpen ,currentPage, handlePageChange }) {
          
             </Link>
 
-</Wrapper>
-          
     <Icons>
       
       <A href="mailto:matt.ell@pm.me">
@@ -205,6 +205,8 @@ function MenuBar({ open, setOpen ,currentPage, handlePageChange }) {
       </A> */}
  
     </Icons>
+</Wrapper>
+          
 
 <ThreeWrapper>
   <Three/>
