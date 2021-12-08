@@ -15,8 +15,7 @@ const AnimatedGraphic = styled(animated.div)`
 `
 
 const SpringMount = () => {
-    const [ setIntervalId] = useState(0);
-    const [disable, setDisable] = useState(false)
+
     const [isVisible] = useState(true);
     
     // DEFINE ANIMATION PARAMETERS

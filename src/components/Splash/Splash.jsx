@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { mobile } from "../../js/responsive";
-import { animated, useTransition, config } from '@react-spring/web'
+
 import "./rotatingText.css"
 import "./script"
 
@@ -54,7 +54,7 @@ const RotatingText = styled.div`
 `
 const Splash = () => {
 
-  const [isVisible] = useState(true);
+
 
   // DEFINE ANIMATION PARAMETERS
 
