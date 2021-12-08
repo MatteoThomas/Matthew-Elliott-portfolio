@@ -24,9 +24,9 @@ const ButtonWrapper = styled.div`
   z-index:133;
 `
 const Home = () => {
-  const [open, setOpen] = useState(false);
+
+  const [open, setOpen] = useState(true);
   const [currentPage, setCurrentPage] = useState("SplashSpring");
-  // THEME 
   const [theme, toggleTheme] = useLightMode();
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
   const handlePageChange = (page) => setCurrentPage(page);
@@ -50,13 +50,14 @@ const Home = () => {
             
             <SplashSpring/>
             <ComponentsWrapper>
+              
             <AboutSpring/>
             <WebdevSpring/>
             <GraphicSpring/>
             <ContactSpring/>
 
             </ComponentsWrapper>
-            {/* <Router/> */}
+      
           </Container>
         </ThemeProvider>
       </div>

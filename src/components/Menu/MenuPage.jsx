@@ -21,9 +21,8 @@ const Container = styled.div`
   align-content: center;
   filter: ${({ open }) => open ?  'opacity: 1' : 'opacity 0'};
   transform: ${({ open }) => open ?  'translateX(100%)' : 'translateX(0%)'};
-  /* transition: transform .7s ease-in-out; */
-  transition: all .3s cubic-bezier(0,.23,1,.57);
-  -webkit-transition: all .3s cubic-bezier(0,.23,1,.57);
+  transition: all .2s cubic-bezier(0,.23,1,.87);
+  -webkit-transition: all .2s cubic-bezier(0,.23,1,.87);
   display: block;
   position: fixed;
   z-index: 10;
@@ -54,9 +53,14 @@ const Container = styled.div`
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
   padding-top: 3rem;
   ${mobile({ paddingTop: "6rem"})}
-  height: 100vh;
+  height: 70vh;
+  &:first-child {
+  margin-top: 4rem;
+}
   `
 
 const ThreeWrapper = styled.div`
@@ -95,9 +99,9 @@ function MenuBar({ open, setOpen ,currentPage, handlePageChange }) {
     setOpen(!open)
 
   }
+  console.log(open)
     return (
     
-
     <Container className="blur" open={open} onClick={() =>  setOpen(!open)}>
       <Wrapper>
 

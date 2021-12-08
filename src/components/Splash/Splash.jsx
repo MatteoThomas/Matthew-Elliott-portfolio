@@ -48,15 +48,10 @@ const HelloOutline = styled.div`
   -webkit-text-fill-color: transparent;
 `
 
-
 const RotatingText = styled.div`
   margin-top: 1rem;
 `
 const Splash = () => {
-
-
-
-  // DEFINE ANIMATION PARAMETERS
 
 return (
   <Container>

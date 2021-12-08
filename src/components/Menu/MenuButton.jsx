@@ -49,7 +49,8 @@ const CircleIcon = styled.img`
 `
 
 const MenuButton = ({ open, setOpen }) => {
-
+  
+  console.log(open)
   return (
     <div>
       <Wrapper>
@@ -64,7 +65,6 @@ const MenuButton = ({ open, setOpen }) => {
     </div>
   );
 };
-
 MenuButton.propTypes = {
   open: bool.isRequired,
   setOpen: func.isRequired,

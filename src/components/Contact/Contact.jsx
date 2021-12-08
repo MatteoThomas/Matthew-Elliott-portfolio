@@ -12,17 +12,6 @@ const Container = styled.div`
 
 `
 
-// const Header = styled.h1`
-//   font-family: 'Nunito Sans', sans-serif;
-//   font-weight: 900;
-//   font-size: clamp(1rem, 1vw, 14.74rem); 
-//   letter-spacing: -.11rem;
-//   line-height: .8;
-//   word-wrap: break-word;
-//   text-align: right;
-//   transition: all .5s ease;
-// `
-
 const Outline = styled.div`
   font-family: 'Hurricane', cursive;
   font-size: clamp(6rem, 28vw, 22rem);
@@ -78,9 +67,7 @@ const Button = styled.button`
   `
 
 const ButtonWrap = styled.div`
-  /* display: flex;
-  justify-content: end; */
-  
+
   & input {
     font-size: 2rem;
     ${mobile({ fontSize: "1.2rem"})};
