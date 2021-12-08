@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
-import  { Wrapper, Outline }  from "../../styles/Styles";
+
 import { mobile } from "../../js/responsive"
 import { webData } from '../../js/data'
 import GitHubIcon from '@mui/icons-material/GitHub';

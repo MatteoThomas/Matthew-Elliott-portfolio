@@ -1,7 +1,6 @@
 
 import styled from "styled-components"
 import  { Wrapper, Description }  from "../../styles/Styles"
-import { mobile } from "../../js/responsive"
 import GraphicContainer from "./GraphicContainer";
 
 const Container = styled.div`

@@ -23,7 +23,6 @@ function changeWebFont() {
 setInterval(changeWebFont, 200);
 
 let colors = ["#fa535b", "pink", "#72e2c6"];
-var currentColor = 0;
 
 function changeBackground() {
   let backgroundColor = document.getElementById("word");
@@ -33,7 +32,6 @@ function changeBackground() {
 setInterval(changeBackground, 300);
 
 let weights = [200, 500, 300, 400, 600, 100, 400];
-var currentWeight = 400;
 
 function changeWeight() {
   let weight = document.getElementById("word");
@@ -43,7 +41,6 @@ function changeWeight() {
 setInterval(changeWeight, 500);
 
 let spacing = ["3px", "10px", "20px", "15px", "30px", "6px"];
-var currentSpacing = 0;
 
 function changeSpace() {
   let space = document.getElementById("word");
@@ -53,7 +50,6 @@ function changeSpace() {
 setInterval(changeSpace, 400);
 
 let sizing = ["100px", "40px", "20px", "200px", "60px", "6px"];
-var currentSize = 0;
 
 function changeSize() {
   let size = document.getElementById("word");

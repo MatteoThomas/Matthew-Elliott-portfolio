@@ -3,15 +3,12 @@ import { Canvas, useFrame, useThree } from "@react-three/fiber"
 import { Cloud } from "@react-three/drei"
 import styled from "styled-components"
 
-
 const Container = styled.div`
       height: 100vh;
       width: 100vw;
       background: linear-gradient(14deg, ${({ theme }) => theme.text} 0%, transparent 100%);
       filter: opacity(.5);
 `
-
-
 
 function Rig() {
   const camera = useThree((state) => state.camera)

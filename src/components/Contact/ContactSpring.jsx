@@ -2,7 +2,6 @@ import { useTransition } from "@react-spring/core";
 import { animated, config } from "@react-spring/web";
 import React, { useState } from "react";
 import styled from "styled-components"
-import { Button } from "../../styles/Styles"
 import Contact from "./Contact";
 
 const Wrapper = styled.div`
@@ -12,13 +11,11 @@ const Container = styled.div`
 `
 const AnimatedContact = styled(animated.div)`
 `
-const ButtonWrap = styled.div`
-`
 
 const SpringMount = () => {
-    const [intervalId, setIntervalId] = useState(0);
+    const [ setIntervalId] = useState(0);
     const [disable, setDisable] = useState(false)
-    const [isVisible, setIsVisible] = useState(true);
+    const [isVisible] = useState(true);
     
     // DEFINE ANIMATION PARAMETERS
     const transition = useTransition(isVisible, {
@@ -29,15 +26,6 @@ const SpringMount = () => {
 
     });
 
-    const handleClick = () => {
-        
-
-        console.log(disable)
-        const newIntervalId = setInterval(() => {
-            setDisable(false);
-        }, 2000);
-        setIntervalId(newIntervalId);
-    }
 
     return (
 

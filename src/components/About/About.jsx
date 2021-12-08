@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { mobile } from "../../js/responsive";
-import { useSpring, animated, useTransition, config } from '@react-spring/web'
 import Resume from "../About/Resume"
-import { fontSize } from "@mui/system";
+
 
 const Container = styled.div`
   display: flex;
@@ -32,18 +31,6 @@ const AboutDetail = styled.div`
   ${mobile({ margin: "0rem auto 0 auto"})}
 `
 
-const AnimatedFade = styled(animated.div)`
-  margin:5rem 0rem 0 0;
-  ${mobile({ marginTop: "0rem"})}
-`
-
-const AnimatedAbout = styled(animated.div)`
-  margin:0rem 0rem 0 0;
-  ${mobile({ marginTop: "0rem"})}
-`
-
-const LeaveText = styled(animated.div)`
-`
 
 const About = () => {
 

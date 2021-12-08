@@ -2,7 +2,6 @@ import { useTransition } from "@react-spring/core";
 import { animated, config } from "@react-spring/web";
 import React, { useState } from "react";
 import styled from "styled-components"
-import { Button } from "../../styles/Styles"
 import Graphic  from "./Graphic";
 
 const Wrapper = styled.div`
@@ -15,15 +14,10 @@ const Container = styled.div`
 const AnimatedGraphic = styled(animated.div)`
 `
 
-const ButtonWrap = styled.div`
-position: absolute;
-top:4rem;
-`
-
 const SpringMount = () => {
-    const [intervalId, setIntervalId] = useState(0);
+    const [ setIntervalId] = useState(0);
     const [disable, setDisable] = useState(false)
-    const [isVisible, setIsVisible] = useState(true);
+    const [isVisible] = useState(true);
     
     // DEFINE ANIMATION PARAMETERS
     const transition = useTransition(isVisible, {
@@ -34,15 +28,7 @@ const SpringMount = () => {
 
     });
 
-    const handleClick = () => {
 
-
-        console.log(disable)
-        const newIntervalId = setInterval(() => {
-            setDisable(false);
-        }, 3000);
-        setIntervalId(newIntervalId);
-    }
 
     return (
 

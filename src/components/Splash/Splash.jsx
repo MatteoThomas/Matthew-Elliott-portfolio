@@ -48,39 +48,15 @@ const HelloOutline = styled.div`
   -webkit-text-fill-color: transparent;
 `
 
-const AnimatedFade = styled(animated.div)`
-  margin:5rem 0rem 0 0;
-  ${mobile({ marginTop: "0rem"})}
-`
-
-const AnimatedAbout = styled(animated.div)`
-  margin:0rem 0rem 0 0;
-  ${mobile({ marginTop: "0rem"})}
-`
 
 const RotatingText = styled.div`
   margin-top: 1rem;
 `
 const Splash = () => {
 
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible] = useState(true);
 
   // DEFINE ANIMATION PARAMETERS
-  const first = useTransition(isVisible, {
-      config: isVisible ? { ...config.molasses} : { duration: 150 },
-      from: { opacity: 0, transform: `translate3d(0px, 822px, 0px)` },
-      enter: { opacity: 1, transform: `translate3d(0px, 0px, 0px)` },
-      leave: { opacity: 0, transform: `translate3d(0px, 10px, 0px)` },
-      delay: 3300
-  });
-
-  const fadeOut = useTransition(isVisible, {
-    config: isVisible ? { ...config.gentle} : { duration: 150 },
-    from: { opacity: 1 },
-    enter: { opacity: 0 },
-    leave: { opacity: 0 },
-    delay: 4000
-});
 
 return (
   <Container>

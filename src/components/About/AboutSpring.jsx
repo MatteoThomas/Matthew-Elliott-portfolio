@@ -1,8 +1,7 @@
 import { useTransition } from "@react-spring/core";
 import { animated, config } from "@react-spring/web";
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import styled from "styled-components"
-import { Button } from "../../styles/Styles"
 import About from "./About";
 
 
@@ -19,7 +18,7 @@ const ButtonWrap = styled.div`
 const SpringMount = () => {
 
 
-    const [isVisible, setIsVisible] = useState(true);
+    const [isVisible] = useState(true);
 
     
     // DEFINE ANIMATION PARAMETERS

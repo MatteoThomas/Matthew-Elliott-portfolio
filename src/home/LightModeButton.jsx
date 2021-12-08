@@ -26,21 +26,10 @@ const ColorBtn = styled.div`
 }
 `
 
-const Icon = styled.img`
-  transition: all 1s ease;
-  background-image: url(${lm});
-  width:100;
-  height:100;
-`
 
-const IconDark = styled.img`
-  transition: all .5s ease;
-  background-image: url(${lm});
-  width:100;
-  height:100;
-`
 const Img = ({ theme }) => (
 <img
+alt="light / dark mode button"
 style={{ width: '48px', height: '48px' }}
 src={theme === "dark" ? lm  : lm}
   />

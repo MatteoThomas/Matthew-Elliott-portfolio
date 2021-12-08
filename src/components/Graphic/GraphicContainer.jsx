@@ -6,13 +6,10 @@ import  { graphicData } from "../../js/data"
 import  {  SubDescription, Tech }  from "../../styles/Styles";
 
 import {mobile} from "../../js/responsive"
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { useTransition, animated, useSpring, config } from '@react-spring/web'
-import useResizeAware from "react-resize-aware";
 
 const Container = styled.div`
     width:clamp(10px, 80%, 1200px);
-    display: ${({ open }) => open ?  'none' : 'block'};
+ 
 `
     
 const Box = styled.div`
@@ -45,21 +42,11 @@ const Image = styled.img`
 const Icons = styled.div`
 `
 
-const Icon = styled.div`
-    margin: 0rem 1rem 1rem 1rem;
-    color: ${({ theme }) => theme.text};
-    ${mobile({ margin: "0rem 1rem 0rem 1rem"})}
-`
+
 
 const GraphicContainer = (theme, open, setOpen ) => {
 
-// KEEPS SUBHEADER ACCENT COLOR BACKGROUND IF ITEM OPEN    
-const inputStyle = (index, theme) => {
-  return {
-    backgroundColor: open[index] ?  "transparent" : "transparent"  
-}
 
-}
    
     return (
         <Container>
