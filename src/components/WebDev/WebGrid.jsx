@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { mobile } from "../../js/responsive"
 import { webData } from '../../js/data'
 import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkIcon from '@mui/icons-material/Link';
+
 
 const Container = styled.div`
   width: clamp(200px, 90%, 1200px);
