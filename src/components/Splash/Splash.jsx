@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { mobile } from "../../js/responsive";
+import LMface from "../../img/LM_face.png"
+import DMface from "../../img/DM_face.png"
 
 import "./rotatingText.css"
 import "./script"
@@ -49,9 +51,20 @@ const HelloOutline = styled.div`
 `
 
 const RotatingText = styled.div`
-  margin-top: 1rem;
+  margin: 1rem auto;
 `
-const Splash = () => {
+const Face = styled.img`
+display: flex;
+justify-content: center;
+position: absolute;
+top:2rem;
+right:12rem;
+width:20vw;
+transform: rotate(10deg);
+${mobile({ transform: "rotate(0deg)", position: "initial", width: "55vw", margin: "5rem auto 0rem auto"})};
+
+`
+const Splash = ({theme}) => {
 
 return (
   <Container>
@@ -60,7 +73,7 @@ return (
         <HelloOutline> 
           Hey! I'm   
         </HelloOutline>
-        <br/>Matthew.<br/>   
+        <br/>Matthew<br/>   
         <HelloOutline>Let's make<br/>something</HelloOutline>
         <RotatingText className="rotatingText" id="word">            
           <span className="rotatingText-adjective" id="word">cool</span>
@@ -71,6 +84,7 @@ return (
           <span className="rotatingText-adjective" id="word">weird</span>  
         </RotatingText>
       </AnimatedHelloText>
+    <Face  src={theme === "dark" ? DMface  : LMface }/>
     </Wrapper>
   </Container>
 )

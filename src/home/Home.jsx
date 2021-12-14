@@ -13,6 +13,7 @@ import SplashSpring from '../components/Splash/Splash'
 import MenuPage from "../components/Menu/MenuPage";
 import MenuButton from "../components/Menu/MenuButton";
 
+
 const Container = styled.div`
 `
 const ComponentsWrapper = styled.div`
@@ -30,7 +31,7 @@ const Home = () => {
   const [theme, toggleTheme] = useLightMode();
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
   const handlePageChange = (page) => setCurrentPage(page);
-  
+  console.log(theme)
   return (
       <div>
         <ThemeProvider theme={themeMode}>
@@ -48,7 +49,7 @@ const Home = () => {
             currentPage={currentPage} 
             handlePageChange={handlePageChange}/>
             
-            <SplashSpring/>
+            <SplashSpring theme={theme}/>
             <ComponentsWrapper>
               
             <AboutSpring/>

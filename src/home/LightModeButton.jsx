@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { func, string } from 'prop-types';
 import { mobile } from "../js/responsive"
 import lm from "../img/LDmode_L.png"
+import dm from "../img/LDmode_D.png"
 
 const ColorBtn = styled.div`
   font-family: 'Poppins', sans-serif;
@@ -27,16 +28,16 @@ const ColorBtn = styled.div`
 `
 
 
-const Img = ({ theme }) => (
-<img
-alt="light / dark mode button"
-style={{ width: '48px', height: '48px' }}
-src={theme === "dark" ? lm  : lm}
-  />
-  );
 
 const LightModeButton = ({theme, toggleTheme}) => {
-
+  
+  const Img = () => (
+    <img
+    alt="light / dark mode button"
+    style={{ width: '48px', height: '48px' }}
+    src={theme === "dark" ? lm  : dm }
+    />
+    );
   return (
     <ColorBtn onClick={toggleTheme}>
      <Img/>

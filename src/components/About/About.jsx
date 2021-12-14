@@ -38,9 +38,10 @@ return (
   <Container id="about">
       <Wrapper> 
         <AboutDetail>
-            I'm a live event technician and graphic designer that 
-            completed a web development boot-camp at the University of Denver in 2021. Now 
-            learning everything. I'm looking forward to combining all my talents to create 
+            I'm a live event technician and graphic designer. Having
+            completed a web development boot-camp at the University of Denver in 
+            2021 I'm ready to hit the ground running. Now trying to learning 
+            everything. Looking forward to combining all my talents to create 
             unique and memorable experiences for the masses.
         </AboutDetail>
         <Resume/>

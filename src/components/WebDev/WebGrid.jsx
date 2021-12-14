@@ -38,6 +38,11 @@ const Title = styled.div`
   word-wrap: break-word;
   transition: all .5s ease;
   text-align: left;
+  a {
+  &:hover {
+    color: ${({ theme }) => theme.accent}
+  }
+}
 `
 
 const Image = styled.img`
@@ -58,7 +63,10 @@ const Desc = styled.div`
 const Icons = styled.div`
   grid-area: icons;
     a {
-      padding: 0 2rem 0rem 0rem;
+      padding: 2rem 2rem 2rem 0rem;
+      &:hover {
+        color: ${({ theme }) => theme.accent}
+      }
     }
   ${mobile({ paddingTop: "0rem"})}
 `
@@ -68,7 +76,7 @@ const Date = styled.div`
   text-align: right;
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 600;
-  ${mobile({ display: "none"})}
+  ${mobile({ textAlign: "right", marginTop: "-2.5rem"})}
 `
 
 const Grid = () => {
@@ -81,18 +89,17 @@ const Grid = () => {
               <Container>
                 <Image src={item.img}/>  
                 <TitleWrapper>
-                <Title>{item.title}</Title>
+                <Title> <a href={item.link}>{item.title}</a></Title>
                 </TitleWrapper>
                 <Desc>{item.desc}</Desc>
                 <Header>
                 <Icons>
-                  <a href={item.link}><LinkIcon/></a>
                   <a href={item.github}><GitHubIcon/></a>
                 </Icons>
+                  </Header>
                   <Date>
                   {item.date}
                   </Date>
-                  </Header>
               </Container>
             </div>
           )
