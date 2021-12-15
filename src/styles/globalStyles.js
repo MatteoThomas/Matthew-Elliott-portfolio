@@ -15,13 +15,29 @@ export const darkTheme = {
   body: "#222222",
   background: "#222222",
   text: "#e7dcd8",
-  accent: "#A1FF00",
+  accent: "#bffc32",
   accentTwo: "#e25c7d",
   opacity: ".3",
   invert: "1",
 };
 
 const GlobalStyles = createGlobalStyle`
+
+*::-webkit-scrollbar {
+    width: 20px;
+    z-index: -1;
+  }
+
+  *::-webkit-scrollbar-track {
+    filter: opacity(0);
+    /* background: transparent; */
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: ${({ theme }) => theme.accent};
+    border-radius: 0px;
+    border: 13px  ${({ theme }) => theme.background};
+  }
 
 * {
   box-sizing: border-box;
@@ -32,9 +48,11 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
+    /* Hide horizontal scrollbar */
+    overflow: overlay;
+    overflow-x: hidden; 
     background: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
-
     margin: 0;
   }
 

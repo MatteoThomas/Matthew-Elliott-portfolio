@@ -13,12 +13,14 @@ This is my personal portfolio. It's meant to show off my front-end skills. There
 
 - Light / Dark Mode
 
-- Styled Components
-
 - Three, React Three/Fiber
+
+- React Router 
 
 - React Scroll
 
+- Styled Components
+  
 - Email JS
 
 # Usage

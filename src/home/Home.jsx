@@ -35,7 +35,7 @@ const Home = () => {
   return (
       <div>
         <ThemeProvider theme={themeMode}>
-          <GlobalStyles />
+          <GlobalStyles   />
           <Container>
             <LightModeButton theme={theme} toggleTheme={toggleTheme} /> 
 

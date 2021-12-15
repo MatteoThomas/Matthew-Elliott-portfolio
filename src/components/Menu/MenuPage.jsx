@@ -26,7 +26,7 @@ const Container = styled.div`
   display: block;
   position: fixed;
   z-index: 10;
-
+  
   a {
     transition: transform .8s ease-in-out;
     cursor: pointer;

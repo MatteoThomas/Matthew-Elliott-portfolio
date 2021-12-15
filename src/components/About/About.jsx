@@ -40,7 +40,7 @@ return (
         <AboutDetail>
             I'm a live event technician and graphic designer. Having
             completed a web development boot-camp at the University of Denver in 
-            2021 I'm ready to hit the ground running. Now trying to learning 
+            2021, I'm ready to hit the ground running. Now trying to learning 
             everything. Looking forward to combining all my talents to create 
             unique and memorable experiences for the masses.
         </AboutDetail>
