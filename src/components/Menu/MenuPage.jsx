@@ -11,6 +11,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import Three from "../Three/Three";
 import { Link } from "react-scroll";
 
+
 const Container = styled.div`
   background-color:  ${({ theme }) => theme.background};
   height:100vh;
@@ -19,10 +20,10 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-content: center;
-  filter: ${({ open }) => open ?  'opacity: 1' : 'opacity 0'};
+  /* filter: ${({ open }) => open ?  'opacity: 1' : 'opacity 0'}; */
   transform: ${({ open }) => open ?  'translateX(100%)' : 'translateX(0%)'};
   transition: all .2s cubic-bezier(0,.23,1,.87);
-  -webkit-transition: all .2s cubic-bezier(0,.23,1,.87);
+  -webkit-transition: all .6s cubic-bezier(.3,.81,1,.82);
   display: block;
   position: fixed;
   z-index: 10;
@@ -45,6 +46,7 @@ const Container = styled.div`
       border: none;
     }
     &::after {
+  
       opacity: 0;
     }
   }
@@ -58,8 +60,9 @@ const Wrapper = styled.div`
   padding-top: 3rem;
   ${mobile({ paddingTop: "6rem"})}
   height: 70vh;
+
   &:first-child {
-  margin-top: 4rem;
+    margin-top: 4rem;
 }
   `
 
@@ -67,6 +70,7 @@ const ThreeWrapper = styled.div`
   position: absolute;
   top:0;
   pointer-events: none;
+  /* mix-blend-mode: color-burn; */
 `
 
 const Icons = styled.div`

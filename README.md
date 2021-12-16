@@ -12,6 +12,8 @@ This is my personal portfolio. It's meant to show off my front-end skills. There
 # Features
 
 - Light / Dark Mode
+# Technoloies
+### CSS
 
 - Three, React Three/Fiber
 

@@ -8,7 +8,7 @@ import menuCircleDark from "../../img/menu-circular-dark.png"
 const Button = styled.button`
   overflow: hidden;
   color: ${({ theme }) => theme.background};
-  margin: 1rem 1rem 0 0;
+  margin: 1rem 2rem 0 0;
   ${mobile({ margin: "-2rem 2rem 0 0"})}
   display: flex;
   justify-content: center;
@@ -18,16 +18,22 @@ const Button = styled.button`
   border-radius: 50px;
   cursor: pointer;
   z-index: 111;
-  transition: all .5s ease-in-out;
+  transition: all .2s cubic-bezier(.3,.81,1,.82);
+  -webkit-transition: all .6s cubic-bezier(.84,.46,.86,1.2);
   overflow: hidden;
   
   &:hover {
-    transform: scale(1.1);
+
+   transform: scale(.95);
+   transition: all .2s cubic-bezier(.3,.81,1,.82);
+  -webkit-transition: all .3s cubic-bezier(.84,.46,.86,1.2);
+
 }
+
   &:active {
-    transform: scale(1.2);
-    filter: opacity(0);
-    transition: all .2s ease-in-out;
+    transform: scale(1.05);
+    transition: all .2s cubic-bezier(.3,.81,1,.82);
+  -webkit-transition: all 1s cubic-bezier(.84,.46,.86,1.2);
   }
 `
 
@@ -42,10 +48,16 @@ const rotate = keyframes`
 
 const CircleIcon = styled.img`
   width:8rem;
-  animation: ${rotate} 30s linear infinite;
-  transition: rotate 2s ease-in-out;
+  animation: ${rotate} 60s linear infinite;
+  transition: all 2s ease-in-out;
   z-index: 200;
   filter: invert( ${({ theme }) => theme.invert} );
+
+  /* &:hover {
+   transform: scale(.8)
+    transition: all 2s ease-in-out;
+  } */
+
 `
 
 const MenuButton = ({ open, setOpen }) => {

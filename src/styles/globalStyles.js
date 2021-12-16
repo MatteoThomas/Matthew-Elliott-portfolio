@@ -5,8 +5,8 @@ export const lightTheme = {
   body: "#e7dcd8",
   background: "#e7dcd8",
   text: "#222222",
-  accent: "#e25c7d",
-  accentTwo: "#d4ff13",
+  accent: "#d69f9f",
+  accentTwo: "#c3e760",
   opacity: "0",
   invert: "0",
 };
@@ -15,8 +15,8 @@ export const darkTheme = {
   body: "#222222",
   background: "#222222",
   text: "#e7dcd8",
-  accent: "#bffc32",
-  accentTwo: "#e25c7d",
+  accent: "#c3e760",
+  accentTwo: "#d69f9f",
   opacity: ".3",
   invert: "1",
 };

@@ -31,7 +31,7 @@ const Home = () => {
   const [theme, toggleTheme] = useLightMode();
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
   const handlePageChange = (page) => setCurrentPage(page);
-  console.log(theme)
+
   return (
       <div>
         <ThemeProvider theme={themeMode}>
