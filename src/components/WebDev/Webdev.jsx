@@ -60,7 +60,7 @@ const Webdev = () => {
           <Header>
             <Outline>web</Outline><br/>development
         <Description>
-          Javascript / Css / React / NodeJs / Express / MongoDB
+          Javascript / CSS / React / NodeJs / Express / MongoDB
         </Description>
           </Header>
         </HeaderWrap>

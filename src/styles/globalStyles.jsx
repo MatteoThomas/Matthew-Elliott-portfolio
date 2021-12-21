@@ -76,7 +76,6 @@ a {
 a:link {
   text-decoration: none;
   color: ${({ theme }) => theme.text}
-
 }
 
 a:hover {
@@ -99,7 +98,7 @@ a:active {
 a:focus {
   text-decoration: none;
   color: ${({ theme }) => theme.accent};
-  border: 1px solid ${({ theme }) => theme.accent};
+  /* border: 1px solid ${({ theme }) => theme.accent}; */
   border-radius: 50px;
 
 }

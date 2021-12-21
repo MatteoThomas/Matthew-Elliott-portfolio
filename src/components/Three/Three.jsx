@@ -25,7 +25,7 @@ export default function App() {
       <ambientLight intensity={.1} />
 
       <Suspense fallback={null}>
-        <Cloud position={[-3, 4, 5]} speed={.2} opacity={1} />
+        <Cloud position={[-5, 4, 5]} speed={.2} opacity={.5} />
         <Cloud position={[-9, 1, -15]} speed={1} opacity={.3}/>
         
         {/* <Cloud position={[5, -6, -5]} speed={0.2} opacity={.05} /> */}

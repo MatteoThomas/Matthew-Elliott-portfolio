@@ -26,7 +26,7 @@ const Outline = styled.div`
   height: 45px;
   width: 45px;
   border:1px solid ${({ theme}) => theme.text};    
-  background-color: ${({ theme}) => theme.body};
+  background-color: transparent;
   border-radius: 50%;
   /* overflow: hidden; */
   transition: all .1s ease;
