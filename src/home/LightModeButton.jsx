@@ -1,12 +1,10 @@
-
 import React from "react";
 import styled from "styled-components";
 import { func, string } from 'prop-types';
 import { mobile } from "../js/responsive"
-import lm from "../img/LDmode_L.png"
-import dm from "../img/LDmode_D.png"
 
 const ColorBtn = styled.div`
+  position: relative;
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   line-height: 1rem;
@@ -18,29 +16,34 @@ const ColorBtn = styled.div`
   top:2rem;
   left:1.5rem;
   ${mobile({ top:"1rem", right: "5.5rem"})}
-  transition: all .5s ease;
+  transition: all .1s ease;
   z-index: 110;
-  transform: rotate(0deg);
-
+  
+  `
+const Outline = styled.div`
+  padding-top: .3rem;
+  text-align: center;
+  height: 45px;
+  width: 45px;
+  border:1px solid ${({ theme}) => theme.text};    
+  background-color: ${({ theme}) => theme.body};
+  border-radius: 50%;
+  /* overflow: hidden; */
+  transition: all .1s ease;
   &:hover {
-    transform:  translateY(10%);
+    color:${({ theme}) => theme.body};
+    background-color: ${({ theme}) => theme.text}; 
+    transition: all .5s ease;
 }
 `
 
-
-
 const LightModeButton = ({theme, toggleTheme}) => {
   
-  const Img = () => (
-    <img
-    alt="light / dark mode button"
-    style={{ width: '48px', height: '48px' }}
-    src={theme === "dark" ? lm  : dm }
-    />
-    );
+  
   return (
     <ColorBtn onClick={toggleTheme}>
-     <Img/>
+    {theme === "dark" ?   
+    <Outline><div>L<br/>M</div></Outline> : <Outline><div>D<br/>M</div></Outline>}
     </ColorBtn>
 );
 }

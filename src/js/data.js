@@ -18,7 +18,7 @@ export const webData = [
     desc: "E-Comm Store is a full stack e-commerce site, allowing users to login with authorization, add items to a cart, and checkout with Stripe. Items can be filtered and sorted.",
     tech: "React / MongoDB / Mongoose / Styled Components / NodeJS / Express",
     link: "https://ecomm-store-mern.herokuapp.com/",
-    github: "https://github.com/MatteoThomas/mern-store",
+    github: "https://github.com/MatteoThomas/mern-store/tree/master",
   },
   {
     id: 2,

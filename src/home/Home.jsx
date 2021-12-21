@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { ThemeProvider } from "styled-components";
-import GlobalStyles from '../styles/globalStyles';
+import GlobalStyles from '../styles/globalStyles.jsx';
 import { lightTheme, darkTheme } from "../styles/globalStyles"
 import LightModeButton from "./LightModeButton"
 import { useLightMode } from "./useLightMode";

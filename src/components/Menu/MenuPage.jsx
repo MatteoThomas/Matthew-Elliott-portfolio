@@ -7,7 +7,6 @@ import  { Outline }  from "../../styles/Styles";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import InstagramIcon from '@mui/icons-material/Instagram';
 import Three from "../Three/Three";
 import { Link } from "react-scroll";
 
@@ -200,18 +199,6 @@ function MenuBar({ open, setOpen ,currentPage, handlePageChange }) {
         </Icon>
       </A>
 
-      <A href="https://www.instagram.com/mattycakes512/">
-        <Icon>
-        <InstagramIcon style={{ fontSize: "1.5rem"}}/>
-        </Icon>
-      </A>
-
-      {/* <A href="https://matteoelliott.myportfolio.com/">
-        <Icon>
-        <ImageIcon style={{ fontSize: "1.5rem"}}/>
-        </Icon>
-      </A> */}
- 
     </Icons>
 </Wrapper>
           

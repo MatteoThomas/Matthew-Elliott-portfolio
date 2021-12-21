@@ -231,26 +231,7 @@ const Contact = () => {
     </SubDescription>
     </Icons>
 
-    <Icons>
-    <a href="https://www.instagram.com/mattycakes512/">
-    <IconWrapper>
-    
-      <InstagramIcon style={{color: "inherit", fontSize: "inherit", margin: "inherit"}}/>
-      </IconWrapper>
-    </a>
-    <SubDescription>Instagram
-    </SubDescription>
-    </Icons>
-
-    {/* <Icons>
-    <a href="https://matteoelliott.myportfolio.com/">
-    <IconWrapper>
-    
-      <ImageIcon style={{color: "inherit", fontSize: "inherit", margin: "inherit"}}/>
-      </IconWrapper>
-    </a>
-
-    </Icons> */}
+  
 
 
 </IconContainer>

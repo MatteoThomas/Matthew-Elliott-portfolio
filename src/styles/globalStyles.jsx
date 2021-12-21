@@ -48,6 +48,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
+    -webkit-font-smoothing: antialiased;
     /* Hide horizontal scrollbar */
     overflow: overlay;
     overflow-x: hidden; 
@@ -102,95 +103,6 @@ a:focus {
   border: 1px solid ${({ theme }) => theme.accent};
   border-radius: 50px;
 
-}
-
-.container-slider {
-  width: clamp(100px, 90%, 1200px);
-  /* height: 400px; */
-  margin: 100px 1rem 0 1rem;
-  position: relative;
-  /* overflow: hidden; */
-}
-
-.slide {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  opacity: 0;
-  transition: opacity ease-in-out .2s;
-}
-
-.active-anim {
-  opacity: 1;
-}
-
-.btn-slide {
-  border-radius: 50px;
-  width: 50px;
-  height: 50px;
-  border: none;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  border: 1px solid ${({ theme }) => theme.text};
-  background-color: ${({ theme }) => theme.body};
-  ${mobile({ width: "40px", height: "40px", marginTop: "0" })}
-  transition: all .5s ease-in-out;
-  margin-top: -10rem;
-  /* background-color: aqua; */
-}
-
-.btn-slide img {
-  width: 25px;
-  height: 25px;
-  pointer-events: none;
-}
-
-.prev {
-  top: 6rem;
-  left:0rem;
-  ${mobile({ top: "-4rem", left: "-1rem" })};
-}
-
-.prev:hover {
-  transition: all .2s ease-in-out;
-  transform: scale(1.2);
-}
-
-.next {
-  top: 6rem;
-  left: 6rem;
-  ${mobile({ top: "-4rem", left: "4rem" })};
-}
-
-.next:hover {
-  transition: all .5s ease-in-out;
-  transform: rotate(-136deg);
-  transform: scale(1.2);
-  }
-
-.container-dots {
-  display: block;
-  display: flex;
-  transition: all .5s ease-in-out;
-}
-
-.dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  margin: 2rem 5px;
-  background: ${({ theme }) => theme.background};
-  border: 1px solid ${({ theme }) => theme.text};
-  transition: all .5s ease-in-out;
-}
-
-.dot.active {
-  background: ${({ theme }) => theme.accent};
-  border: 1px solid ${({ theme }) => theme.accent};
-  transition: all .5s ease-in-out;
 }
 
 // IF BROWSER DOESNT SUPPORT CSS BLUR USE BACKGROUND_COLOR
