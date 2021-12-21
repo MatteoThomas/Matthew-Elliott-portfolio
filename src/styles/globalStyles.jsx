@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-import { mobile } from "../js/responsive";
 
 export const lightTheme = {
   body: "#e7dcd8",
