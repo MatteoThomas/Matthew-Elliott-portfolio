@@ -76,7 +76,7 @@ const Icons = styled.div`
   display: flex;
   justify-content: center;
   border-top: 2px solid ${({ theme }) => theme.text};
-  background-color: ${({ theme }) => theme.background};
+  background-color: transparent;
 `
 
 const Icon = styled.div`
