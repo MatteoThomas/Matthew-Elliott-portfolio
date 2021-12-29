@@ -1,8 +1,7 @@
 ![Screenshot](splash.png)
 # Matthew Elliott Portfolio
 
-This is my personal portfolio. It's meant to show off my front-end skills. There's a web development section with links to my best projects. A graphic design section that shows the design work I've done over the last decade. Also a contact form that uses the Email JS library to send me an email when submitted. I used three js on the menu page for eye candy and there will be more in the future.
-
+This is my web-dev portfolio for showing off my skills. 
 
 
 # Technologies
